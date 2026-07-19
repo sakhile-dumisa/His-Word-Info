@@ -206,7 +206,7 @@ function RouteComponent() {
 							<div className="flex items-center gap-2">
 								<HugeiconsIcon
 									icon={item.icon}
-									className="text-primary size-5 shrink-0"
+									className="text-muted-foreground size-5 shrink-0"
 								/>
 								<h2 className="text-xl font-semibold text-foreground">
 									{item.title}
@@ -226,7 +226,7 @@ function RouteComponent() {
 					<div className="flex items-center gap-2">
 						<HugeiconsIcon
 							icon={LegalDocument01Icon}
-							className="text-primary size-5 shrink-0"
+							className="text-muted-foreground size-5 shrink-0"
 						/>
 						<h2 className="text-xl font-semibold text-foreground">
 							{relatedTermsTitle}

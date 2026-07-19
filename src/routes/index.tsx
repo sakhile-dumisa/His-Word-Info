@@ -281,7 +281,7 @@ function RouteComponent() {
 								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
 									<HugeiconsIcon
 										icon={Book01Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<span>{step1Title}</span>
 								</h3>
@@ -295,7 +295,7 @@ function RouteComponent() {
 								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
 									<HugeiconsIcon
 										icon={Book02Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<span>{step2Title}</span>
 								</h3>
@@ -309,7 +309,7 @@ function RouteComponent() {
 								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
 									<HugeiconsIcon
 										icon={BookSearchIcon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<span>{step3Title}</span>
 								</h3>
@@ -323,7 +323,7 @@ function RouteComponent() {
 								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
 									<HugeiconsIcon
 										icon={Share01Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<span>{step4Title}</span>
 								</h3>
@@ -344,7 +344,7 @@ function RouteComponent() {
 								<div className="flex items-center gap-2">
 									<HugeiconsIcon
 										icon={Database01Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<h4 className="text-sm font-medium text-foreground">
 										{hoodCard1Title}
@@ -358,7 +358,7 @@ function RouteComponent() {
 								<div className="flex items-center gap-2">
 									<HugeiconsIcon
 										icon={PaintBrush01Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<h4 className="text-sm font-medium text-foreground">
 										{hoodCard2Title}
@@ -372,7 +372,7 @@ function RouteComponent() {
 								<div className="flex items-center gap-2">
 									<HugeiconsIcon
 										icon={Folder01Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<h4 className="text-sm font-medium text-foreground">
 										{hoodCard3Title}
@@ -386,7 +386,7 @@ function RouteComponent() {
 								<div className="flex items-center gap-2">
 									<HugeiconsIcon
 										icon={Share01Icon}
-										className="text-primary size-5 shrink-0"
+										className="text-muted-foreground size-5 shrink-0"
 									/>
 									<h4 className="text-sm font-medium text-foreground">
 										{hoodCard4Title}
