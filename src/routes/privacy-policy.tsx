@@ -13,7 +13,7 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { SITE_TITLE, SITE_URL } from "../lib/site";
+import { EMAIL, SITE_TITLE, SITE_URL } from "../lib/site";
 
 const PRIVACY_DATA = [
 	{
@@ -81,8 +81,15 @@ const PRIVACY_DATA = [
 					Sakhile Dumisa
 				</a>
 				. If you have any inquiries, feedback, or concerns regarding your
-				privacy or the application's functionality, please reach out via the
-				contact avenues provided on the platform.
+				privacy or the application's functionality, please reach out via email
+				at{" "}
+				<a
+					href={`mailto:${EMAIL}`}
+					className="underline underline-offset-4 hover:text-foreground"
+				>
+					{EMAIL}
+				</a>
+				.
 			</>
 		),
 	},
