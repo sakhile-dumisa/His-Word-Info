@@ -1,11 +1,14 @@
 import {
+	AppleIcon,
 	Book01Icon,
 	Book02Icon,
 	BookSearchIcon,
 	Database01Icon,
 	Folder01Icon,
 	PaintBrush01Icon,
+	PlayStoreIcon,
 	Share01Icon,
+	Store01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute } from "@tanstack/react-router";
@@ -145,6 +148,87 @@ function RouteComponent() {
 						Designed for absolute focus, running entirely offline, and
 						engineered with deep respect for your privacy.
 					</p>
+
+					<div className="flex flex-wrap gap-4 pt-2 pb-4">
+						{/* Apple App Store */}
+						<div className="relative group">
+							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+								Coming Soon
+							</span>
+							<button
+								type="button"
+								disabled
+								className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+							>
+								<HugeiconsIcon
+									icon={AppleIcon}
+									size={24}
+									className="text-foreground/80 shrink-0"
+								/>
+								<div className="flex flex-col leading-none">
+									<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+										Download on the
+									</span>
+									<span className="text-xs font-semibold text-foreground mt-0.5">
+										App Store
+									</span>
+								</div>
+							</button>
+						</div>
+
+						{/* Google Play Store */}
+						<div className="relative group">
+							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+								Coming Soon
+							</span>
+							<button
+								type="button"
+								disabled
+								className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+							>
+								<HugeiconsIcon
+									icon={PlayStoreIcon}
+									size={24}
+									className="text-foreground/80 shrink-0"
+								/>
+								<div className="flex flex-col leading-none">
+									<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+										Get it on
+									</span>
+									<span className="text-xs font-semibold text-foreground mt-0.5">
+										Google Play
+									</span>
+								</div>
+							</button>
+						</div>
+
+						{/* Huawei AppGallery */}
+						<div className="relative group">
+							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+								Coming Soon
+							</span>
+							<button
+								type="button"
+								disabled
+								className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+							>
+								<HugeiconsIcon
+									icon={Store01Icon}
+									size={24}
+									className="text-foreground/80 shrink-0"
+								/>
+								<div className="flex flex-col leading-none">
+									<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+										Explore it on
+									</span>
+									<span className="text-xs font-semibold text-foreground mt-0.5">
+										AppGallery
+									</span>
+								</div>
+							</button>
+						</div>
+					</div>
+
 					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground mt-2 space-y-2">
 						<p>
 							"In the beginning was the Word, and the Word was with God, and the
