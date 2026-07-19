@@ -7,6 +7,8 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { inject } from "@vercel/analytics";
+import BackToTop from "../components/BackToTop";
+import CustomCursor from "../components/CustomCursor";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import appCss from "../globals.css?url";
@@ -62,11 +64,13 @@ function RootLayout() {
 
 	return (
 		<div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
+			<CustomCursor />
 			<Header />
 			<main className="grow">
 				<Outlet />
 			</main>
 			<Footer />
+			<BackToTop />
 		</div>
 	);
 }

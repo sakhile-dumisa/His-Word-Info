@@ -18,6 +18,12 @@ This web project acts as the landing page, detailing app features, specification
 3. **Asynchronous Deep Search:** Instant keyword searching across all 66 books using micro-task chunking to avoid blocking the main UI thread.
 4. **Tactile Shake & Share:** On-device canvas composition translates journal reflections or scriptures into beautiful high-res cards, triggered with native haptic vibration.
 
+### 🌐 Web Interface Features
+* **Interactive Screenshots Carousel:** Touch-friendly slider utilizing Framer Motion for swipe gestures, dot indicators, and chevron navigation, coupled with a fullscreen Lightbox zoom. Supports toggling between individual screenshots and the all-in-one mockup collage.
+* **Global Custom Cursor:** Premium desktop custom cursor featuring an instant inner dot and a spring-physics outer ring that scales and changes fill colors when hovering over interactive elements (mix-blend-difference support, disabled on mobile).
+* **Back to Top Navigation:** Floating action button that fades in dynamically after scrolling down 300px and smoothly scrolls back to the top of the viewport.
+* **Cohesive Iconography:** Custom Hugeicons integrated into the features timeline, technical spec cards, and Privacy & Terms sections to create a rich and unified design language.
+
 ---
 
 ## 🛠️ Web Tech Stack

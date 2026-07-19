@@ -217,3 +217,8 @@ a {
 button{
 	cursor: pointer;
 }
+
+.custom-cursor-active,
+.custom-cursor-active * {
+	cursor: none !important;
+}
