@@ -128,10 +128,8 @@ const itemVariants = {
 function RouteComponent() {
 	const {
 		heroTitle,
-		heroDescription,
-		quoteText1,
-		quoteText2Part1,
-		quoteText2Part2,
+		verseText,
+		aboutText,
 		howItWorksTitle,
 		step1Title,
 		step1Desc,
@@ -153,16 +151,98 @@ function RouteComponent() {
 	} = useIntlayer("index");
 
 	return (
-		<motion.main
-			variants={containerVariants}
-			initial="hidden"
-			animate="visible"
-			className="min-h-screen bg-background mt-2"
-		>
+		<>
+			{/* Floating vertical download buttons for desktop */}
+			<div className="fixed left-8 bottom-8 hidden md:flex flex-col gap-4 z-40">
+				{/* Apple App Store */}
+				<div className="relative group">
+					<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+						Coming Soon
+					</span>
+					<button
+						type="button"
+						disabled
+						className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+					>
+						<HugeiconsIcon
+							icon={AppleIcon}
+							size={24}
+							className="text-foreground/80 shrink-0"
+						/>
+						<div className="flex flex-col leading-none">
+							<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+								Download on the
+							</span>
+							<span className="text-xs font-semibold text-foreground mt-0.5">
+								App Store
+							</span>
+						</div>
+					</button>
+				</div>
+
+				{/* Google Play Store */}
+				<div className="relative group">
+					<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+						Coming Soon
+					</span>
+					<button
+						type="button"
+						disabled
+						className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+					>
+						<HugeiconsIcon
+							icon={PlayStoreIcon}
+							size={24}
+							className="text-foreground/80 shrink-0"
+						/>
+						<div className="flex flex-col leading-none">
+							<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+								Get it on
+							</span>
+							<span className="text-xs font-semibold text-foreground mt-0.5">
+								Google Play
+							</span>
+						</div>
+					</button>
+				</div>
+
+				{/* Huawei AppGallery */}
+				<div className="relative group">
+					<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+						Coming Soon
+					</span>
+					<button
+						type="button"
+						disabled
+						className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+					>
+						<HugeiconsIcon
+							icon={Store01Icon}
+							size={24}
+							className="text-foreground/80 shrink-0"
+						/>
+						<div className="flex flex-col leading-none">
+							<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+								Explore it on
+							</span>
+							<span className="text-xs font-semibold text-foreground mt-0.5">
+								AppGallery
+							</span>
+						</div>
+					</button>
+				</div>
+			</div>
+
+			<motion.main
+				variants={containerVariants}
+				initial="hidden"
+				animate="visible"
+				className="min-h-screen bg-background mt-2"
+			>
 			<div className="mx-auto max-w-2xl px-4 py-6 md:mt-10 space-y-16">
 				{/* Hero Header */}
 				<motion.header variants={itemVariants} className="space-y-4">
-					<h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl flex items-center gap-3">
+					<h1 className="text-4xl font-semibold tracking-tight text-foreground justify-center flex items-center gap-3">
 						<img
 							src="/logo192.png"
 							alt="His Word App Logo"
@@ -170,11 +250,9 @@ function RouteComponent() {
 						/>
 						<span>{heroTitle}</span>
 					</h1>
-					<p className="text-lg text-foreground leading-relaxed text-balance">
-						{heroDescription}
-					</p>
 
-					<div className="flex flex-wrap gap-4 pt-2 pb-4">
+
+					<div className="flex flex-wrap gap-4 pt-2 pb-4 justify-center md:hidden">
 						{/* Apple App Store */}
 						<div className="relative group">
 							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
@@ -254,14 +332,15 @@ function RouteComponent() {
 						</div>
 					</div>
 
-					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground mt-2 space-y-2">
-						<p>{quoteText1}</p>
-						<p>
-							{quoteText2Part1}
-							<strong>Izwi Lakhe</strong>
-							{quoteText2Part2}
+					{/* Minimalistic Verse Quote & About Text */}
+					<div className="space-y-4 pt-4 text-center">
+						<p className="text-base text-foreground/85 leading-relaxed">
+							{verseText}
 						</p>
-					</blockquote>
+						<p className="text-sm text-muted-foreground leading-relaxed">
+							{aboutText}
+						</p>
+					</div>
 				</motion.header>
 
 				{/* Screenshots Carousel */}
@@ -412,5 +491,6 @@ function RouteComponent() {
 				</motion.section>
 			</div>
 		</motion.main>
+		</>
 	);
 }

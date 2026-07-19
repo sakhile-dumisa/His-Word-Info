@@ -8,20 +8,16 @@ const indexContent = {
 			zu: "Izwi Lakhe",
 		}),
 		heroDescription: t({
-			en: "A modern, high-performance Bible reading and study companion. Designed for absolute focus, running entirely offline, and engineered with deep respect for your privacy.",
-			zu: "Umngane wanamuhla wokufunda nokutadisha iBhayibheli onejubane eliphezulu. Idizayinelwe ukugxila ngokuphelele, isebenza ngokungaxhunyiwe ku-inthanethi ngokuphelele, futhi yakhiwe ngenhlonipho ejulile yobumfihlo bakho.",
+			en: "A beautifully fast, offline-first Bible companion built for distraction-free reading, deep study, and absolute privacy.",
+			zu: "Umngane weBhayibheli osheshayo ngendlela enhle, ongaxhunyiwe ku-inthanethi owakhelwe ukufunda okungenaphazamiso, ukutadisha okujulile, kanye nobumfihlo obuphelele.",
 		}),
-		quoteText1: t({
-			en: '"In the beginning was the Word, and the Word was with God, and the Word was God." — John 1:1. The name His Word is inspired by this prologue, celebrating scripture as the living Word of God.',
-			zu: '"Ekuqaleni kwakukhona uLizwi, uLizwi wayekuye uNkulunkulu, uLizwi wayenguNkulunkulu." — Johane 1:1. Igama elithi His Word liphefumulelwe yilesi singeniso, libungaza umbhalo ongcwele njengezwi eliphilayo likaNkulunkulu.',
+		verseText: t({
+			en: '"In the beginning was the Word, and the Word was with God, and the Word was God." — John 1:1',
+			zu: '"Ekuqaleni kwakukhona uLizwi, uLizwi wayekuye uNkulunkulu, uLizwi wayenguNkulunkulu." — Johane 1:1',
 		}),
-		quoteText2Part1: t({
-			en: 'In isiZulu, "His Word" translates to ',
-			zu: 'NgesiZulu, "His Word" ihunyushwa ngokuthi ',
-		}),
-		quoteText2Part2: t({
-			en: ", which was the original concept and name for the application. However, due to copyright restrictions regarding Zulu Bible translations, the app is currently available in English only.",
-			zu: ", okuwumqondo wokuqala negama lesicelo. Nokho, ngenxa yemikhawulo ye-copyright mayelana nokuhunyushwa kweBhayibheli lesiZulu, i-app okwamanje itholakala ngesiNgisi kuphela.",
+		aboutText: t({
+			en: "Inspired by this prologue, His Word is built to celebrate scripture as the living Word of God. The app's original concept was titled Izwi Lakhe (isiZulu for \"His Word\"), but due to copyright restrictions regarding Zulu Bible translations, the companion is currently available in English only.",
+			zu: "Uphefumulelwe yilesi singeniso, i-His Word yakhelwe ukubungaza umbhalo ongcwele njengezwi eliphilayo likaNkulunkulu. Umqondo wokuqala walolu hlelo lokusebenza wawunesihloko esithi Izwi Lakhe, kodwa ngenxa yemikhawulo ye-copyright mayelana nokuhunyushwa kweBhayibheli lesiZulu, umngane okwamanje itholakala ngesiNgisi kuphela.",
 		}),
 		howItWorksTitle: t({
 			en: "How It Works",

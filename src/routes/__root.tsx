@@ -68,7 +68,7 @@ function RootLayout() {
 			<div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
 				<CustomCursor />
 				<Header />
-				<main className="grow">
+				<main className="grow -mt-20 md:mt-0">
 					<Outlet />
 				</main>
 				<Footer />
