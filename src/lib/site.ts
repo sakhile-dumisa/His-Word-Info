@@ -1,11 +1,10 @@
-export const SITE_TITLE = "His Word - Izwi Lakhe";
+export const SITE_TITLE = "His Word";
 export const SITE_DESCRIPTION =
-	"His Word is a bible study platform for everyone. ";
-export const SITE_URL = "https://izwi.sakhiledumisa.com";
+	"A premium, offline-first Bible app built with Expo and HeroUI. Features dual translations, rich reflections, lag-free search, and shake-to-capture sharing.";
+export const SITE_URL = "https://word.sakhiledumisa.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/sakhile-dumisa";
 export const X_URL = "https://x.com/sakhiledumisa0";
-export const EMAIL = "izwi@sakhiledumisa.com";
-export const CREDLY_URL = "https://www.credly.com/users/sakhile-dumisa";
+export const EMAIL = "word@sakhiledumisa.com";
 
 export interface SocialLinkItem {
 	key:
@@ -31,7 +30,6 @@ export interface PrimaryActionItem {
 
 export const SOCIAL_LINKS: SocialLinkItem[] = [
 	{ key: "x", href: X_URL, label: "X" },
-	{ key: "credly", href: CREDLY_URL, label: "credly" },
 	{ key: "linkedin", href: LINKEDIN_URL, label: "LinkedIn" },
 	{ key: "github", href: "https://github.com/sakhile-dumisa", label: "GitHub" },
 	{
@@ -45,7 +43,7 @@ export const SOCIAL_LINKS: SocialLinkItem[] = [
 		label: "Threads",
 	},
 	{ key: "website", href: SITE_URL, label: "Website" },
-	{ key: "email", href: "mailto:izwi@sakhiledumisa.com", label: "Email" },
+	{ key: "email", href: "mailto:word@sakhiledumisa.com", label: "Email" },
 ];
 
 export const PRIMARY_ACTIONS: PrimaryActionItem[] = [
@@ -57,7 +55,7 @@ export const PRIMARY_ACTIONS: PrimaryActionItem[] = [
 	},
 	{
 		key: "contact",
-		href: "mailto:izwi@sakhiledumisa.com",
+		href: "mailto:word@sakhiledumisa.com",
 		label: "Get in touch",
 		variant: "primary",
 	},
