@@ -2,7 +2,7 @@
 
 The official web presence and companion platform for **His Word**, an offline-first mobile Bible study application built for focus, high-performance scripture study, and complete user privacy.
 
-Live site: [his-word.sakhiledumisa.com](https://his-word.sakhiledumisa.com)
+Live site: [word.sakhiledumisa.com](https://word.sakhiledumisa.com)
 
 ---
 
