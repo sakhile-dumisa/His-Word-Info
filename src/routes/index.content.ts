@@ -16,7 +16,7 @@ const indexContent = {
 			zu: '"Ekuqaleni kwakukhona uLizwi, uLizwi wayekuye uNkulunkulu, uLizwi wayenguNkulunkulu." — Johane 1:1',
 		}),
 		aboutText: t({
-			en: "Inspired by this prologue, His Word is built to celebrate scripture as the living Word of God. The app's original concept was titled Izwi Lakhe (isiZulu for \"His Word\"), but due to copyright restrictions regarding Zulu Bible translations, the companion is currently available in English only.",
+			en: 'Inspired by this prologue, His Word is built to celebrate scripture as the living Word of God. The app\'s original concept was titled Izwi Lakhe (isiZulu for "His Word"), but due to copyright restrictions regarding Zulu Bible translations, the companion is currently available in English only.',
 			zu: "Uphefumulelwe yilesi singeniso, i-His Word yakhelwe ukubungaza umbhalo ongcwele njengezwi eliphilayo likaNkulunkulu. Umqondo wokuqala walolu hlelo lokusebenza wawunesihloko esithi Izwi Lakhe, kodwa ngenxa yemikhawulo ye-copyright mayelana nokuhunyushwa kweBhayibheli lesiZulu, umngane okwamanje itholakala ngesiNgisi kuphela.",
 		}),
 		howItWorksTitle: t({

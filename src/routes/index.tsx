@@ -239,40 +239,201 @@ function RouteComponent() {
 				animate="visible"
 				className="min-h-screen bg-background mt-2"
 			>
-			<div className="mx-auto max-w-2xl px-4 py-6 md:mt-10 space-y-16">
-				{/* Hero Header */}
-				<motion.header variants={itemVariants} className="space-y-4">
-					<h1 className="text-4xl font-semibold tracking-tight text-foreground justify-center flex items-center gap-3">
-						<img
-							src="/logo192.png"
-							alt="His Word App Logo"
-							className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl"
-						/>
-						<span>{heroTitle}</span>
-					</h1>
+				<div className="mx-auto max-w-2xl px-4 py-6 md:mt-10 space-y-16">
+					{/* Hero Header */}
+					<motion.header variants={itemVariants} className="space-y-4">
+						<h1 className="text-4xl font-semibold tracking-tight text-foreground justify-center flex items-center gap-3">
+							<img
+								src="/logo192.png"
+								alt="His Word App Logo"
+								className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl"
+							/>
+							<span>{heroTitle}</span>
+						</h1>
 
+						{/* Minimalistic Verse Quote & About Text */}
+						<div className="space-y-4 pt-4 text-center">
+							<p className="text-base text-foreground/85 leading-relaxed">
+								{verseText}
+							</p>
+							<p className="text-sm text-muted-foreground leading-relaxed">
+								{aboutText}
+							</p>
+						</div>
+					</motion.header>
 
-					<div className="flex flex-wrap gap-4 pt-2 pb-4 justify-center md:hidden">
+					{/* Screenshots Carousel */}
+					<motion.section
+						variants={itemVariants}
+						className="py-2 border-t border-border/30"
+					>
+						<Carousel />
+					</motion.section>
+
+					{/* How It Works Section */}
+					<motion.section variants={itemVariants} className="space-y-6">
+						<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
+							{howItWorksTitle}
+						</h2>
+						<div className="space-y-8 border-l border-border pl-4 ml-1">
+							<div className="space-y-2 relative">
+								<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
+								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+									<HugeiconsIcon
+										icon={Book01Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<span>{step1Title}</span>
+								</h3>
+								<p className="text-sm text-muted-foreground leading-relaxed">
+									{step1Desc}
+								</p>
+							</div>
+
+							<div className="space-y-2 relative">
+								<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
+								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+									<HugeiconsIcon
+										icon={Book02Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<span>{step2Title}</span>
+								</h3>
+								<p className="text-sm text-muted-foreground leading-relaxed">
+									{step2Desc}
+								</p>
+							</div>
+
+							<div className="space-y-2 relative">
+								<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
+								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+									<HugeiconsIcon
+										icon={BookSearchIcon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<span>{step3Title}</span>
+								</h3>
+								<p className="text-sm text-muted-foreground leading-relaxed">
+									{step3Desc}
+								</p>
+							</div>
+
+							<div className="space-y-2 relative">
+								<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
+								<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+									<HugeiconsIcon
+										icon={Share01Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<span>{step4Title}</span>
+								</h3>
+								<p className="text-sm text-muted-foreground leading-relaxed">
+									{step4Desc}
+								</p>
+							</div>
+						</div>
+					</motion.section>
+
+					{/* Technical Architecture & Specs */}
+					<motion.section variants={itemVariants} className="space-y-6">
+						<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
+							{underTheHoodTitle}
+						</h2>
+						<div className="grid gap-4 sm:grid-cols-2">
+							<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
+								<div className="flex items-center gap-2">
+									<HugeiconsIcon
+										icon={Database01Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<h4 className="text-sm font-medium text-foreground">
+										{hoodCard1Title}
+									</h4>
+								</div>
+								<p className="text-xs text-muted-foreground leading-relaxed">
+									{hoodCard1Desc}
+								</p>
+							</div>
+							<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
+								<div className="flex items-center gap-2">
+									<HugeiconsIcon
+										icon={PaintBrush01Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<h4 className="text-sm font-medium text-foreground">
+										{hoodCard2Title}
+									</h4>
+								</div>
+								<p className="text-xs text-muted-foreground leading-relaxed">
+									{hoodCard2Desc}
+								</p>
+							</div>
+							<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
+								<div className="flex items-center gap-2">
+									<HugeiconsIcon
+										icon={Folder01Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<h4 className="text-sm font-medium text-foreground">
+										{hoodCard3Title}
+									</h4>
+								</div>
+								<p className="text-xs text-muted-foreground leading-relaxed">
+									{hoodCard3Desc}
+								</p>
+							</div>
+							<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
+								<div className="flex items-center gap-2">
+									<HugeiconsIcon
+										icon={Share01Icon}
+										className="text-primary size-5 shrink-0"
+									/>
+									<h4 className="text-sm font-medium text-foreground">
+										{hoodCard4Title}
+									</h4>
+								</div>
+								<p className="text-xs text-muted-foreground leading-relaxed">
+									{hoodCard4Desc}
+								</p>
+							</div>
+						</div>
+					</motion.section>
+
+					{/* FAQ Section */}
+					<motion.section
+						id="faq"
+						variants={itemVariants}
+						aria-label="Frequently asked questions"
+						className="mt-8"
+					>
+						<FAQ />
+					</motion.section>
+
+					{/* Mobile download buttons (small and below accordion) */}
+					<motion.section
+						variants={itemVariants}
+						className="flex flex-wrap gap-3 pt-6 pb-2 justify-center md:hidden"
+					>
 						{/* Apple App Store */}
 						<div className="relative group">
-							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+							<span className="absolute -top-1.5 -right-1 z-10 text-[8px] font-semibold bg-primary/10 text-primary border border-primary/25 px-1.5 py-0.5 rounded-full select-none scale-80 group-hover:scale-85 transition-transform">
 								Coming Soon
 							</span>
 							<button
 								type="button"
 								disabled
-								className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+								className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[115px] focus:outline-none"
 							>
 								<HugeiconsIcon
 									icon={AppleIcon}
-									size={24}
+									size={18}
 									className="text-foreground/80 shrink-0"
 								/>
 								<div className="flex flex-col leading-none">
-									<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+									<span className="text-[7.5px] uppercase tracking-wider text-muted-foreground font-medium">
 										Download on the
 									</span>
-									<span className="text-xs font-semibold text-foreground mt-0.5">
+									<span className="text-[10px] font-semibold text-foreground mt-0.5">
 										App Store
 									</span>
 								</div>
@@ -281,24 +442,24 @@ function RouteComponent() {
 
 						{/* Google Play Store */}
 						<div className="relative group">
-							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+							<span className="absolute -top-1.5 -right-1 z-10 text-[8px] font-semibold bg-primary/10 text-primary border border-primary/25 px-1.5 py-0.5 rounded-full select-none scale-80 group-hover:scale-85 transition-transform">
 								Coming Soon
 							</span>
 							<button
 								type="button"
 								disabled
-								className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+								className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[115px] focus:outline-none"
 							>
 								<HugeiconsIcon
 									icon={PlayStoreIcon}
-									size={24}
+									size={18}
 									className="text-foreground/80 shrink-0"
 								/>
 								<div className="flex flex-col leading-none">
-									<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+									<span className="text-[7.5px] uppercase tracking-wider text-muted-foreground font-medium">
 										Get it on
 									</span>
-									<span className="text-xs font-semibold text-foreground mt-0.5">
+									<span className="text-[10px] font-semibold text-foreground mt-0.5">
 										Google Play
 									</span>
 								</div>
@@ -307,190 +468,32 @@ function RouteComponent() {
 
 						{/* Huawei AppGallery */}
 						<div className="relative group">
-							<span className="absolute -top-2 -right-1.5 z-10 text-[9px] font-semibold bg-primary/10 text-primary border border-primary/25 px-2 py-0.5 rounded-full select-none scale-90 group-hover:scale-95 transition-transform">
+							<span className="absolute -top-1.5 -right-1 z-10 text-[8px] font-semibold bg-primary/10 text-primary border border-primary/25 px-1.5 py-0.5 rounded-full select-none scale-80 group-hover:scale-85 transition-transform">
 								Coming Soon
 							</span>
 							<button
 								type="button"
 								disabled
-								className="flex items-center gap-3 px-4 py-2 rounded-xl bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[150px] focus:outline-none"
+								className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-[115px] focus:outline-none"
 							>
 								<HugeiconsIcon
 									icon={Store01Icon}
-									size={24}
+									size={18}
 									className="text-foreground/80 shrink-0"
 								/>
 								<div className="flex flex-col leading-none">
-									<span className="text-[9px] uppercase tracking-wider text-muted-foreground font-medium">
+									<span className="text-[7.5px] uppercase tracking-wider text-muted-foreground font-medium">
 										Explore it on
 									</span>
-									<span className="text-xs font-semibold text-foreground mt-0.5">
+									<span className="text-[10px] font-semibold text-foreground mt-0.5">
 										AppGallery
 									</span>
 								</div>
 							</button>
 						</div>
-					</div>
-
-					{/* Minimalistic Verse Quote & About Text */}
-					<div className="space-y-4 pt-4 text-center">
-						<p className="text-base text-foreground/85 leading-relaxed">
-							{verseText}
-						</p>
-						<p className="text-sm text-muted-foreground leading-relaxed">
-							{aboutText}
-						</p>
-					</div>
-				</motion.header>
-
-				{/* Screenshots Carousel */}
-				<motion.section
-					variants={itemVariants}
-					className="py-2 border-t border-border/30"
-				>
-					<Carousel />
-				</motion.section>
-
-				{/* How It Works Section */}
-				<motion.section variants={itemVariants} className="space-y-6">
-					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
-						{howItWorksTitle}
-					</h2>
-					<div className="space-y-8 border-l border-border pl-4 ml-1">
-						<div className="space-y-2 relative">
-							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Book01Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<span>{step1Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step1Desc}
-							</p>
-						</div>
-
-						<div className="space-y-2 relative">
-							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Book02Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<span>{step2Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step2Desc}
-							</p>
-						</div>
-
-						<div className="space-y-2 relative">
-							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={BookSearchIcon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<span>{step3Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step3Desc}
-							</p>
-						</div>
-
-						<div className="space-y-2 relative">
-							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Share01Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<span>{step4Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step4Desc}
-							</p>
-						</div>
-					</div>
-				</motion.section>
-
-				{/* Technical Architecture & Specs */}
-				<motion.section variants={itemVariants} className="space-y-6">
-					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
-						{underTheHoodTitle}
-					</h2>
-					<div className="grid gap-4 sm:grid-cols-2">
-						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<div className="flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Database01Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<h4 className="text-sm font-medium text-foreground">
-									{hoodCard1Title}
-								</h4>
-							</div>
-							<p className="text-xs text-muted-foreground leading-relaxed">
-								{hoodCard1Desc}
-							</p>
-						</div>
-						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<div className="flex items-center gap-2">
-								<HugeiconsIcon
-									icon={PaintBrush01Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<h4 className="text-sm font-medium text-foreground">
-									{hoodCard2Title}
-								</h4>
-							</div>
-							<p className="text-xs text-muted-foreground leading-relaxed">
-								{hoodCard2Desc}
-							</p>
-						</div>
-						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<div className="flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Folder01Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<h4 className="text-sm font-medium text-foreground">
-									{hoodCard3Title}
-								</h4>
-							</div>
-							<p className="text-xs text-muted-foreground leading-relaxed">
-								{hoodCard3Desc}
-							</p>
-						</div>
-						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<div className="flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Share01Icon}
-									className="text-primary size-5 shrink-0"
-								/>
-								<h4 className="text-sm font-medium text-foreground">
-									{hoodCard4Title}
-								</h4>
-							</div>
-							<p className="text-xs text-muted-foreground leading-relaxed">
-								{hoodCard4Desc}
-							</p>
-						</div>
-					</div>
-				</motion.section>
-
-				{/* FAQ Section */}
-				<motion.section
-					id="faq"
-					variants={itemVariants}
-					aria-label="Frequently asked questions"
-					className="mt-8"
-				>
-					<FAQ />
-				</motion.section>
-			</div>
-		</motion.main>
+					</motion.section>
+				</div>
+			</motion.main>
 		</>
 	);
 }
