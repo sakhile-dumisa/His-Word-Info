@@ -248,7 +248,7 @@ function RouteComponent() {
 								alt="His Word App Logo"
 								className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl"
 							/>
-							<span>{heroTitle}</span>
+							<span className="hidden md:block">{heroTitle}</span>
 						</h1>
 
 						{/* Minimalistic Verse Quote & About Text */}

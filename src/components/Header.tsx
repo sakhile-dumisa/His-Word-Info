@@ -6,7 +6,7 @@ import {
 	TranslateIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Link as RouterLink } from "@tanstack/react-router";
+import { Link as RouterLink, useLocation } from "@tanstack/react-router";
 import { useIntlayer, useLocale } from "react-intlayer";
 import { type Theme, useTheme } from "#/lib/theme-store";
 import { Button } from "@/components/ui/button";
@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function Header() {
+	const location = useLocation();
 	const { theme, setTheme } = useTheme();
 	const { locale, setLocale } = useLocale();
 	const {
@@ -31,6 +32,8 @@ export default function Header() {
 		darkTheme,
 		systemTheme,
 	} = useIntlayer("header");
+
+	const isHomePage = location.pathname === "/";
 
 	const currentIcon = () => {
 		switch (theme) {
@@ -46,22 +49,24 @@ export default function Header() {
 	return (
 		<div className="w-full">
 			{/* Top Announcement Banner */}
-			<div className="w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
-				<HugeiconsIcon
-					icon={Comment01Icon}
-					size={14}
-					className="text-primary hidden md:flex shrink-0"
-				/>
-				<span className="text-muted-foreground">{bannerPrompt}</span>
-				<a
-					href="https://www.sakhiledumisa.com/blog/his-word-quietly"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="text-primary font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
-				>
-					{bannerLinkText} &rarr;
-				</a>
-			</div>
+			{isHomePage && (
+				<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
+					<HugeiconsIcon
+						icon={Comment01Icon}
+						size={14}
+						className="text-primary shrink-0"
+					/>
+					<span className="text-muted-foreground">{bannerPrompt}</span>
+					<a
+						href="https://www.sakhiledumisa.com/blog/his-word-quietly"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-primary font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
+					>
+						{bannerLinkText} &rarr;
+					</a>
+				</div>
+			)}
 
 			<header className=" py-4 px-6 flex items-center justify-between bg-transparent sticky top-0 z-50">
 				<div className="invisible md:visible md:flex items-center gap-4">
