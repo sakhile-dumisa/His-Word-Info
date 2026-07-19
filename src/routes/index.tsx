@@ -1,5 +1,16 @@
+import {
+	Book01Icon,
+	Book02Icon,
+	BookSearchIcon,
+	Database01Icon,
+	Folder01Icon,
+	PaintBrush01Icon,
+	Share01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
+import Carousel from "../components/Carousel";
 import FAQ from "../components/Faq";
 // Import site constants
 import { SITE_URL, X_URL } from "../lib/site";
@@ -150,6 +161,14 @@ function RouteComponent() {
 					</blockquote>
 				</motion.header>
 
+				{/* Screenshots Carousel */}
+				<motion.section
+					variants={itemVariants}
+					className="py-2 border-t border-border/30"
+				>
+					<Carousel />
+				</motion.section>
+
 				{/* How It Works Section */}
 				<motion.section variants={itemVariants} className="space-y-6">
 					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
@@ -158,8 +177,12 @@ function RouteComponent() {
 					<div className="space-y-8 border-l border-border pl-4 ml-1">
 						<div className="space-y-2 relative">
 							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground">
-								1. Fast, Offline Reading
+							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+								<HugeiconsIcon
+									icon={Book01Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<span>1. Fast, Offline Reading</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
 								His Word stores Bible translations (ASV and WEB) locally on your
@@ -171,8 +194,12 @@ function RouteComponent() {
 
 						<div className="space-y-2 relative">
 							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground">
-								2. Study, Highlight & Journal
+							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+								<HugeiconsIcon
+									icon={Book02Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<span>2. Study, Highlight & Journal</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
 								Long-press verses to highlight using custom theme-adaptive
@@ -183,8 +210,12 @@ function RouteComponent() {
 
 						<div className="space-y-2 relative">
 							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground">
-								3. Asynchronous Deep Search
+							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+								<HugeiconsIcon
+									icon={BookSearchIcon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<span>3. Asynchronous Deep Search</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
 								Search across all 66 books instantly. The search engine uses
@@ -196,8 +227,12 @@ function RouteComponent() {
 
 						<div className="space-y-2 relative">
 							<span className="absolute left-[-21px] top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground">
-								4. Tactile Shake & Share
+							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
+								<HugeiconsIcon
+									icon={Share01Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<span>4. Tactile Shake & Share</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
 								Export your journal entries or highlighted scriptures as
@@ -216,9 +251,15 @@ function RouteComponent() {
 					</h2>
 					<div className="grid gap-4 sm:grid-cols-2">
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<h4 className="text-sm font-medium text-foreground">
-								LRU Database Cache
-							</h4>
+							<div className="flex items-center gap-2">
+								<HugeiconsIcon
+									icon={Database01Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<h4 className="text-sm font-medium text-foreground">
+									LRU Database Cache
+								</h4>
+							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
 								Custom Least Recently Used cache system that keeps memory
 								footprint minimal by loading book modules dynamically and
@@ -226,9 +267,15 @@ function RouteComponent() {
 							</p>
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<h4 className="text-sm font-medium text-foreground">
-								Multi-Theme Engine
-							</h4>
+							<div className="flex items-center gap-2">
+								<HugeiconsIcon
+									icon={PaintBrush01Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<h4 className="text-sm font-medium text-foreground">
+									Multi-Theme Engine
+								</h4>
+							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
 								Built using Uniwind and custom Metro configurations. Instantly
 								switches system accent variables across 4 premium color palettes
@@ -236,9 +283,15 @@ function RouteComponent() {
 							</p>
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<h4 className="text-sm font-medium text-foreground">
-								Local JSON / Storage
-							</h4>
+							<div className="flex items-center gap-2">
+								<HugeiconsIcon
+									icon={Folder01Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<h4 className="text-sm font-medium text-foreground">
+									Local JSON / Storage
+								</h4>
+							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
 								All metrics, reflections, historical reading records, bookmarks,
 								and preferences are saved locally on-device. Zero cloud database
@@ -246,9 +299,15 @@ function RouteComponent() {
 							</p>
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
-							<h4 className="text-sm font-medium text-foreground">
-								Canvas Share Engine
-							</h4>
+							<div className="flex items-center gap-2">
+								<HugeiconsIcon
+									icon={Share01Icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<h4 className="text-sm font-medium text-foreground">
+									Canvas Share Engine
+								</h4>
+							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
 								Uses a localized off-screen WebView to dynamically compose and
 								render typography into a high-res PNG image, which feeds

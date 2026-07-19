@@ -1,4 +1,17 @@
-import { ArrowLeftIcon } from "@hugeicons/core-free-icons";
+import {
+	Agreement01Icon,
+	AlertCircleIcon,
+	ArrowLeftIcon,
+	Book01Icon,
+	ComputerUserIcon,
+	Contact01Icon,
+	CourtLawIcon,
+	InformationCircleIcon,
+	InformationSquareIcon,
+	Share02Icon,
+	Shield02Icon,
+	SystemUpdate01Icon,
+} from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { motion } from "motion/react";
@@ -8,30 +21,35 @@ const TERMS_DATA = [
 	{
 		id: "1",
 		title: "1. Acceptance of Terms",
+		icon: Agreement01Icon,
 		content:
 			"By accessing this website or using the His Word mobile application, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not access the site or use the application.",
 	},
 	{
 		id: "2",
 		title: "2. Description of Service",
+		icon: Book01Icon,
 		content:
 			"His Word is a local, offline-first Bible reading application featuring dual translations, reading logs, custom devotional scheduling, reflection journaling, and visual scripture sharing. The service also includes this informational website. All app features are designed to run locally on your device.",
 	},
 	{
 		id: "3",
 		title: "3. Website Analytics & Caching",
+		icon: InformationCircleIcon,
 		content:
 			"To monitor traffic and improve performance on this informational website, we use anonymous analytics tools (such as Vercel and Google Analytics). The mobile application itself operates entirely offline and does not track your personal activities, search history, or reading metrics.",
 	},
 	{
 		id: "4",
 		title: "4. User Conduct & Local Content",
+		icon: ComputerUserIcon,
 		content:
 			"You are solely responsible for any content you input into the application, such as journaling reflections and highlights. Although these reflections are stored entirely locally on your device, you agree to use the application and its shareable outputs (such as generated scripture images) only for lawful purposes.",
 	},
 	{
 		id: "5",
 		title: "5. Intellectual Property",
+		icon: CourtLawIcon,
 		content: (
 			<>
 				All website designs, copywriting, original graphics, source code, and
@@ -54,24 +72,28 @@ const TERMS_DATA = [
 	{
 		id: "6",
 		title: "6. No Professional or Theological Counsel",
+		icon: AlertCircleIcon,
 		content:
 			"The content provided on this website and within the daily devotionals is for informational and personal study purposes only. Devotional materials represent personal and curated reflections and do not constitute formal theological doctrine, pastoral guidance, or absolute truth.",
 	},
 	{
 		id: "7",
 		title: "7. Third-Party Links & Integrations",
+		icon: Share02Icon,
 		content:
 			"Our website or application may reference external resources or facilitate sharing images to external applications (like native system share sheets). We do not assume responsibility for the content, privacy policies, or terms of use of any third-party websites or services.",
 	},
 	{
 		id: "8",
 		title: "8. Disclaimer of Warranties",
+		icon: InformationSquareIcon,
 		content:
 			"The website and the His Word mobile application are provided 'as is' and 'as available' without warranties of any kind, either express or implied. While we strive to maintain high-quality offline access and seamless caching, we do not warrant that the application will be completely error-free or uninterrupted.",
 	},
 	{
 		id: "9",
 		title: "9. Limitation of Liability",
+		icon: Shield02Icon,
 		content: (
 			<>
 				To the maximum extent permitted by law, developer{" "}
@@ -93,6 +115,7 @@ const TERMS_DATA = [
 	{
 		id: "10",
 		title: "10. Changes to These Terms",
+		icon: SystemUpdate01Icon,
 		content:
 			"These terms may be updated periodically. Your continued use of the website or the mobile application after updates are published constitutes acceptance of the modified Terms of Use.",
 	},
@@ -198,12 +221,18 @@ function RouteComponent() {
 				<motion.div variants={itemVariants} className="space-y-8">
 					{TERMS_DATA.map((item) => (
 						<section key={item.id} className="space-y-2">
-							<h2 className="text-xl font-semibold text-foreground">
-								{item.title}
-							</h2>
-							<p className="text-sm text-muted-foreground leading-relaxed">
+							<div className="flex items-center gap-2">
+								<HugeiconsIcon
+									icon={item.icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<h2 className="text-xl font-semibold text-foreground">
+									{item.title}
+								</h2>
+							</div>
+							<div className="text-sm text-muted-foreground leading-relaxed pl-7">
 								{item.content}
-							</p>
+							</div>
 						</section>
 					))}
 				</motion.div>
@@ -212,23 +241,31 @@ function RouteComponent() {
 					variants={itemVariants}
 					className="space-y-2 pt-4 border-t border-border"
 				>
-					<h2 className="text-xl font-semibold text-foreground">
-						11. Contact & Privacy
-					</h2>
-					<p className="text-sm text-muted-foreground">
-						Questions about these terms can be directed through the contact
-						options listed on the homepage.
-					</p>
-					<p className="text-sm text-muted-foreground">
-						Please also review our{" "}
-						<RouterLink
-							to="/privacy-policy"
-							className="underline underline-offset-4 hover:text-foreground"
-						>
-							Privacy Policy
-						</RouterLink>
-						.
-					</p>
+					<div className="flex items-center gap-2">
+						<HugeiconsIcon
+							icon={Contact01Icon}
+							className="text-primary size-5 shrink-0"
+						/>
+						<h2 className="text-xl font-semibold text-foreground">
+							11. Contact & Privacy
+						</h2>
+					</div>
+					<div className="text-sm text-muted-foreground pl-7 space-y-2">
+						<p>
+							Questions about these terms can be directed through the contact
+							options listed on the homepage.
+						</p>
+						<p>
+							Please also review our{" "}
+							<RouterLink
+								to="/privacy-policy"
+								className="underline underline-offset-4 hover:text-foreground"
+							>
+								Privacy Policy
+							</RouterLink>
+							.
+						</p>
+					</div>
 				</motion.section>
 			</motion.article>
 		</main>

@@ -1,4 +1,15 @@
-import { ArrowLeftIcon } from "@hugeicons/core-free-icons";
+import {
+	AlertCircleIcon,
+	ArrowLeftIcon,
+	ComputerUserIcon,
+	Contact01Icon,
+	Database01Icon,
+	InformationCircleIcon,
+	LegalDocument01Icon,
+	Share01Icon,
+	Shield01Icon,
+	SystemUpdate01Icon,
+} from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { motion } from "motion/react";
@@ -8,48 +19,56 @@ const PRIVACY_DATA = [
 	{
 		id: "1",
 		title: "1. Offline-First & Local Storage",
+		icon: Database01Icon,
 		content:
 			"His Word is designed to be fully functional offline. All user-generated data—including your reflections/journal entries, reading history, verse highlights, custom book bookmarks, and theme configurations—is stored locally on your device via AsyncStorage. This data is never sent to, stored on, or processed by remote servers.",
 	},
 	{
 		id: "2",
 		title: "2. Device Permissions",
+		icon: Shield01Icon,
 		content:
 			"To support its features, the application requests access to specific hardware capabilities on your device: Accelerometer sensors (to detect the shake gesture for screenshot capture), Notifications (to schedule and display your custom daily devotionals), and Haptics (for tactile vibration feedback). No telemetry or sensory data from these permissions is collected or shared.",
 	},
 	{
 		id: "3",
 		title: "3. On-Device Image Sharing",
+		icon: Share01Icon,
 		content:
 			"When using the visual sharing engine to export verses or reflections, the rendering of the final PNG image is performed entirely on your device using a local HTML5 Canvas inside a secure WebView. The resulting image is passed directly to your device's native sharing sheet and is not uploaded to any cloud storage.",
 	},
 	{
 		id: "4",
 		title: "4. No Accounts or Authentication",
+		icon: ComputerUserIcon,
 		content:
 			"You do not need to create an account, register an email, or sign in to use the His Word application. We do not maintain user profile databases, nor do we associate your reading progress or search history with any personal identity.",
 	},
 	{
 		id: "5",
 		title: "5. Website Traffic & Analytics",
+		icon: InformationCircleIcon,
 		content:
 			"If you browse this informational website, basic anonymous metrics (such as page views, browser types, and referral paths) may be collected through Vercel or Google Analytics to help us monitor performance. This is separate from the mobile app, which remains entirely offline and telemetry-free.",
 	},
 	{
 		id: "6",
 		title: "6. Data Control & Deletion",
+		icon: AlertCircleIcon,
 		content:
 			"Since all mobile application data resides on your physical device, you maintain absolute control over it. You can modify or delete your journaling entries and highlights at any time directly in the app. Uninstalling the application will permanently erase all locally stored data from your device.",
 	},
 	{
 		id: "7",
 		title: "7. Changes to this Policy",
+		icon: SystemUpdate01Icon,
 		content:
 			"We may update this privacy standard from time to time to align with new features or underlying OS changes. Continued use of the mobile application or website following updates constitutes your acknowledgement of the revised privacy practices.",
 	},
 	{
 		id: "8",
 		title: "8. Developer & Contact Info",
+		icon: Contact01Icon,
 		content: (
 			<>
 				His Word is developed and maintained by{" "}
@@ -169,12 +188,18 @@ function RouteComponent() {
 				<motion.div variants={itemVariants} className="space-y-8">
 					{PRIVACY_DATA.map((item) => (
 						<section key={item.id} className="space-y-2">
-							<h2 className="text-xl font-semibold text-foreground">
-								{item.title}
-							</h2>
-							<p className="text-sm text-muted-foreground leading-relaxed">
+							<div className="flex items-center gap-2">
+								<HugeiconsIcon
+									icon={item.icon}
+									className="text-primary size-5 shrink-0"
+								/>
+								<h2 className="text-xl font-semibold text-foreground">
+									{item.title}
+								</h2>
+							</div>
+							<div className="text-sm text-muted-foreground leading-relaxed pl-7">
 								{item.content}
-							</p>
+							</div>
 						</section>
 					))}
 				</motion.div>
@@ -183,10 +208,16 @@ function RouteComponent() {
 					variants={itemVariants}
 					className="space-y-2 pt-4 border-t border-border"
 				>
-					<h2 className="text-xl font-semibold text-foreground">
-						9. Related Terms
-					</h2>
-					<p className="text-sm text-muted-foreground">
+					<div className="flex items-center gap-2">
+						<HugeiconsIcon
+							icon={LegalDocument01Icon}
+							className="text-primary size-5 shrink-0"
+						/>
+						<h2 className="text-xl font-semibold text-foreground">
+							9. Related Terms
+						</h2>
+					</div>
+					<div className="text-sm text-muted-foreground pl-7">
 						Please also review our{" "}
 						<RouterLink
 							to="/terms-of-use"
@@ -195,7 +226,7 @@ function RouteComponent() {
 							Terms of Use
 						</RouterLink>
 						.
-					</p>
+					</div>
 				</motion.section>
 			</motion.article>
 		</main>
