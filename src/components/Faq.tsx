@@ -1,4 +1,16 @@
-import { Accordion } from "@heroui/react";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
 import { EMAIL } from "../lib/site";
 
 export default function FAQ() {
@@ -103,7 +115,7 @@ export default function FAQ() {
 				<h2 className="text-lg font-bold tracking-tight text-foreground">
 					Frequently Asked Questions
 				</h2>
-				<p className="max-w-md text-sm font-normal leading-relaxed text-foreground/70">
+				<p className="max-w-md text-sm font-normal leading-relaxed text-muted-foreground">
 					Everything you need to know about the His Word application features,
 					performance, and data policies.
 				</p>
@@ -111,29 +123,33 @@ export default function FAQ() {
 
 			<div className="flex flex-col gap-10">
 				{categories.map((category) => (
-					<div key={category.title} className="space-y-4">
-						<p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary/60">
-							{category.title}
-						</p>
-						<Accordion className="w-full">
-							{category.items.map((item) => (
-								<Accordion.Item
-									key={item.title}
-									className="border-b border-border/50"
-								>
-									<Accordion.Heading>
-										<Accordion.Trigger className="w-full text-foreground font-medium text-left hover:text-primary transition-colors text-sm py-3 flex justify-between items-center">
+					<Card key={category.title} className="w-full">
+						<CardHeader>
+							<CardTitle>{category.title}</CardTitle>
+							<CardDescription>{category.description}</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<Accordion
+								multiple
+								className="w-full border-none shadow-none p-0 rounded-none gap-2 flex flex-col"
+							>
+								{category.items.map((item) => (
+									<AccordionItem
+										key={item.title}
+										value={item.title}
+										className="border-none rounded-lg transition-all"
+									>
+										<AccordionTrigger className="w-full text-foreground font-medium text-left hover:text-primary hover:no-underline transition-colors text-sm py-3 px-4 flex justify-between items-center [&_svg]:size-4">
 											<span>{item.title}</span>
-											<Accordion.Indicator />
-										</Accordion.Trigger>
-									</Accordion.Heading>
-									<Accordion.Panel className="text-foreground/70 leading-relaxed text-sm pb-4">
-										{item.content}
-									</Accordion.Panel>
-								</Accordion.Item>
-							))}
-						</Accordion>
-					</div>
+										</AccordionTrigger>
+										<AccordionContent className="text-muted-foreground leading-relaxed text-sm pb-4 pt-0 px-4">
+											{item.content}
+										</AccordionContent>
+									</AccordionItem>
+								))}
+							</Accordion>
+						</CardContent>
+					</Card>
 				))}
 			</div>
 		</section>

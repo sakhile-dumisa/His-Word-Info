@@ -9,8 +9,8 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { inject } from "@vercel/analytics";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import appCss from "../globals.css?url";
 import { useThemeSync } from "../lib/theme-store";
-import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
 	head: () => ({

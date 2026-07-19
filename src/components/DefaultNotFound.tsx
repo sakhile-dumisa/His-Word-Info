@@ -1,7 +1,7 @@
-import { Button } from "@heroui/react";
 import { ArrowLeft01Icon, Home01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useCanGoBack, useRouter } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 
 export default function DefaultNotFound() {
 	const router = useRouter();
@@ -11,7 +11,7 @@ export default function DefaultNotFound() {
 		<main className="flex flex-col items-center justify-center p-6">
 			<title>404 - Not Found</title>
 			<div className="flex max-w-sm flex-col items-center text-center gap-5">
-				<span className="rounded-full bg-tertiary px-3 py-1 text-xs font-medium text-foreground">
+				<span className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
 					404 Error
 				</span>
 

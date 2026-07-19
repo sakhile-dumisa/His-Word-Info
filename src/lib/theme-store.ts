@@ -1,3 +1,4 @@
+import { useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -41,13 +42,11 @@ export function useTheme() {
 	};
 }
 
-/**
- * A hook that syncs the theme state with the html element's class list
- * and listens to changes in the OS system dark preference.
- */
 export function useThemeSync() {
 	const store = useThemeStore();
+	const location = useLocation();
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: trigger theme color sync on navigation
 	useEffect(() => {
 		const root = window.document.documentElement;
 
@@ -83,5 +82,5 @@ export function useThemeSync() {
 				mediaQuery.removeEventListener("change", listener);
 			};
 		}
-	}, [store.theme]);
+	}, [store.theme, location.pathname]);
 }

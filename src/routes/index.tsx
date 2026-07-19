@@ -48,7 +48,6 @@ export const Route = createFileRoute("/")({
 				{ name: "twitter:description", content: description },
 				{ name: "twitter:image", content: socialImage },
 				{ name: "twitter:url", content: url },
-				{ name: "theme-color", content: "#000000" },
 			],
 			scripts: [
 				{
@@ -130,12 +129,12 @@ function RouteComponent() {
 						/>
 						<span>His Word</span>
 					</h1>
-					<p className="text-lg text-muted-foreground leading-relaxed text-balance">
+					<p className="text-lg text-foreground leading-relaxed text-balance">
 						A modern, high-performance Bible reading and study companion.
 						Designed for absolute focus, running entirely offline, and
 						engineered with deep respect for your privacy.
 					</p>
-					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground/80 mt-2 space-y-2">
+					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground mt-2 space-y-2">
 						<p>
 							"In the beginning was the Word, and the Word was with God, and the
 							Word was God." — John 1:1. The name <strong>His Word</strong> is

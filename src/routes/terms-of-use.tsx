@@ -1,12 +1,6 @@
-import { Button } from "@heroui/react";
 import { ArrowLeftIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import {
-	createFileRoute,
-	Link as RouterLink,
-	useCanGoBack,
-	useRouter,
-} from "@tanstack/react-router";
+import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { SITE_TITLE, SITE_URL } from "../lib/site";
 
@@ -160,8 +154,6 @@ const itemVariants = {
 
 function RouteComponent() {
 	const effectiveDate = "July 18, 2026";
-	const router = useRouter();
-	const canGoBack = useCanGoBack();
 
 	return (
 		<main className="min-h-screen bg-background px-4 py-10 sm:px-6 lg:px-8">
@@ -172,20 +164,13 @@ function RouteComponent() {
 				className="mx-auto w-full max-w-3xl space-y-8"
 			>
 				<motion.div variants={itemVariants}>
-					<Button
-						variant="ghost"
-						onClick={() => {
-							if (canGoBack) {
-								router.history.back();
-								return;
-							}
-							router.navigate({ to: "/" });
-						}}
-						className="pl-0 text-muted-foreground hover:text-foreground"
+					<RouterLink
+						to="/"
+						className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
 					>
 						<HugeiconsIcon icon={ArrowLeftIcon} size={16} className="mr-2" />
 						Back
-					</Button>
+					</RouterLink>
 				</motion.div>
 
 				<motion.header variants={itemVariants} className="space-y-3">
