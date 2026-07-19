@@ -13,6 +13,7 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
+import { useIntlayer } from "react-intlayer";
 import Carousel from "../components/Carousel";
 import FAQ from "../components/Faq";
 // Import site constants
@@ -125,6 +126,32 @@ const itemVariants = {
 };
 
 function RouteComponent() {
+	const {
+		heroTitle,
+		heroDescription,
+		quoteText1,
+		quoteText2Part1,
+		quoteText2Part2,
+		howItWorksTitle,
+		step1Title,
+		step1Desc,
+		step2Title,
+		step2Desc,
+		step3Title,
+		step3Desc,
+		step4Title,
+		step4Desc,
+		underTheHoodTitle,
+		hoodCard1Title,
+		hoodCard1Desc,
+		hoodCard2Title,
+		hoodCard2Desc,
+		hoodCard3Title,
+		hoodCard3Desc,
+		hoodCard4Title,
+		hoodCard4Desc,
+	} = useIntlayer("index");
+
 	return (
 		<motion.main
 			variants={containerVariants}
@@ -141,12 +168,10 @@ function RouteComponent() {
 							alt="His Word App Logo"
 							className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl"
 						/>
-						<span>His Word</span>
+						<span>{heroTitle}</span>
 					</h1>
 					<p className="text-lg text-foreground leading-relaxed text-balance">
-						A modern, high-performance Bible reading and study companion.
-						Designed for absolute focus, running entirely offline, and
-						engineered with deep respect for your privacy.
+						{heroDescription}
 					</p>
 
 					<div className="flex flex-wrap gap-4 pt-2 pb-4">
@@ -230,17 +255,11 @@ function RouteComponent() {
 					</div>
 
 					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground mt-2 space-y-2">
+						<p>{quoteText1}</p>
 						<p>
-							"In the beginning was the Word, and the Word was with God, and the
-							Word was God." — John 1:1. The name <strong>His Word</strong> is
-							inspired by this prologue, celebrating scripture as the living
-							Word of God.
-						</p>
-						<p>
-							In isiZulu, "His Word" translates to <strong>Izwi Lakhe</strong>,
-							which was the original concept and name for the application.
-							However, due to copyright restrictions regarding Zulu Bible
-							translations, the app is currently available in English only.
+							{quoteText2Part1}
+							<strong>Izwi Lakhe</strong>
+							{quoteText2Part2}
 						</p>
 					</blockquote>
 				</motion.header>
@@ -256,7 +275,7 @@ function RouteComponent() {
 				{/* How It Works Section */}
 				<motion.section variants={itemVariants} className="space-y-6">
 					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
-						How It Works
+						{howItWorksTitle}
 					</h2>
 					<div className="space-y-8 border-l border-border pl-4 ml-1">
 						<div className="space-y-2 relative">
@@ -266,13 +285,10 @@ function RouteComponent() {
 									icon={Book01Icon}
 									className="text-primary size-5 shrink-0"
 								/>
-								<span>1. Fast, Offline Reading</span>
+								<span>{step1Title}</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
-								His Word stores Bible translations (ASV and WEB) locally on your
-								device. Toggle between translations instantly, check your
-								reading history, and resume exactly where you left off with
-								spring-animated controls.
+								{step1Desc}
 							</p>
 						</div>
 
@@ -283,12 +299,10 @@ function RouteComponent() {
 									icon={Book02Icon}
 									className="text-primary size-5 shrink-0"
 								/>
-								<span>2. Study, Highlight & Journal</span>
+								<span>{step2Title}</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
-								Long-press verses to highlight using custom theme-adaptive
-								palettes. Author rich-text reflection entries directly inside
-								the chapter reader to record your study notes.
+								{step2Desc}
 							</p>
 						</div>
 
@@ -299,13 +313,10 @@ function RouteComponent() {
 									icon={BookSearchIcon}
 									className="text-primary size-5 shrink-0"
 								/>
-								<span>3. Asynchronous Deep Search</span>
+								<span>{step3Title}</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
-								Search across all 66 books instantly. The search engine uses
-								smart micro-task chunking to parse keywords over thousands of
-								verses without blocking the UI thread, highlighting search
-								keywords dynamically.
+								{step3Desc}
 							</p>
 						</div>
 
@@ -316,13 +327,10 @@ function RouteComponent() {
 									icon={Share01Icon}
 									className="text-primary size-5 shrink-0"
 								/>
-								<span>4. Tactile Shake & Share</span>
+								<span>{step4Title}</span>
 							</h3>
 							<p className="text-sm text-muted-foreground leading-relaxed">
-								Export your journal entries or highlighted scriptures as
-								beautiful high-res cards rendered on-device using a local
-								canvas. Simply shake your device to capture and share content
-								with haptic vibration confirmation.
+								{step4Desc}
 							</p>
 						</div>
 					</div>
@@ -331,7 +339,7 @@ function RouteComponent() {
 				{/* Technical Architecture & Specs */}
 				<motion.section variants={itemVariants} className="space-y-6">
 					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
-						Under the Hood
+						{underTheHoodTitle}
 					</h2>
 					<div className="grid gap-4 sm:grid-cols-2">
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
@@ -341,13 +349,11 @@ function RouteComponent() {
 									className="text-primary size-5 shrink-0"
 								/>
 								<h4 className="text-sm font-medium text-foreground">
-									LRU Database Cache
+									{hoodCard1Title}
 								</h4>
 							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
-								Custom Least Recently Used cache system that keeps memory
-								footprint minimal by loading book modules dynamically and
-								caching only active books.
+								{hoodCard1Desc}
 							</p>
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
@@ -357,13 +363,11 @@ function RouteComponent() {
 									className="text-primary size-5 shrink-0"
 								/>
 								<h4 className="text-sm font-medium text-foreground">
-									Multi-Theme Engine
+									{hoodCard2Title}
 								</h4>
 							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
-								Built using Uniwind and custom Metro configurations. Instantly
-								switches system accent variables across 4 premium color palettes
-								(Green, Pink, Blue, Charcoal).
+								{hoodCard2Desc}
 							</p>
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
@@ -373,13 +377,11 @@ function RouteComponent() {
 									className="text-primary size-5 shrink-0"
 								/>
 								<h4 className="text-sm font-medium text-foreground">
-									Local JSON / Storage
+									{hoodCard3Title}
 								</h4>
 							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
-								All metrics, reflections, historical reading records, bookmarks,
-								and preferences are saved locally on-device. Zero cloud database
-								latency or tracking.
+								{hoodCard3Desc}
 							</p>
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
@@ -389,13 +391,11 @@ function RouteComponent() {
 									className="text-primary size-5 shrink-0"
 								/>
 								<h4 className="text-sm font-medium text-foreground">
-									Canvas Share Engine
+									{hoodCard4Title}
 								</h4>
 							</div>
 							<p className="text-xs text-muted-foreground leading-relaxed">
-								Uses a localized off-screen WebView to dynamically compose and
-								render typography into a high-res PNG image, which feeds
-								directly into native sharing hooks.
+								{hoodCard4Desc}
 							</p>
 						</div>
 					</div>

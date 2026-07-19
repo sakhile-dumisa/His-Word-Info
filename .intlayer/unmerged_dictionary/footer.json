@@ -1,0 +1,38 @@
+[
+  {
+    "key": "footer",
+    "content": {
+      "termsOfService": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "Terms of Service",
+          "zu": "Imigomo Yokusetshenziswa"
+        }
+      },
+      "privacyPolicy": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "Privacy Policy",
+          "zu": "Inqubomgomo Yobumfihlo"
+        }
+      },
+      "allRightsReserved": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "All rights reserved.",
+          "zu": "Wonke amalungelo agodliwe."
+        }
+      },
+      "seeSitemap": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "See Sitemap",
+          "zu": "Bona i-Sitemap"
+        }
+      }
+    },
+    "location": "local",
+    "localId": "footer::local::src\\components\\Footer.content.ts",
+    "filePath": "src\\components\\Footer.content.ts"
+  }
+]

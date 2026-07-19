@@ -13,87 +13,8 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { motion } from "motion/react";
+import { useIntlayer } from "react-intlayer";
 import { EMAIL, SITE_TITLE, SITE_URL } from "../lib/site";
-
-const PRIVACY_DATA = [
-	{
-		id: "1",
-		title: "1. Offline-First & Local Storage",
-		icon: Database01Icon,
-		content:
-			"His Word is designed to be fully functional offline. All user-generated data—including your reflections/journal entries, reading history, verse highlights, custom book bookmarks, and theme configurations—is stored locally on your device via AsyncStorage. This data is never sent to, stored on, or processed by remote servers.",
-	},
-	{
-		id: "2",
-		title: "2. Device Permissions",
-		icon: Shield01Icon,
-		content:
-			"To support its features, the application requests access to specific hardware capabilities on your device: Accelerometer sensors (to detect the shake gesture for screenshot capture), Notifications (to schedule and display your custom daily devotionals), and Haptics (for tactile vibration feedback). No telemetry or sensory data from these permissions is collected or shared.",
-	},
-	{
-		id: "3",
-		title: "3. On-Device Image Sharing",
-		icon: Share01Icon,
-		content:
-			"When using the visual sharing engine to export verses or reflections, the rendering of the final PNG image is performed entirely on your device using a local HTML5 Canvas inside a secure WebView. The resulting image is passed directly to your device's native sharing sheet and is not uploaded to any cloud storage.",
-	},
-	{
-		id: "4",
-		title: "4. No Accounts or Authentication",
-		icon: ComputerUserIcon,
-		content:
-			"You do not need to create an account, register an email, or sign in to use the His Word application. We do not maintain user profile databases, nor do we associate your reading progress or search history with any personal identity.",
-	},
-	{
-		id: "5",
-		title: "5. Website Traffic & Analytics",
-		icon: InformationCircleIcon,
-		content:
-			"If you browse this informational website, basic anonymous metrics (such as page views, browser types, and referral paths) may be collected through Vercel or Google Analytics to help us monitor performance. This is separate from the mobile app, which remains entirely offline and telemetry-free.",
-	},
-	{
-		id: "6",
-		title: "6. Data Control & Deletion",
-		icon: AlertCircleIcon,
-		content:
-			"Since all mobile application data resides on your physical device, you maintain absolute control over it. You can modify or delete your journaling entries and highlights at any time directly in the app. Uninstalling the application will permanently erase all locally stored data from your device.",
-	},
-	{
-		id: "7",
-		title: "7. Changes to this Policy",
-		icon: SystemUpdate01Icon,
-		content:
-			"We may update this privacy standard from time to time to align with new features or underlying OS changes. Continued use of the mobile application or website following updates constitutes your acknowledgement of the revised privacy practices.",
-	},
-	{
-		id: "8",
-		title: "8. Developer & Contact Info",
-		icon: Contact01Icon,
-		content: (
-			<>
-				His Word is developed and maintained by{" "}
-				<a
-					href="https://sakhiledumisa.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="underline underline-offset-4 hover:text-foreground"
-				>
-					Sakhile Dumisa
-				</a>
-				. If you have any inquiries, feedback, or concerns regarding your
-				privacy or the application's functionality, please reach out via email
-				at{" "}
-				<a
-					href={`mailto:${EMAIL}`}
-					className="underline underline-offset-4 hover:text-foreground"
-				>
-					{EMAIL}
-				</a>
-				.
-			</>
-		),
-	},
-];
 
 export const Route = createFileRoute("/privacy-policy")({
 	head: () => {
@@ -150,7 +71,104 @@ const itemVariants = {
 };
 
 function RouteComponent() {
+	const {
+		pageTitle,
+		pageSubtitle,
+		backLink,
+		item1Title,
+		item1Content,
+		item2Title,
+		item2Content,
+		item3Title,
+		item3Content,
+		item4Title,
+		item4Content,
+		item5Title,
+		item5Content,
+		item6Title,
+		item6Content,
+		item7Title,
+		item7Content,
+		item8Title,
+		item8Content1,
+		item8Content2,
+		relatedTermsTitle,
+		relatedTermsText,
+		relatedTermsLink,
+	} = useIntlayer("privacy-policy");
+
 	const effectiveDate = "July 18, 2026";
+
+	const privacyItems = [
+		{
+			id: "1",
+			title: item1Title,
+			icon: Database01Icon,
+			content: item1Content,
+		},
+		{
+			id: "2",
+			title: item2Title,
+			icon: Shield01Icon,
+			content: item2Content,
+		},
+		{
+			id: "3",
+			title: item3Title,
+			icon: Share01Icon,
+			content: item3Content,
+		},
+		{
+			id: "4",
+			title: item4Title,
+			icon: ComputerUserIcon,
+			content: item4Content,
+		},
+		{
+			id: "5",
+			title: item5Title,
+			icon: InformationCircleIcon,
+			content: item5Content,
+		},
+		{
+			id: "6",
+			title: item6Title,
+			icon: AlertCircleIcon,
+			content: item6Content,
+		},
+		{
+			id: "7",
+			title: item7Title,
+			icon: SystemUpdate01Icon,
+			content: item7Content,
+		},
+		{
+			id: "8",
+			title: item8Title,
+			icon: Contact01Icon,
+			content: (
+				<>
+					{item8Content1}
+					<a
+						href="https://sakhiledumisa.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="underline underline-offset-4 hover:text-foreground"
+					>
+						Sakhile Dumisa
+					</a>
+					{item8Content2}
+					<a
+						href={`mailto:${EMAIL}`}
+						className="underline underline-offset-4 hover:text-foreground"
+					>
+						{EMAIL}
+					</a>
+					.
+				</>
+			),
+		},
+	];
 
 	return (
 		<main className="min-h-screen bg-background px-4 py-10 sm:px-6 lg:px-8">
@@ -166,34 +184,24 @@ function RouteComponent() {
 						className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
 					>
 						<HugeiconsIcon icon={ArrowLeftIcon} size={16} className="mr-2" />
-						Back
+						{backLink}
 					</RouterLink>
 				</motion.div>
 
 				<motion.header variants={itemVariants} className="space-y-3">
 					<h1 className="text-3xl font-semibold tracking-tight text-foreground">
-						Privacy Policy
+						{pageTitle}
 					</h1>
 					<p className="text-sm text-muted-foreground">
 						Effective date: {effectiveDate}
 					</p>
 					<p className="text-sm text-muted-foreground text-balance">
-						This policy outlines how the His Word application, developed by{" "}
-						<a
-							href="https://sakhiledumisa.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="underline underline-offset-4 hover:text-foreground"
-						>
-							Sakhile Dumisa
-						</a>
-						, operates as a local, offline-first platform, and details how
-						device permissions, local storage, and website metrics are managed.
+						{pageSubtitle}
 					</p>
 				</motion.header>
 
 				<motion.div variants={itemVariants} className="space-y-8">
-					{PRIVACY_DATA.map((item) => (
+					{privacyItems.map((item) => (
 						<section key={item.id} className="space-y-2">
 							<div className="flex items-center gap-2">
 								<HugeiconsIcon
@@ -221,16 +229,16 @@ function RouteComponent() {
 							className="text-primary size-5 shrink-0"
 						/>
 						<h2 className="text-xl font-semibold text-foreground">
-							9. Related Terms
+							{relatedTermsTitle}
 						</h2>
 					</div>
 					<div className="text-sm text-muted-foreground pl-7">
-						Please also review our{" "}
+						{relatedTermsText}
 						<RouterLink
 							to="/terms-of-use"
 							className="underline underline-offset-4 hover:text-foreground"
 						>
-							Terms of Use
+							{relatedTermsLink}
 						</RouterLink>
 						.
 					</div>

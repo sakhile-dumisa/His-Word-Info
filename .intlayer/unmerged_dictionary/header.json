@@ -1,0 +1,31 @@
+[
+  {
+    "key": "header",
+    "content": {
+      "languageLabel": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "Language",
+          "zu": "Ulimi"
+        }
+      },
+      "englishOption": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "English",
+          "zu": "IsiNgisi"
+        }
+      },
+      "zuluOption": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "isiZulu",
+          "zu": "isiZulu"
+        }
+      }
+    },
+    "location": "local",
+    "localId": "header::local::src\\components\\Header.content.ts",
+    "filePath": "src\\components\\Header.content.ts"
+  }
+]

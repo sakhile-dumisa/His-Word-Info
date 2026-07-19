@@ -1,0 +1,27 @@
+{
+  "key": "carousel",
+  "content": {
+    "nodeType": "translation",
+    "translation": {
+      "en": {
+        "sectionTitle": "Interface & Design",
+        "sectionSubtitle": "Explore the clean, distraction-free interface of His Word, built with system accent support and typography designed for focus.",
+        "tabScreenshots": "Screenshots",
+        "tabCollage": "All-in-One Collage",
+        "clickToExpand": "Click to Expand",
+        "clickToZoom": "Click to Zoom Collage"
+      },
+      "zu": {
+        "sectionTitle": "Isixhumi Se-interface & Idizayini",
+        "sectionSubtitle": "Hlola isixhumi esihlanzekile, esingenaziphazamiso se-His Word, esakhiwe ngokusekelwa kwe-system accent ne-typography eyenzelwe ukugxila.",
+        "tabScreenshots": "Izithombe Zesikrini",
+        "tabCollage": "I-Collage Yonke-Ku-One",
+        "clickToExpand": "Chofoza ukuze Ukhulise",
+        "clickToZoom": "Chofoza ukuze Usondeze I-Collage"
+      }
+    }
+  },
+  "localIds": [
+    "carousel::local::src\\components\\Carousel.content.ts"
+  ]
+}

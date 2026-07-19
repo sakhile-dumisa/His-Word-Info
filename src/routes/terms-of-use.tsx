@@ -15,111 +15,8 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute, Link as RouterLink } from "@tanstack/react-router";
 import { motion } from "motion/react";
+import { useIntlayer } from "react-intlayer";
 import { SITE_TITLE, SITE_URL } from "../lib/site";
-
-const TERMS_DATA = [
-	{
-		id: "1",
-		title: "1. Acceptance of Terms",
-		icon: Agreement01Icon,
-		content:
-			"By accessing this website or using the His Word mobile application, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not access the site or use the application.",
-	},
-	{
-		id: "2",
-		title: "2. Description of Service",
-		icon: Book01Icon,
-		content:
-			"His Word is a local, offline-first Bible reading application featuring dual translations, reading logs, custom devotional scheduling, reflection journaling, and visual scripture sharing. The service also includes this informational website. All app features are designed to run locally on your device.",
-	},
-	{
-		id: "3",
-		title: "3. Website Analytics & Caching",
-		icon: InformationCircleIcon,
-		content:
-			"To monitor traffic and improve performance on this informational website, we use anonymous analytics tools (such as Vercel and Google Analytics). The mobile application itself operates entirely offline and does not track your personal activities, search history, or reading metrics.",
-	},
-	{
-		id: "4",
-		title: "4. User Conduct & Local Content",
-		icon: ComputerUserIcon,
-		content:
-			"You are solely responsible for any content you input into the application, such as journaling reflections and highlights. Although these reflections are stored entirely locally on your device, you agree to use the application and its shareable outputs (such as generated scripture images) only for lawful purposes.",
-	},
-	{
-		id: "5",
-		title: "5. Intellectual Property",
-		icon: CourtLawIcon,
-		content: (
-			<>
-				All website designs, copywriting, original graphics, source code, and
-				application assets are the exclusive intellectual property of the
-				developer,{" "}
-				<a
-					href="https://sakhiledumisa.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="underline underline-offset-4 hover:text-foreground"
-				>
-					Sakhile Dumisa
-				</a>
-				. The Bible translations (ASV & WEB) are in the public domain. You may
-				freely capture screenshots, share reflections, and generate sharing
-				images for personal, educational, or non-commercial devotional use.
-			</>
-		),
-	},
-	{
-		id: "6",
-		title: "6. No Professional or Theological Counsel",
-		icon: AlertCircleIcon,
-		content:
-			"The content provided on this website and within the daily devotionals is for informational and personal study purposes only. Devotional materials represent personal and curated reflections and do not constitute formal theological doctrine, pastoral guidance, or absolute truth.",
-	},
-	{
-		id: "7",
-		title: "7. Third-Party Links & Integrations",
-		icon: Share02Icon,
-		content:
-			"Our website or application may reference external resources or facilitate sharing images to external applications (like native system share sheets). We do not assume responsibility for the content, privacy policies, or terms of use of any third-party websites or services.",
-	},
-	{
-		id: "8",
-		title: "8. Disclaimer of Warranties",
-		icon: InformationSquareIcon,
-		content:
-			"The website and the His Word mobile application are provided 'as is' and 'as available' without warranties of any kind, either express or implied. While we strive to maintain high-quality offline access and seamless caching, we do not warrant that the application will be completely error-free or uninterrupted.",
-	},
-	{
-		id: "9",
-		title: "9. Limitation of Liability",
-		icon: Shield02Icon,
-		content: (
-			<>
-				To the maximum extent permitted by law, developer{" "}
-				<a
-					href="https://sakhiledumisa.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="underline underline-offset-4 hover:text-foreground"
-				>
-					Sakhile Dumisa
-				</a>{" "}
-				shall not be liable for any indirect, incidental, special,
-				consequential, or punitive damages, or any loss of data (including local
-				reflections, bookmarks, or highlights) arising out of your use or
-				inability to use the application.
-			</>
-		),
-	},
-	{
-		id: "10",
-		title: "10. Changes to These Terms",
-		icon: SystemUpdate01Icon,
-		content:
-			"These terms may be updated periodically. Your continued use of the website or the mobile application after updates are published constitutes acceptance of the modified Terms of Use.",
-	},
-];
 
 export const Route = createFileRoute("/terms-of-use")({
 	head: () => {
@@ -176,7 +73,128 @@ const itemVariants = {
 };
 
 function RouteComponent() {
+	const {
+		pageTitle,
+		pageSubtitle,
+		backLink,
+		item1Title,
+		item1Content,
+		item2Title,
+		item2Content,
+		item3Title,
+		item3Content,
+		item4Title,
+		item4Content,
+		item5Title,
+		item5Content1,
+		item5Content2,
+		item6Title,
+		item6Content,
+		item7Title,
+		item7Content,
+		item8Title,
+		item8Content,
+		item9Title,
+		item9Content1,
+		item9Content2,
+		item10Title,
+		item10Content,
+		item11Title,
+		item11ContentText,
+		item11PrivacyText,
+		item11PrivacyLink,
+	} = useIntlayer("terms-of-use");
+
 	const effectiveDate = "July 18, 2026";
+
+	const termsItems = [
+		{
+			id: "1",
+			title: item1Title,
+			icon: Agreement01Icon,
+			content: item1Content,
+		},
+		{
+			id: "2",
+			title: item2Title,
+			icon: Book01Icon,
+			content: item2Content,
+		},
+		{
+			id: "3",
+			title: item3Title,
+			icon: InformationCircleIcon,
+			content: item3Content,
+		},
+		{
+			id: "4",
+			title: item4Title,
+			icon: ComputerUserIcon,
+			content: item4Content,
+		},
+		{
+			id: "5",
+			title: item5Title,
+			icon: CourtLawIcon,
+			content: (
+				<>
+					{item5Content1}
+					<a
+						href="https://sakhiledumisa.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="underline underline-offset-4 hover:text-foreground"
+					>
+						Sakhile Dumisa
+					</a>
+					{item5Content2}
+				</>
+			),
+		},
+		{
+			id: "6",
+			title: item6Title,
+			icon: AlertCircleIcon,
+			content: item6Content,
+		},
+		{
+			id: "7",
+			title: item7Title,
+			icon: Share02Icon,
+			content: item7Content,
+		},
+		{
+			id: "8",
+			title: item8Title,
+			icon: InformationSquareIcon,
+			content: item8Content,
+		},
+		{
+			id: "9",
+			title: item9Title,
+			icon: Shield02Icon,
+			content: (
+				<>
+					{item9Content1}
+					<a
+						href="https://sakhiledumisa.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="underline underline-offset-4 hover:text-foreground"
+					>
+						Sakhile Dumisa
+					</a>{" "}
+					{item9Content2}
+				</>
+			),
+		},
+		{
+			id: "10",
+			title: item10Title,
+			icon: SystemUpdate01Icon,
+			content: item10Content,
+		},
+	];
 
 	return (
 		<main className="min-h-screen bg-background px-4 py-10 sm:px-6 lg:px-8">
@@ -192,34 +210,24 @@ function RouteComponent() {
 						className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
 					>
 						<HugeiconsIcon icon={ArrowLeftIcon} size={16} className="mr-2" />
-						Back
+						{backLink}
 					</RouterLink>
 				</motion.div>
 
 				<motion.header variants={itemVariants} className="space-y-3">
 					<h1 className="text-3xl font-semibold tracking-tight text-foreground">
-						Terms of Use
+						{pageTitle}
 					</h1>
 					<p className="text-sm text-muted-foreground">
 						Effective date: {effectiveDate}
 					</p>
 					<p className="text-sm text-muted-foreground text-balance">
-						These terms of use govern your access to and use of the His Word
-						application and related features on this website, developed by{" "}
-						<a
-							href="https://sakhiledumisa.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="underline underline-offset-4 hover:text-foreground"
-						>
-							Sakhile Dumisa
-						</a>
-						.
+						{pageSubtitle}
 					</p>
 				</motion.header>
 
 				<motion.div variants={itemVariants} className="space-y-8">
-					{TERMS_DATA.map((item) => (
+					{termsItems.map((item) => (
 						<section key={item.id} className="space-y-2">
 							<div className="flex items-center gap-2">
 								<HugeiconsIcon
@@ -247,21 +255,18 @@ function RouteComponent() {
 							className="text-primary size-5 shrink-0"
 						/>
 						<h2 className="text-xl font-semibold text-foreground">
-							11. Contact & Privacy
+							{item11Title}
 						</h2>
 					</div>
 					<div className="text-sm text-muted-foreground pl-7 space-y-2">
+						<p>{item11ContentText}</p>
 						<p>
-							Questions about these terms can be directed through the contact
-							options listed on the homepage.
-						</p>
-						<p>
-							Please also review our{" "}
+							{item11PrivacyText}
 							<RouterLink
 								to="/privacy-policy"
 								className="underline underline-offset-4 hover:text-foreground"
 							>
-								Privacy Policy
+								{item11PrivacyLink}
 							</RouterLink>
 							.
 						</p>

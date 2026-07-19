@@ -1,3 +1,4 @@
+import { useIntlayer } from "react-intlayer";
 import {
 	Accordion,
 	AccordionContent,
@@ -14,93 +15,128 @@ import {
 import { EMAIL } from "../lib/site";
 
 export default function FAQ() {
+	const {
+		sectionTitle,
+		sectionSubtitle,
+		catAppTitle,
+		catAppDesc,
+		q1Title,
+		q1Content,
+		q2Title,
+		q2Content,
+		q3Title,
+		q3Content,
+		q4Title,
+		q4Content,
+		q5Title,
+		q5Content,
+		catPrivacyTitle,
+		catPrivacyDesc,
+		q6Title,
+		q6Content,
+		q7Title,
+		q7Content,
+		q8Title,
+		q8Content,
+		catPerfTitle,
+		catPerfDesc,
+		q9Title,
+		q9Content,
+		q10Title,
+		q10Content,
+		q11Title,
+		q11Content,
+		q12Title,
+		q12Content,
+		q13Title,
+		q13Content,
+		q14Title,
+		q14Content,
+	} = useIntlayer("faq");
+
 	const categories = [
 		{
-			title: "App & Features",
-			description:
-				"General questions about features, translations, and reading tools.",
+			title: catAppTitle,
+			description: catAppDesc,
 			items: [
 				{
-					title: "What translations are supported in His Word?",
-					content:
-						"His Word includes the American Standard Version (ASV) and the World English Bible (WEB). Both translations are stored fully offline on your device, allowing you to switch between them instantly with zero network delay.",
+					title: q1Title,
+					content: q1Content,
 				},
 				{
-					title: "Is His Word free to use, and are there ads?",
-					content:
-						"Yes, His Word is 100% free, open-source, and does not contain any advertisements, subscription models, or hidden in-app purchases.",
+					title: q2Title,
+					content: q2Content,
 				},
 				{
-					title: "How do the daily devotionals and notifications work?",
-					content:
-						"The app features a custom notification queue that schedules devotionals locally on your device. It includes holiday-specific reminders (such as Christmas, Easter, and Good Friday) and automatically refreshes its internal queue to make sure you never miss a Verse of the Day.",
+					title: q3Title,
+					content: q3Content,
 				},
 				{
-					title: "Does the app track what I read?",
-					content:
-						"No. His Word features a local Reading History tracker that logs your last 10 reading sessions with deduplication and relative timestamps, but this log remains strictly on your device and is not shared with any analytics services.",
+					title: q4Title,
+					content: q4Content,
 				},
 				{
-					title: "Can I filter scriptures by testament or category?",
-					content:
-						"Yes. The search and navigation views include dynamic category tags (such as Law, History, Poetry, Gospels, or Epistles), allowing you to quickly filter search results and navigate to specific genres of biblical literature.",
+					title: q5Title,
+					content: q5Content,
 				},
 			],
 		},
 		{
-			title: "Privacy & Offline Access",
-			description: "How your data and connection status are managed.",
+			title: catPrivacyTitle,
+			description: catPrivacyDesc,
 			items: [
 				{
-					title: "Where is my journaling and reading data stored?",
-					content:
-						"All data—including your reflections, book bookmarks, reading logs, and color-coded verse highlights—is stored locally on your device using AsyncStorage. None of your data is ever uploaded to external databases or cloud servers.",
+					title: q6Title,
+					content: q6Content,
 				},
 				{
-					title: "Do I need an active internet connection to read?",
-					content:
-						"No. His Word is designed as an offline-first application. Once installed, all Bible scriptures, search tools, and devotionals are accessible without internet, cellular data, or server connectivity.",
+					title: q7Title,
+					content: q7Content,
 				},
 				{
-					title: "What personal details are required to use the app?",
-					content:
-						"None. There are no sign-up forms, email verifications, profile creations, or social sign-ins. Your identity remains completely anonymous.",
+					title: q8Title,
+					content: q8Content,
 				},
 			],
 		},
 		{
-			title: "Performance & Hardware Sensors",
-			description:
-				"Details on advanced mobile capabilities, caching, and background threads.",
+			title: catPerfTitle,
+			description: catPerfDesc,
 			items: [
 				{
-					title: "How does the 'Shake-to-Capture' sharing feature work?",
-					content:
-						"When you shake your device, the app's accelerometer triggers a screenshot capture of your current reader layout. It uses native haptics to give you tactile feedback, then opens your system's share sheet to let you send or save the image.",
+					title: q9Title,
+					content: q9Content,
 				},
 				{
-					title: "Why does the app request notification and sensor access?",
-					content:
-						"Notifications are requested to deliver your scheduled daily devotionals. Sensor (accelerometer) permissions are requested solely to detect the shake gesture for screen capturing. None of this data is collected or transmitted off your device.",
+					title: q10Title,
+					content: q10Content,
 				},
 				{
-					title: "What is the LRU Bible module cache?",
-					content:
-						"To keep the memory footprint minimal on older devices, the app utilizes a custom Least Recently Used (LRU) cache. It dynamically loads book translations when needed and limits active Bible files in memory to a maximum of 5, preventing memory bloat and app crashes.",
+					title: q11Title,
+					content: q11Content,
 				},
 				{
-					title: "How does the non-blocking search work?",
-					content:
-						"Searching a massive text database on mobile can cause lag. His Word splits search queries into asynchronous batches (using timer chunk macros) to run on separate execution cycles. This allows the search bar to stay 100% responsive and lag-free while parsing the entire scripture.",
+					title: q12Title,
+					content: q12Content,
 				},
 				{
-					title: "How does the high-fidelity image exporter work?",
-					content:
-						"When you click share, the app uses a hidden WebView to render the scripture, your highlight colors, or reflection text onto a virtual HTML5 Canvas using premium typography. The canvas compiles this into a high-resolution PNG locally for sharing.",
+					title: q13Title,
+					content: q13Content,
 				},
 				{
-					title: "How can I submit bugs or request features?",
-					content: `For support, bug submissions, or feature requests, you can email the developer directly at ${EMAIL}.`,
+					title: q14Title,
+					content: (
+						<>
+							{q14Content}
+							<a
+								href={`mailto:${EMAIL}`}
+								className="underline hover:text-primary transition-colors"
+							>
+								{EMAIL}
+							</a>
+							.
+						</>
+					),
 				},
 			],
 		},
@@ -113,11 +149,10 @@ export default function FAQ() {
 		>
 			<header className="space-y-4">
 				<h2 className="text-lg font-bold tracking-tight text-foreground">
-					Frequently Asked Questions
+					{sectionTitle}
 				</h2>
 				<p className="max-w-md text-sm font-normal leading-relaxed text-muted-foreground">
-					Everything you need to know about the His Word application features,
-					performance, and data policies.
+					{sectionSubtitle}
 				</p>
 			</header>
 

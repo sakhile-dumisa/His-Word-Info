@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { inject } from "@vercel/analytics";
+import { IntlayerProvider } from "react-intlayer";
 import BackToTop from "../components/BackToTop";
 import CustomCursor from "../components/CustomCursor";
 import Footer from "../components/Footer";
@@ -63,15 +64,17 @@ function RootLayout() {
 	useThemeSync();
 
 	return (
-		<div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
-			<CustomCursor />
-			<Header />
-			<main className="grow">
-				<Outlet />
-			</main>
-			<Footer />
-			<BackToTop />
-		</div>
+		<IntlayerProvider>
+			<div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
+				<CustomCursor />
+				<Header />
+				<main className="grow">
+					<Outlet />
+				</main>
+				<Footer />
+				<BackToTop />
+			</div>
+		</IntlayerProvider>
 	);
 }
 

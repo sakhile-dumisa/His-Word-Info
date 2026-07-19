@@ -10,10 +10,13 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Link as RouterLink } from "@tanstack/react-router";
+import { useIntlayer } from "react-intlayer";
 import { SOCIAL_LINKS } from "#/lib/site";
 
 export default function Footer() {
 	const year = new Date().getFullYear();
+	const { termsOfService, privacyPolicy, allRightsReserved, seeSitemap } =
+		useIntlayer("footer");
 
 	const socialIcons = {
 		x: NewTwitterIcon,
@@ -34,8 +37,7 @@ export default function Footer() {
 					if (!Icon) return null;
 
 					const href = item.key === "website" ? "/sitemap.xml" : item.href;
-					const tooltipLabel =
-						item.key === "website" ? "See Sitemap" : item.label;
+					const tooltipLabel = item.key === "website" ? seeSitemap : item.label;
 					const isExternalLink =
 						href?.startsWith("http://") || href?.startsWith("https://");
 
@@ -60,7 +62,7 @@ export default function Footer() {
 					to="/terms-of-use"
 					className="transition-colors hover:text-primary"
 				>
-					Terms of Service
+					{termsOfService}
 				</RouterLink>
 				<span aria-hidden="true" className="text-border">
 					•
@@ -69,12 +71,12 @@ export default function Footer() {
 					to="/privacy-policy"
 					className="transition-colors hover:text-primary"
 				>
-					Privacy Policy
+					{privacyPolicy}
 				</RouterLink>
 			</div>
 
 			<p className="pt-5 text-center text-xs text-muted-foreground/60">
-				© {year} His Word. All rights reserved.
+				© {year} His Word. {allRightsReserved}
 			</p>
 		</footer>
 	);

@@ -9,7 +9,8 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useState } from "react";
-import { cn } from "@/lib/utils"; /*  */
+import { useIntlayer } from "react-intlayer";
+import { cn } from "@/lib/utils";
 
 const SCREENS = [
 	"/appShots/Frame 1.png",
@@ -23,6 +24,15 @@ const SCREENS = [
 const COLLAGE_IMAGE = "/appShots/thumbnail.png";
 
 export default function Carousel() {
+	const {
+		sectionTitle,
+		sectionSubtitle,
+		tabScreenshots,
+		tabCollage,
+		clickToExpand,
+		clickToZoom,
+	} = useIntlayer("carousel");
+
 	const [activeTab, setActiveTab] = useState<"slider" | "collage">("slider");
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
@@ -61,11 +71,10 @@ export default function Carousel() {
 			{/* Section Header */}
 			<div className="text-center space-y-2">
 				<h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-					Interface & Design
+					{sectionTitle}
 				</h2>
 				<p className="text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed">
-					Explore the clean, distraction-free interface of His Word, built with
-					system accent support and typography designed for focus.
+					{sectionSubtitle}
 				</p>
 			</div>
 
@@ -83,7 +92,7 @@ export default function Carousel() {
 						)}
 					>
 						<HugeiconsIcon icon={SmartPhone01Icon} size={14} />
-						<span>Screenshots</span>
+						<span>{tabScreenshots}</span>
 						{activeTab === "slider" && (
 							<motion.div
 								layoutId="activeTabPill"
@@ -103,7 +112,7 @@ export default function Carousel() {
 						)}
 					>
 						<HugeiconsIcon icon={GridIcon} size={14} />
-						<span>All-in-One Collage</span>
+						<span>{tabCollage}</span>
 						{activeTab === "collage" && (
 							<motion.div
 								layoutId="activeTabPill"
@@ -198,7 +207,7 @@ export default function Carousel() {
 														<div className="absolute inset-0 bg-black/0 hover:bg-black/5 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
 															<span className="text-white bg-black/50 text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1.5 rounded-md backdrop-blur-xs flex items-center gap-1.5 shadow-sm">
 																<HugeiconsIcon icon={EyeIcon} size={12} />
-																<span>Click to Expand</span>
+																<span>{clickToExpand}</span>
 															</span>
 														</div>
 													)}
@@ -259,7 +268,7 @@ export default function Carousel() {
 								<div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
 									<span className="text-white bg-black/60 text-xs uppercase tracking-wider font-semibold px-3.5 py-2 rounded-md backdrop-blur-xs shadow-md flex items-center gap-1.5">
 										<HugeiconsIcon icon={EyeIcon} size={14} />
-										<span>Click to Zoom Collage</span>
+										<span>{clickToZoom}</span>
 									</span>
 								</div>
 							</button>

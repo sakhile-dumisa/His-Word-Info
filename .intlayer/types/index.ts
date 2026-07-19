@@ -1,0 +1,62 @@
+/* eslint-disable */
+export default {
+  "key": "index",
+  "content": {
+    "nodeType": "translation",
+    "translation": {
+      "en": {
+        "heroTitle": "His Word",
+        "heroDescription": "A modern, high-performance Bible reading and study companion. Designed for absolute focus, running entirely offline, and engineered with deep respect for your privacy.",
+        "quoteText1": "\"In the beginning was the Word, and the Word was with God, and the Word was God.\" — John 1:1. The name His Word is inspired by this prologue, celebrating scripture as the living Word of God.",
+        "quoteText2Part1": "In isiZulu, \"His Word\" translates to ",
+        "quoteText2Part2": ", which was the original concept and name for the application. However, due to copyright restrictions regarding Zulu Bible translations, the app is currently available in English only.",
+        "howItWorksTitle": "How It Works",
+        "step1Title": "1. Fast, Offline Reading",
+        "step1Desc": "His Word stores Bible translations (ASV and WEB) locally on your device. Toggle between translations instantly, check your reading history, and resume exactly where you left off with spring-animated controls.",
+        "step2Title": "2. Study, Highlight & Journal",
+        "step2Desc": "Long-press verses to highlight using custom theme-adaptive palettes. Author rich-text reflection entries directly inside the chapter reader to record your study notes.",
+        "step3Title": "3. Asynchronous Deep Search",
+        "step3Desc": "Search across all 66 books instantly. The search engine uses smart micro-task chunking to parse keywords over thousands of verses without blocking the UI thread, highlighting search keywords dynamically.",
+        "step4Title": "4. Tactile Shake & Share",
+        "step4Desc": "Export your journal entries or highlighted scriptures as beautiful high-res cards rendered on-device using a local canvas. Simply shake your device to capture and share content with haptic vibration confirmation.",
+        "underTheHoodTitle": "Under the Hood",
+        "hoodCard1Title": "LRU Database Cache",
+        "hoodCard1Desc": "Custom Least Recently Used cache system that keeps memory footprint minimal by loading book modules dynamically and caching only active books.",
+        "hoodCard2Title": "Multi-Theme Engine",
+        "hoodCard2Desc": "Built using Uniwind and custom Metro configurations. Instantly switches system accent variables across 4 premium color palettes (Green, Pink, Blue, Charcoal).",
+        "hoodCard3Title": "Local JSON / Storage",
+        "hoodCard3Desc": "All metrics, reflections, historical reading records, bookmarks, and preferences are saved locally on-device. Zero cloud database latency or tracking.",
+        "hoodCard4Title": "Canvas Share Engine",
+        "hoodCard4Desc": "Uses a localized off-screen WebView to dynamically compose and render typography into a high-res PNG image, which feeds directly into native sharing hooks."
+      },
+      "zu": {
+        "heroTitle": "Izwi Lakhe",
+        "heroDescription": "Umngane wanamuhla wokufunda nokutadisha iBhayibheli onejubane eliphezulu. Idizayinelwe ukugxila ngokuphelele, isebenza ngokungaxhunyiwe ku-inthanethi ngokuphelele, futhi yakhiwe ngenhlonipho ejulile yobumfihlo bakho.",
+        "quoteText1": "\"Ekuqaleni kwakukhona uLizwi, uLizwi wayekuye uNkulunkulu, uLizwi wayenguNkulunkulu.\" — Johane 1:1. Igama elithi His Word liphefumulelwe yilesi singeniso, libungaza umbhalo ongcwele njengezwi eliphilayo likaNkulunkulu.",
+        "quoteText2Part1": "NgesiZulu, \"His Word\" ihunyushwa ngokuthi ",
+        "quoteText2Part2": ", okuwumqondo wokuqala negama lesicelo. Nokho, ngenxa yemikhawulo ye-copyright mayelana nokuhunyushwa kweBhayibheli lesiZulu, i-app okwamanje itholakala ngesiNgisi kuphela.",
+        "howItWorksTitle": "Ukusebenza Kwayo",
+        "step1Title": "1. Ukufunda Okusheshayo Ngaphandle kwe-Inthanethi",
+        "step1Desc": "I-His Word igcina izinguqulo zeBhayibheli (ASV ne-WEB) endaweni kudivayisi yakho. Shintsha phakathi kwezinguqulo ngokushesha, hlola umlando wakho wokufunda, futhi uqhubeke lapho ugcine khona ngezilawuli ezinezithombe.",
+        "step2Title": "2. Funda, Gqamisa & Bhala phansi",
+        "step2Desc": "Cindezela isikhathi eside amavesi ukuze uwagqamise usebenzisa amaphalethi ahambisana netimu. Bhala okufundile ngqo ngaphakathi komfundi wesahluko ukuze ugcine amanothi akho okutadisha.",
+        "step3Title": "3. Ukusesha Okujulile Okujwayelekile",
+        "step3Desc": "Sesha kuzo zonke izincwadi ezingama-66 ngokushesha. Injini yosesho isebenzisa ukwahlukanisa ukuhlunga amagama angukhiye emavesini ayizinkulungwane ngaphandle kokuvimba i-UI.",
+        "step4Title": "4. Nyakazisa & Wabelane",
+        "step4Desc": "Thumela okubhalile noma amavesi agqanyisiwe njengamakhadi amahle e-high-res akhiqizwa kudivayisi isebenzisa i-canvas yasendaweni. Nyakazisa idivayisi yakho ukuze uthwebule futhi wabelane ngokuqukethwe ngesikhumbuzi sokudlidliza.",
+        "underTheHoodTitle": "Ngaphansi Kwendwangu",
+        "hoodCard1Title": "I-LRU Database Cache",
+        "hoodCard1Desc": "Isistimu yenqolobane ye-Least Recently Used (LRU) egcina inkumbulo incane ngokulayisha amamojula ezincwadi ngendlela eguquguqukayo nangokugcina izincwadi ezisebenzayo kuphela.",
+        "hoodCard2Title": "Injini Yezinhlobonhlobo Zezihloko",
+        "hoodCard2Desc": "Yakhiwe isebenzisa i-Uniwind nokucushwa kwe-Metro. Ishintsha ngokushesha okuguquguqukayo kwesistimu phakathi kwamaphalethi emibala we-premium ama-4 (Eliluhlaza, Eliphinki, Eliluhlaza okwesibhakabhaka, Namalahle).",
+        "hoodCard3Title": "I-Local JSON / Isitore",
+        "hoodCard3Desc": "Yonke imikhombandlela, okubhalile, amarekhodi wokufunda omlando, amabhukumaka, nezintandokazi kulondolozwa endaweni kudivayisi. Ukubambezeleka kwedatha yefu enguziro noma ukulandelela.",
+        "hoodCard4Title": "Injini Yokwabelana ye-Canvas",
+        "hoodCard4Desc": "Isebenzisa i-WebView yasendaweni engaphandle kwesikrini ukuze ibhale ngokuguquguqukayo futhi inikeze i-typography esithombeni se-PNG esiphezulu, esondla ngqo kumahuku okwabelana omndabu."
+      }
+    }
+  },
+  "localIds": [
+    "index::local::src\\routes\\index.content.ts"
+  ]
+} as const;

@@ -30,11 +30,13 @@
     "@vercel/analytics": "^2.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "intlayer": "^8.12.4",
     "lucide-react": "^0.545.0",
     "motion": "^12.42.2",
     "nitro": "npm:nitro-nightly@latest",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-intlayer": "^8.12.4",
     "shadcn": "^4.13.1",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.1.18",
@@ -55,6 +57,7 @@
     "jsdom": "^28.1.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.0",
+    "vite-intlayer": "^8.12.4",
     "vitest": "^4.1.5"
   },
   "pnpm": {
