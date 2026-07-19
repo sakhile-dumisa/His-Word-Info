@@ -7,6 +7,7 @@ import {
 	useCanGoBack,
 	useRouter,
 } from "@tanstack/react-router";
+import { motion } from "motion/react";
 import { SITE_TITLE, SITE_URL } from "../lib/site";
 
 const PRIVACY_DATA = [
@@ -55,8 +56,22 @@ const PRIVACY_DATA = [
 	{
 		id: "8",
 		title: "8. Developer & Contact Info",
-		content:
-			"His Word is developed and maintained by Sakhile Dumisa. If you have any inquiries, feedback, or concerns regarding your privacy or the application's functionality, please reach out via the contact avenues provided on the platform.",
+		content: (
+			<>
+				His Word is developed and maintained by{" "}
+				<a
+					href="https://sakhiledumisa.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="underline underline-offset-4 hover:text-foreground"
+				>
+					Sakhile Dumisa
+				</a>
+				. If you have any inquiries, feedback, or concerns regarding your
+				privacy or the application's functionality, please reach out via the
+				contact avenues provided on the platform.
+			</>
+		),
 	},
 ];
 
@@ -91,6 +106,29 @@ export const Route = createFileRoute("/privacy-policy")({
 	component: RouteComponent,
 });
 
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.1,
+			delayChildren: 0.05,
+		},
+	},
+};
+
+const itemVariants = {
+	hidden: { opacity: 0, y: 15 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.4,
+			ease: [0.16, 1, 0.3, 1] as const,
+		},
+	},
+};
+
 function RouteComponent() {
 	const effectiveDate = "July 18, 2026";
 	const router = useRouter();
@@ -98,8 +136,13 @@ function RouteComponent() {
 
 	return (
 		<main className="min-h-screen bg-background px-4 py-10 sm:px-6 lg:px-8">
-			<article className="mx-auto w-full max-w-3xl space-y-8">
-				<div>
+			<motion.article
+				variants={containerVariants}
+				initial="hidden"
+				animate="visible"
+				className="mx-auto w-full max-w-3xl space-y-8"
+			>
+				<motion.div variants={itemVariants}>
 					<Button
 						variant="ghost"
 						onClick={() => {
@@ -114,9 +157,9 @@ function RouteComponent() {
 						<HugeiconsIcon icon={ArrowLeftIcon} size={16} className="mr-2" />
 						Back
 					</Button>
-				</div>
+				</motion.div>
 
-				<header className="space-y-3">
+				<motion.header variants={itemVariants} className="space-y-3">
 					<h1 className="text-3xl font-semibold tracking-tight text-foreground">
 						Privacy Policy
 					</h1>
@@ -124,14 +167,21 @@ function RouteComponent() {
 						Effective date: {effectiveDate}
 					</p>
 					<p className="text-sm text-muted-foreground text-balance">
-						This policy outlines how the His Word application, developed by
-						Sakhile Dumisa, operates as a local, offline-first platform, and
-						details how device permissions, local storage, and website metrics
-						are managed.
+						This policy outlines how the His Word application, developed by{" "}
+						<a
+							href="https://sakhiledumisa.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline underline-offset-4 hover:text-foreground"
+						>
+							Sakhile Dumisa
+						</a>
+						, operates as a local, offline-first platform, and details how
+						device permissions, local storage, and website metrics are managed.
 					</p>
-				</header>
+				</motion.header>
 
-				<div className="space-y-8">
+				<motion.div variants={itemVariants} className="space-y-8">
 					{PRIVACY_DATA.map((item) => (
 						<section key={item.id} className="space-y-2">
 							<h2 className="text-xl font-semibold text-foreground">
@@ -142,9 +192,12 @@ function RouteComponent() {
 							</p>
 						</section>
 					))}
-				</div>
+				</motion.div>
 
-				<section className="space-y-2 pt-4 border-t border-border">
+				<motion.section
+					variants={itemVariants}
+					className="space-y-2 pt-4 border-t border-border"
+				>
 					<h2 className="text-xl font-semibold text-foreground">
 						9. Related Terms
 					</h2>
@@ -158,8 +211,8 @@ function RouteComponent() {
 						</RouterLink>
 						.
 					</p>
-				</section>
-			</article>
+				</motion.section>
+			</motion.article>
 		</main>
 	);
 }

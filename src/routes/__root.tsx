@@ -6,6 +6,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { inject } from "@vercel/analytics";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { useThemeSync } from "../lib/theme-store";
@@ -52,6 +53,9 @@ export const Route = createRootRoute({
 	component: RootLayout,
 	shellComponent: RootDocument,
 });
+
+// Initialize Vercel Analytics
+inject();
 
 function RootLayout() {
 	useThemeSync();

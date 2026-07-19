@@ -7,6 +7,7 @@ import {
 	useCanGoBack,
 	useRouter,
 } from "@tanstack/react-router";
+import { motion } from "motion/react";
 import { SITE_TITLE, SITE_URL } from "../lib/site";
 
 const TERMS_DATA = [
@@ -37,8 +38,24 @@ const TERMS_DATA = [
 	{
 		id: "5",
 		title: "5. Intellectual Property",
-		content:
-			"All website designs, copywriting, original graphics, source code, and application assets are the exclusive intellectual property of the developer, Sakhile Dumisa. The Bible translations (ASV & WEB) are in the public domain. You may freely capture screenshots, share reflections, and generate sharing images for personal, educational, or non-commercial devotional use.",
+		content: (
+			<>
+				All website designs, copywriting, original graphics, source code, and
+				application assets are the exclusive intellectual property of the
+				developer,{" "}
+				<a
+					href="https://sakhiledumisa.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="underline underline-offset-4 hover:text-foreground"
+				>
+					Sakhile Dumisa
+				</a>
+				. The Bible translations (ASV & WEB) are in the public domain. You may
+				freely capture screenshots, share reflections, and generate sharing
+				images for personal, educational, or non-commercial devotional use.
+			</>
+		),
 	},
 	{
 		id: "6",
@@ -61,8 +78,23 @@ const TERMS_DATA = [
 	{
 		id: "9",
 		title: "9. Limitation of Liability",
-		content:
-			"To the maximum extent permitted by law, developer Sakhile Dumisa shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of data (including local reflections, bookmarks, or highlights) arising out of your use or inability to use the application.",
+		content: (
+			<>
+				To the maximum extent permitted by law, developer{" "}
+				<a
+					href="https://sakhiledumisa.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="underline underline-offset-4 hover:text-foreground"
+				>
+					Sakhile Dumisa
+				</a>{" "}
+				shall not be liable for any indirect, incidental, special,
+				consequential, or punitive damages, or any loss of data (including local
+				reflections, bookmarks, or highlights) arising out of your use or
+				inability to use the application.
+			</>
+		),
 	},
 	{
 		id: "10",
@@ -103,6 +135,29 @@ export const Route = createFileRoute("/terms-of-use")({
 	component: RouteComponent,
 });
 
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.1,
+			delayChildren: 0.05,
+		},
+	},
+};
+
+const itemVariants = {
+	hidden: { opacity: 0, y: 15 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.4,
+			ease: [0.16, 1, 0.3, 1] as const,
+		},
+	},
+};
+
 function RouteComponent() {
 	const effectiveDate = "July 18, 2026";
 	const router = useRouter();
@@ -110,8 +165,13 @@ function RouteComponent() {
 
 	return (
 		<main className="min-h-screen bg-background px-4 py-10 sm:px-6 lg:px-8">
-			<article className="mx-auto w-full max-w-3xl space-y-8">
-				<div>
+			<motion.article
+				variants={containerVariants}
+				initial="hidden"
+				animate="visible"
+				className="mx-auto w-full max-w-3xl space-y-8"
+			>
+				<motion.div variants={itemVariants}>
 					<Button
 						variant="ghost"
 						onClick={() => {
@@ -126,9 +186,9 @@ function RouteComponent() {
 						<HugeiconsIcon icon={ArrowLeftIcon} size={16} className="mr-2" />
 						Back
 					</Button>
-				</div>
+				</motion.div>
 
-				<header className="space-y-3">
+				<motion.header variants={itemVariants} className="space-y-3">
 					<h1 className="text-3xl font-semibold tracking-tight text-foreground">
 						Terms of Use
 					</h1>
@@ -137,12 +197,20 @@ function RouteComponent() {
 					</p>
 					<p className="text-sm text-muted-foreground text-balance">
 						These terms of use govern your access to and use of the His Word
-						application and related features on this website, developed by
-						Sakhile Dumisa.
+						application and related features on this website, developed by{" "}
+						<a
+							href="https://sakhiledumisa.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="underline underline-offset-4 hover:text-foreground"
+						>
+							Sakhile Dumisa
+						</a>
+						.
 					</p>
-				</header>
+				</motion.header>
 
-				<div className="space-y-8">
+				<motion.div variants={itemVariants} className="space-y-8">
 					{TERMS_DATA.map((item) => (
 						<section key={item.id} className="space-y-2">
 							<h2 className="text-xl font-semibold text-foreground">
@@ -153,9 +221,12 @@ function RouteComponent() {
 							</p>
 						</section>
 					))}
-				</div>
+				</motion.div>
 
-				<section className="space-y-2 pt-4 border-t border-border">
+				<motion.section
+					variants={itemVariants}
+					className="space-y-2 pt-4 border-t border-border"
+				>
 					<h2 className="text-xl font-semibold text-foreground">
 						11. Contact & Privacy
 					</h2>
@@ -173,8 +244,8 @@ function RouteComponent() {
 						</RouterLink>
 						.
 					</p>
-				</section>
-			</article>
+				</motion.section>
+			</motion.article>
 		</main>
 	);
 }

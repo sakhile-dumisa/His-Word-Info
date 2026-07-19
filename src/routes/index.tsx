@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { motion } from "motion/react";
 import FAQ from "../components/Faq";
 // Import site constants
 import { SITE_URL, X_URL } from "../lib/site";
@@ -87,12 +88,40 @@ export const Route = createFileRoute("/")({
 	component: RouteComponent,
 });
 
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.12,
+			delayChildren: 0.05,
+		},
+	},
+};
+
+const itemVariants = {
+	hidden: { opacity: 0, y: 20 },
+	visible: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.5,
+			ease: [0.16, 1, 0.3, 1] as const,
+		},
+	},
+};
+
 function RouteComponent() {
 	return (
-		<main className="min-h-screen bg-background mt-2">
+		<motion.main
+			variants={containerVariants}
+			initial="hidden"
+			animate="visible"
+			className="min-h-screen bg-background mt-2"
+		>
 			<div className="mx-auto max-w-2xl px-4 py-6 md:mt-10 space-y-16">
 				{/* Hero Header */}
-				<header className="space-y-4">
+				<motion.header variants={itemVariants} className="space-y-4">
 					<h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl flex items-center gap-3">
 						<img
 							src="/logo192.png"
@@ -106,16 +135,24 @@ function RouteComponent() {
 						Designed for absolute focus, running entirely offline, and
 						engineered with deep respect for your privacy.
 					</p>
-					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground/80 mt-2">
-						"In the beginning was the Word, and the Word was with God, and the
-						Word was God." — John 1:1. The name <strong>His Word</strong> is
-						inspired by this prologue, celebrating scripture as the living Word
-						of God.
+					<blockquote className="border-l-2 border-primary/50 pl-4 text-sm text-muted-foreground/80 mt-2 space-y-2">
+						<p>
+							"In the beginning was the Word, and the Word was with God, and the
+							Word was God." — John 1:1. The name <strong>His Word</strong> is
+							inspired by this prologue, celebrating scripture as the living
+							Word of God.
+						</p>
+						<p>
+							In isiZulu, "His Word" translates to <strong>Izwi Lakhe</strong>,
+							which was the original concept and name for the application.
+							However, due to copyright restrictions regarding Zulu Bible
+							translations, the app is currently available in English only.
+						</p>
 					</blockquote>
-				</header>
+				</motion.header>
 
 				{/* How It Works Section */}
-				<section className="space-y-6">
+				<motion.section variants={itemVariants} className="space-y-6">
 					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
 						How It Works
 					</h2>
@@ -171,10 +208,10 @@ function RouteComponent() {
 							</p>
 						</div>
 					</div>
-				</section>
+				</motion.section>
 
 				{/* Technical Architecture & Specs */}
-				<section className="space-y-6">
+				<motion.section variants={itemVariants} className="space-y-6">
 					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
 						Under the Hood
 					</h2>
@@ -201,7 +238,7 @@ function RouteComponent() {
 						</div>
 						<div className="rounded-lg border border-border p-4 space-y-1.5 bg-muted/10">
 							<h4 className="text-sm font-medium text-foreground">
-								Local SQLite / Storage
+								Local JSON / Storage
 							</h4>
 							<p className="text-xs text-muted-foreground leading-relaxed">
 								All metrics, reflections, historical reading records, bookmarks,
@@ -220,17 +257,18 @@ function RouteComponent() {
 							</p>
 						</div>
 					</div>
-				</section>
+				</motion.section>
 
 				{/* FAQ Section */}
-				<section
+				<motion.section
 					id="faq"
+					variants={itemVariants}
 					aria-label="Frequently asked questions"
 					className="mt-8"
 				>
 					<FAQ />
-				</section>
+				</motion.section>
 			</div>
-		</main>
+		</motion.main>
 	);
 }

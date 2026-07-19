@@ -11,7 +11,7 @@ export default function DefaultNotFound() {
 		<main className="flex flex-col items-center justify-center p-6">
 			<title>404 - Not Found</title>
 			<div className="flex max-w-sm flex-col items-center text-center gap-5">
-				<span className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+				<span className="rounded-full bg-tertiary px-3 py-1 text-xs font-medium text-foreground">
 					404 Error
 				</span>
 
