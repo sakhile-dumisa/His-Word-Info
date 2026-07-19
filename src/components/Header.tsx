@@ -50,7 +50,7 @@ export default function Header() {
 				<HugeiconsIcon
 					icon={Comment01Icon}
 					size={14}
-					className="text-primary shrink-0"
+					className="text-primary hidden md:flex shrink-0"
 				/>
 				<span className="text-muted-foreground">{bannerPrompt}</span>
 				<a
