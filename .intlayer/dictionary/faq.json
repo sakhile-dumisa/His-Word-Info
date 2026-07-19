@@ -38,8 +38,10 @@
         "q12Content": "Searching a massive text database on mobile can cause lag. His Word splits search queries into asynchronous batches (using timer chunk macros) to run on separate execution cycles. This allows the search bar to stay 100% responsive and lag-free while parsing the entire scripture.",
         "q13Title": "How does the high-fidelity image exporter work?",
         "q13Content": "When you click share, the app uses a hidden WebView to render the scripture, your highlight colors, or reflection text onto a virtual HTML5 Canvas using premium typography. The canvas compiles this into a high-resolution PNG locally for sharing.",
-        "q14Title": "How can I submit bugs or request features?",
-        "q14Content": "For support, bug submissions, or feature requests, you can email the developer directly at "
+        "q14Title": "How can I submit bugs, request features, or contact the developer?",
+        "q14Content": "For support, bug submissions, or feature requests, you can email the developer directly at ",
+        "q14LinkText": " Alternatively, if you want to engage directly and publicly with the developer, you can leave a comment on this ",
+        "q14BlogText": "blog post"
       },
       "zu": {
         "sectionTitle": "Imibuzo Ejwayelekile Ukubuzwa",
@@ -76,8 +78,10 @@
         "q12Content": "Ukusesha i-database yombhalo omkhulu kuselula kungadala ukulibala. I-His Word ihlukanisa imibuzo yosesho ibe yamaqoqo asynchronous ukugwema ukulibazisa i-UI. Lokhu kuvumela ibha yosesho ukuthi ihlale isabela ngo-100% ngaphandle kokulibaziseka.",
         "q13Title": "Isebenza kanjani isithekelisi sezithombe eziphezulu?",
         "q13Content": "Uma uchofoza okwabelana, i-app isebenzisa i-WebView efihliwe ukukhombisa umbhalo, imibala yakho egqamile, noma umbhalo wokubhala ku-Virtual HTML5 Canvas isebenzisa i-typography ye-premium. Le canvas ihlanganisa lokhu kube yi-resolution ephezulu ye-PNG yasendaweni ukuze yabelane.",
-        "q14Title": "Ngingazithumela kanjani iziphazamisi noma ngicele izici?",
-        "q14Content": "Ukuze uthole ukwesekwa, ukuthunyelwa kweziphazamisi, noma izicelo zezici, ungathumela i-imeyili kunjiniyela ngqo ku- "
+        "q14Title": "Ngingazithumela kanjani iziphazamisi, ngicele izici, noma ngithinte unjiniyela?",
+        "q14Content": "Ukuze uthole ukwesekwa, ukuthunyelwa kweziphazamisi, noma izicelo zezici, ungathumela i-imeyili kunjiniyela ngqo ku- ",
+        "q14LinkText": " Kungenjalo, uma ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni, ungashiya umbono wakho kule ",
+        "q14BlogText": "bhulogi post"
       }
     }
   },

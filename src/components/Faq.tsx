@@ -52,6 +52,8 @@ export default function FAQ() {
 		q13Content,
 		q14Title,
 		q14Content,
+		q14LinkText,
+		q14BlogText,
 	} = useIntlayer("faq");
 
 	const categories = [
@@ -133,6 +135,15 @@ export default function FAQ() {
 								className="underline hover:text-primary transition-colors"
 							>
 								{EMAIL}
+							</a>
+							.{q14LinkText}
+							<a
+								href="https://www.sakhiledumisa.com/blog/his-word-quietly"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="underline hover:text-primary transition-colors"
+							>
+								{q14BlogText}
 							</a>
 							.
 						</>

@@ -81,10 +81,6 @@ export default function CustomCursor() {
 				animate={{
 					width: isHovered ? 44 : 22,
 					height: isHovered ? 44 : 22,
-					backgroundColor: isHovered
-						? "var(--color-primary-foreground)"
-						: "rgba(0,0,0,0)",
-					borderColor: "var(--primary)",
 					borderWidth: isHovered ? 0 : 1.5,
 					opacity: 1,
 				}}
@@ -93,7 +89,9 @@ export default function CustomCursor() {
 					stiffness: 400,
 					damping: 28,
 				}}
-				className="fixed pointer-events-none z-9999 rounded-full mix-blend-difference"
+				className={`fixed pointer-events-none z-9999 rounded-full mix-blend-difference border border-primary transition-colors duration-300 ${
+					isHovered ? "bg-primary-foreground" : "bg-transparent"
+				}`}
 			/>
 
 			{/* Instant Inner Dot */}

@@ -7,12 +7,24 @@ export default {
       "en": {
         "languageLabel": "Language",
         "englishOption": "English",
-        "zuluOption": "isiZulu"
+        "zuluOption": "isiZulu",
+        "bannerPrompt": "Want to engage directly and publicly with the developer?",
+        "bannerLinkText": "Leave a comment on this blog post",
+        "themeToggle": "Theme toggle",
+        "lightTheme": "Light",
+        "darkTheme": "Dark",
+        "systemTheme": "System"
       },
       "zu": {
         "languageLabel": "Ulimi",
         "englishOption": "IsiNgisi",
-        "zuluOption": "isiZulu"
+        "zuluOption": "isiZulu",
+        "bannerPrompt": "Ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni?",
+        "bannerLinkText": "Shiya umbono kule bhulogi post",
+        "themeToggle": "Shintsha itimu",
+        "lightTheme": "Okukhanyayo",
+        "darkTheme": "Okumnyama",
+        "systemTheme": "Isistimu"
       }
     }
   },

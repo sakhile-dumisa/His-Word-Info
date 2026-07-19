@@ -140,12 +140,20 @@ const faqContent = {
 			zu: "Uma uchofoza okwabelana, i-app isebenzisa i-WebView efihliwe ukukhombisa umbhalo, imibala yakho egqamile, noma umbhalo wokubhala ku-Virtual HTML5 Canvas isebenzisa i-typography ye-premium. Le canvas ihlanganisa lokhu kube yi-resolution ephezulu ye-PNG yasendaweni ukuze yabelane.",
 		}),
 		q14Title: t({
-			en: "How can I submit bugs or request features?",
-			zu: "Ngingazithumela kanjani iziphazamisi noma ngicele izici?",
+			en: "How can I submit bugs, request features, or contact the developer?",
+			zu: "Ngingazithumela kanjani iziphazamisi, ngicele izici, noma ngithinte unjiniyela?",
 		}),
 		q14Content: t({
 			en: "For support, bug submissions, or feature requests, you can email the developer directly at ",
 			zu: "Ukuze uthole ukwesekwa, ukuthunyelwa kweziphazamisi, noma izicelo zezici, ungathumela i-imeyili kunjiniyela ngqo ku- ",
+		}),
+		q14LinkText: t({
+			en: " Alternatively, if you want to engage directly and publicly with the developer, you can leave a comment on this ",
+			zu: " Kungenjalo, uma ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni, ungashiya umbono wakho kule ",
+		}),
+		q14BlogText: t({
+			en: "blog post",
+			zu: "bhulogi post",
 		}),
 	},
 } satisfies Dictionary;
