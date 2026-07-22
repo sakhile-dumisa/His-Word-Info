@@ -98,6 +98,7 @@ function RouteComponent() {
 	} = useIntlayer("privacy-policy");
 
 	const effectiveDate = "July 18, 2026";
+	const updateDate = "July 22, 2026";
 
 	const privacyItems = [
 		{
@@ -194,6 +195,9 @@ function RouteComponent() {
 					</h1>
 					<p className="text-sm text-muted-foreground">
 						Effective date: {effectiveDate}
+					</p>
+					<p className="text-sm text-muted-foreground">
+						Last updated: {updateDate}
 					</p>
 					<p className="text-sm text-muted-foreground text-balance">
 						{pageSubtitle}
