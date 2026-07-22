@@ -1,9 +1,9 @@
 import {
 	Comment01Icon,
 	ComputerIcon,
+	Globe02Icon,
 	Moon01Icon,
 	Sun01Icon,
-	TranslateIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Link as RouterLink, useLocation } from "@tanstack/react-router";
@@ -89,7 +89,7 @@ export default function Header() {
 								aria-label="Language selection"
 								className="rounded-full text-muted-foreground hover:text-primary"
 							>
-								<HugeiconsIcon icon={TranslateIcon} size={20} />
+								<HugeiconsIcon icon={Globe02Icon} size={20} />
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent align="end">
