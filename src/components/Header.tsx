@@ -8,7 +8,7 @@ import {
 	Sun01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Link as RouterLink, useLocation } from "@tanstack/react-router";
+import { Link as RouterLink } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useIntlayer, useLocale } from "react-intlayer";
 import { type Theme, useTheme } from "#/lib/theme-store";
@@ -22,7 +22,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export default function Header() {
-	const location = useLocation();
 	const { theme, setTheme } = useTheme();
 	const { locale, setLocale } = useLocale();
 	const {
@@ -37,8 +36,6 @@ export default function Header() {
 		darkTheme,
 		systemTheme,
 	} = useIntlayer("header");
-
-	const isHomePage = location.pathname === "/";
 
 	const [showAppGalleryBanner, setShowAppGalleryBanner] = useState(false);
 
@@ -69,7 +66,7 @@ export default function Header() {
 
 	return (
 		<div className="w-full">
-			{showAppGalleryBanner && isHomePage ? (
+			{showAppGalleryBanner ? (
 				<div className="w-full bg-red-500/5 hover:bg-red-500/10 border-b border-red-500/10 py-2.5 px-4 text-xs text-center flex items-center justify-center gap-1.5 transition-all duration-300 relative">
 					<div className="flex flex-wrap items-center justify-center gap-1.5 pr-6">
 						<span className="inline-flex items-center justify-center bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[8px] tracking-wider uppercase mr-1 shrink-0 animate-pulse">
@@ -102,24 +99,22 @@ export default function Header() {
 					</button>
 				</div>
 			) : (
-				isHomePage && (
-					<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
-						<HugeiconsIcon
-							icon={Comment01Icon}
-							size={14}
-							className="text-primary shrink-0"
-						/>
-						<span className="text-muted-foreground">{bannerPrompt}</span>
-						<a
-							href="https://www.sakhiledumisa.com/blog/his-word-quietly"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="text-primary font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
-						>
-							{bannerLinkText} &rarr;
-						</a>
-					</div>
-				)
+				<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
+					<HugeiconsIcon
+						icon={Comment01Icon}
+						size={14}
+						className="text-primary shrink-0"
+					/>
+					<span className="text-muted-foreground">{bannerPrompt}</span>
+					<a
+						href="https://www.sakhiledumisa.com/blog/his-word-quietly"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-primary font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
+					>
+						{bannerLinkText} &rarr;
+					</a>
+				</div>
 			)}
 
 			<header className=" py-4 px-6 flex items-center justify-between bg-transparent sticky top-0 z-50">

@@ -27,6 +27,10 @@ const footerContent = {
 			en: "Leave a comment on this blog post",
 			zu: "Shiya umbono kule bhulogi post",
 		}),
+		downloadAppGallery: t({
+			en: "Explore on AppGallery",
+			zu: "Hlola ku-AppGallery",
+		}),
 	},
 } satisfies Dictionary;
 

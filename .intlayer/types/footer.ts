@@ -10,7 +10,8 @@ export default {
         "allRightsReserved": "All rights reserved.",
         "seeSitemap": "See Sitemap",
         "blogPrompt": "Want to engage directly and publicly with the developer?",
-        "blogLinkText": "Leave a comment on this blog post"
+        "blogLinkText": "Leave a comment on this blog post",
+        "downloadAppGallery": "Explore on AppGallery"
       },
       "zu": {
         "termsOfService": "Imigomo Yokusetshenziswa",
@@ -18,7 +19,8 @@ export default {
         "allRightsReserved": "Wonke amalungelo agodliwe.",
         "seeSitemap": "Bona i-Sitemap",
         "blogPrompt": "Ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni?",
-        "blogLinkText": "Shiya umbono kule bhulogi post"
+        "blogLinkText": "Shiya umbono kule bhulogi post",
+        "downloadAppGallery": "Hlola ku-AppGallery"
       }
     }
   },

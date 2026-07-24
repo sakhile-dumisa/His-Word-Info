@@ -7,6 +7,7 @@ import {
 	MailAtSign01Icon,
 	NewTwitterIcon,
 	RssIcon,
+	Store01Icon,
 	ThreadsIcon,
 	YoutubeIcon,
 } from "@hugeicons/core-free-icons";
@@ -25,6 +26,7 @@ export default function Footer() {
 		seeSitemap,
 		blogPrompt,
 		blogLinkText,
+		downloadAppGallery,
 	} = useIntlayer("footer");
 
 	const [showFeedbackWidget, setShowFeedbackWidget] = useState(false);
@@ -80,6 +82,18 @@ export default function Footer() {
 						</a>
 					);
 				})}
+			</div>
+
+			<div className="mt-6 flex justify-center">
+				<a
+					href="https://appgallery.huawei.com/app/C118209837"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-primary/10 text-primary border border-primary/20 text-xs font-semibold hover:bg-primary/15 hover:border-primary/30 transition-all select-none duration-200 active:scale-95"
+				>
+					<HugeiconsIcon icon={Store01Icon} size={14} className="shrink-0" />
+					<span>{downloadAppGallery}</span>
+				</a>
 			</div>
 
 			<div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
