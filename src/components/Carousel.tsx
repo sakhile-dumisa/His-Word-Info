@@ -137,7 +137,7 @@ export default function Carousel() {
 							className="space-y-6"
 						>
 							{/* Carousel Container */}
-							<div className="relative w-full h-[540px] flex items-center justify-center overflow-hidden rounded-2xl bg-muted/10 border border-border/40 py-6">
+							<div className="relative w-full h-135 flex items-center justify-center overflow-hidden rounded-2xl  py-6">
 								{/* Left Arrow Button */}
 								<button
 									type="button"
@@ -182,7 +182,7 @@ export default function Carousel() {
 														}
 													}}
 													className={cn(
-														"relative w-[260px] h-[460px] rounded-2xl overflow-hidden border transition-all duration-300 select-none block p-0 bg-transparent text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50",
+														"relative w-65 h-115 rounded-2xl overflow-hidden border transition-all duration-300 select-none block p-0 bg-transparent text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50",
 														isActive
 															? "border-primary/50 shadow-lg shadow-primary/5"
 															: "border-border/40 opacity-40 scale-90 shadow-sm",

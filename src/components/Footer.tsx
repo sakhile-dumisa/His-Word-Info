@@ -119,7 +119,7 @@ export default function Footer() {
 			</p>
 
 			{showFeedbackWidget && (
-				<div className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-40 w-[calc(100%-2rem)] sm:max-w-xs p-4 rounded-xl bg-card/95 backdrop-blur-md border border-border/80 shadow-2xl flex flex-col gap-2 text-left transition-all duration-300">
+				<div className="hidden sm:flex fixed bottom-4 sm:bottom-6 left-4 sm:left-6 z-40 w-[calc(100%-2rem)] sm:max-w-xs p-4 rounded-xl bg-card/95 backdrop-blur-md border border-border/80 shadow-2xl flex-col gap-2 text-left transition-all duration-300">
 					<button
 						type="button"
 						onClick={dismissFeedbackWidget}
