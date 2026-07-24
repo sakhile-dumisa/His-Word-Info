@@ -37,6 +37,20 @@
           "zu": "Shiya umbono kule bhulogi post"
         }
       },
+      "appGalleryBannerPrompt": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "His Word is now available on Huawei AppGallery!",
+          "zu": "I-His Word isiyatholakala ku-Huawei AppGallery!"
+        }
+      },
+      "appGalleryBannerLinkText": {
+        "nodeType": "translation",
+        "translation": {
+          "en": "Download Now",
+          "zu": "Landa Manje"
+        }
+      },
       "themeToggle": {
         "nodeType": "translation",
         "translation": {

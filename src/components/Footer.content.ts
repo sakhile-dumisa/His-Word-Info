@@ -19,6 +19,14 @@ const footerContent = {
 			en: "See Sitemap",
 			zu: "Bona i-Sitemap",
 		}),
+		blogPrompt: t({
+			en: "Want to engage directly and publicly with the developer?",
+			zu: "Ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni?",
+		}),
+		blogLinkText: t({
+			en: "Leave a comment on this blog post",
+			zu: "Shiya umbono kule bhulogi post",
+		}),
 	},
 } satisfies Dictionary;
 

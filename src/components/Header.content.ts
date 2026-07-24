@@ -23,6 +23,14 @@ const headerContent = {
 			en: "Leave a comment on this blog post",
 			zu: "Shiya umbono kule bhulogi post",
 		}),
+		appGalleryBannerPrompt: t({
+			en: "His Word is now available on Huawei AppGallery!",
+			zu: "I-His Word isiyatholakala ku-Huawei AppGallery!",
+		}),
+		appGalleryBannerLinkText: t({
+			en: "Download Now",
+			zu: "Landa Manje",
+		}),
 		themeToggle: t({
 			en: "Theme toggle",
 			zu: "Shintsha itimu",

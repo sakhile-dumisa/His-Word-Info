@@ -1,12 +1,15 @@
 import {
+	Cancel01Icon,
 	Comment01Icon,
 	ComputerIcon,
 	Globe02Icon,
 	Moon01Icon,
+	Store01Icon,
 	Sun01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Link as RouterLink, useLocation } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { useIntlayer, useLocale } from "react-intlayer";
 import { type Theme, useTheme } from "#/lib/theme-store";
 import { Button } from "@/components/ui/button";
@@ -27,6 +30,8 @@ export default function Header() {
 		zuluOption,
 		bannerPrompt,
 		bannerLinkText,
+		appGalleryBannerPrompt,
+		appGalleryBannerLinkText,
 		themeToggle,
 		lightTheme,
 		darkTheme,
@@ -34,6 +39,22 @@ export default function Header() {
 	} = useIntlayer("header");
 
 	const isHomePage = location.pathname === "/";
+
+	const [showAppGalleryBanner, setShowAppGalleryBanner] = useState(false);
+
+	useEffect(() => {
+		const dismissed = localStorage.getItem(
+			"his-word-appgallery-banner-dismissed",
+		);
+		if (!dismissed) {
+			setShowAppGalleryBanner(true);
+		}
+	}, []);
+
+	const dismissBanner = () => {
+		localStorage.setItem("his-word-appgallery-banner-dismissed", "true");
+		setShowAppGalleryBanner(false);
+	};
 
 	const currentIcon = () => {
 		switch (theme) {
@@ -48,24 +69,57 @@ export default function Header() {
 
 	return (
 		<div className="w-full">
-			{/* Top Announcement Banner */}
-			{isHomePage && (
-				<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
-					<HugeiconsIcon
-						icon={Comment01Icon}
-						size={14}
-						className="text-primary shrink-0"
-					/>
-					<span className="text-muted-foreground">{bannerPrompt}</span>
-					<a
-						href="https://www.sakhiledumisa.com/blog/his-word-quietly"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-primary font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
+			{showAppGalleryBanner && isHomePage ? (
+				<div className="w-full bg-red-500/5 hover:bg-red-500/10 border-b border-red-500/10 py-2.5 px-4 text-xs text-center flex items-center justify-center gap-1.5 transition-all duration-300 relative">
+					<div className="flex flex-wrap items-center justify-center gap-1.5 pr-6">
+						<span className="inline-flex items-center justify-center bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[8px] tracking-wider uppercase mr-1 shrink-0 animate-pulse">
+							New Launch
+						</span>
+						<HugeiconsIcon
+							icon={Store01Icon}
+							size={14}
+							className="text-red-500 shrink-0"
+						/>
+						<span className="text-muted-foreground">
+							{appGalleryBannerPrompt}
+						</span>
+						<a
+							href="https://appgallery.huawei.com/app/C118209837"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-red-500 font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
+						>
+							{appGalleryBannerLinkText} &rarr;
+						</a>
+					</div>
+					<button
+						type="button"
+						onClick={dismissBanner}
+						className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground/60 hover:text-foreground hover:bg-muted/20 transition-colors focus:outline-none"
+						aria-label="Dismiss banner"
 					>
-						{bannerLinkText} &rarr;
-					</a>
+						<HugeiconsIcon icon={Cancel01Icon} size={14} />
+					</button>
 				</div>
+			) : (
+				isHomePage && (
+					<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
+						<HugeiconsIcon
+							icon={Comment01Icon}
+							size={14}
+							className="text-primary shrink-0"
+						/>
+						<span className="text-muted-foreground">{bannerPrompt}</span>
+						<a
+							href="https://www.sakhiledumisa.com/blog/his-word-quietly"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-primary font-semibold hover:underline hover:opacity-90 flex items-center gap-0.5"
+						>
+							{bannerLinkText} &rarr;
+						</a>
+					</div>
+				)
 			)}
 
 			<header className=" py-4 px-6 flex items-center justify-between bg-transparent sticky top-0 z-50">

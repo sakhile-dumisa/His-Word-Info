@@ -1,14 +1,11 @@
 import {
-	AppleIcon,
 	Book01Icon,
 	Book02Icon,
 	BookSearchIcon,
 	Database01Icon,
 	Folder01Icon,
 	PaintBrush01Icon,
-	PlayStoreIcon,
 	Share01Icon,
-	Store01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute } from "@tanstack/react-router";
@@ -177,87 +174,6 @@ function RouteComponent() {
 						<p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
 							{aboutText}
 						</p>
-
-						{/* Unified smaller download buttons */}
-						<div className="flex flex-wrap gap-3 pt-4 justify-center">
-							{/* Apple App Store */}
-							<div className="relative group">
-								<span className="absolute -top-1.5 -right-1 z-10 text-[8px] font-semibold bg-primary/10 text-primary border border-primary/25 px-1.5 py-0.5 rounded-full select-none scale-80 group-hover:scale-85 transition-transform">
-									Coming Soon
-								</span>
-								<button
-									type="button"
-									disabled
-									className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-28.75 focus:outline-none"
-								>
-									<HugeiconsIcon
-										icon={AppleIcon}
-										size={18}
-										className="text-foreground/80 shrink-0"
-									/>
-									<div className="flex flex-col leading-none">
-										<span className="text-[7.5px] uppercase tracking-wider text-muted-foreground font-medium">
-											Download on the
-										</span>
-										<span className="text-[10px] font-semibold text-foreground mt-0.5">
-											App Store
-										</span>
-									</div>
-								</button>
-							</div>
-
-							{/* Google Play Store */}
-							<div className="relative group">
-								<span className="absolute -top-1.5 -right-1 z-10 text-[8px] font-semibold bg-primary/10 text-primary border border-primary/25 px-1.5 py-0.5 rounded-full select-none scale-80 group-hover:scale-85 transition-transform">
-									Coming Soon
-								</span>
-								<button
-									type="button"
-									disabled
-									className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-28.75 focus:outline-none"
-								>
-									<HugeiconsIcon
-										icon={PlayStoreIcon}
-										size={18}
-										className="text-foreground/80 shrink-0"
-									/>
-									<div className="flex flex-col leading-none">
-										<span className="text-[7.5px] uppercase tracking-wider text-muted-foreground font-medium">
-											Get it on
-										</span>
-										<span className="text-[10px] font-semibold text-foreground mt-0.5">
-											Google Play
-										</span>
-									</div>
-								</button>
-							</div>
-
-							{/* Huawei AppGallery */}
-							<div className="relative group">
-								<span className="absolute -top-1.5 -right-1 z-10 text-[8px] font-semibold bg-primary/10 text-primary border border-primary/25 px-1.5 py-0.5 rounded-full select-none scale-80 group-hover:scale-85 transition-transform">
-									Coming Soon
-								</span>
-								<button
-									type="button"
-									disabled
-									className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-card border border-border/80 text-left shadow-xs opacity-60 hover:opacity-75 transition-all select-none cursor-not-allowed w-28.75 focus:outline-none"
-								>
-									<HugeiconsIcon
-										icon={Store01Icon}
-										size={18}
-										className="text-foreground/80 shrink-0"
-									/>
-									<div className="flex flex-col leading-none">
-										<span className="text-[7.5px] uppercase tracking-wider text-muted-foreground font-medium">
-											Explore it on
-										</span>
-										<span className="text-[10px] font-semibold text-foreground mt-0.5">
-											AppGallery
-										</span>
-									</div>
-								</button>
-							</div>
-						</div>
 					</div>
 				</motion.header>
 
