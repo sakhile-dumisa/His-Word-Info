@@ -9,9 +9,10 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 import { inject } from "@vercel/analytics";
 import { IntlayerProvider } from "react-intlayer";
 import BackToTop from "../components/BackToTop";
-import CustomCursor from "../components/CustomCursor";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { NoiseTexture } from "../components/ui/noise-texture";
+import { SmoothCursor } from "../components/ui/smooth-cursor";
 import appCss from "../globals.css?url";
 import { useThemeSync } from "../lib/theme-store";
 
@@ -65,10 +66,11 @@ function RootLayout() {
 
 	return (
 		<IntlayerProvider>
-			<div className="flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
-				<CustomCursor />
+			<div className="relative flex flex-col min-h-screen bg-background text-foreground transition-colors duration-300">
+				<NoiseTexture className="fixed inset-0 pointer-events-none z-50 opacity-20 dark:opacity-35" />
+				<SmoothCursor />
 				<Header />
-				<main className="grow -mt-10 md:mt-0">
+				<main className="grow -mt-10">
 					<Outlet />
 				</main>
 				<Footer />

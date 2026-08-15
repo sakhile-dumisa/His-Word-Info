@@ -125,6 +125,7 @@ const itemVariants = {
 function RouteComponent() {
 	const {
 		heroTitle,
+		heroDescription,
 		verseText,
 		aboutText,
 		howItWorksTitle,
@@ -154,36 +155,40 @@ function RouteComponent() {
 			animate="visible"
 			className="min-h-screen bg-background mt-2"
 		>
-			<div className="mx-auto max-w-2xl px-4 py-6 md:mt-10 space-y-16">
-				{/* Hero Header */}
-				<motion.header variants={itemVariants} className="space-y-4">
-					<h1 className="text-4xl font-semibold tracking-tight text-foreground justify-center flex items-center gap-3">
-						<img
-							src="/logo192.png"
-							alt="His Word App Logo"
-							className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl"
-						/>
-						<span className="hidden md:block">{heroTitle}</span>
-					</h1>
+			<div className="mx-auto max-w-2xl px-4 py-6 md:mt-6 space-y-16">
+				{/* Hero Section showcasing Interface & Design */}
+				<motion.header variants={itemVariants} className="space-y-6 text-center">
+					<div className="space-y-3">
+						<div className="flex items-center justify-center gap-3">
+							<img
+								src="/logo192.png"
+								alt="His Word App Logo"
+								className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl shadow-xs"
+							/>
+							<h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground">
+								{heroTitle}
+							</h1>
+						</div>
+						<p className="text-sm sm:text-base text-muted-foreground max-w-lg mx-auto leading-relaxed">
+							{heroDescription}
+						</p>
+					</div>
+
+					{/* Interactive Interface & Design Carousel Showcase */}
+					<div className="pt-2">
+						<Carousel hideHeader />
+					</div>
 
 					{/* Minimalistic Verse Quote & About Text */}
-					<div className="space-y-4 pt-4 text-center flex flex-col items-center">
-						<p className="text-base text-foreground/85 leading-relaxed max-w-xl">
+					<div className="space-y-3 pt-6 border-t border-border/40 text-center flex flex-col items-center max-w-xl mx-auto">
+						<p className="text-sm sm:text-base text-foreground/90 leading-relaxed font-medium">
 							{verseText}
 						</p>
-						<p className="text-sm text-muted-foreground leading-relaxed max-w-xl">
+						<p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
 							{aboutText}
 						</p>
 					</div>
 				</motion.header>
-
-				{/* Screenshots Carousel */}
-				<motion.section
-					variants={itemVariants}
-					className="py-2 border-t border-border/30"
-				>
-					<Carousel />
-				</motion.section>
 
 				{/* How It Works Section */}
 				<motion.section variants={itemVariants} className="space-y-6">

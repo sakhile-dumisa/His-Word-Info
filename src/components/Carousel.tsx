@@ -23,7 +23,11 @@ const SCREENS = [
 
 const COLLAGE_IMAGE = "/appShots/thumbnail.png";
 
-export default function Carousel() {
+interface CarouselProps {
+	hideHeader?: boolean;
+}
+
+export default function Carousel({ hideHeader = false }: CarouselProps) {
 	const {
 		sectionTitle,
 		sectionSubtitle,
@@ -67,16 +71,18 @@ export default function Carousel() {
 	}, [closeLightbox]);
 
 	return (
-		<div className="space-y-8 py-4">
+		<div className={cn("space-y-6", !hideHeader && "py-4 space-y-8")}>
 			{/* Section Header */}
-			<div className="text-center space-y-2">
-				<h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-					{sectionTitle}
-				</h2>
-				<p className="text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed">
-					{sectionSubtitle}
-				</p>
-			</div>
+			{!hideHeader && (
+				<div className="text-center space-y-2">
+					<h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+						{sectionTitle}
+					</h2>
+					<p className="text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed">
+						{sectionSubtitle}
+					</p>
+				</div>
+			)}
 
 			{/* Custom Tab Selector */}
 			<div className="flex justify-center">
