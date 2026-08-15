@@ -13,7 +13,7 @@ interface ThemeState {
 export const useThemeStore = create<ThemeState>()(
 	persist(
 		(set) => ({
-			theme: "system",
+			theme: "dark",
 			setTheme: (theme) => set({ theme }),
 		}),
 		{
@@ -24,7 +24,7 @@ export const useThemeStore = create<ThemeState>()(
 
 /**
  * A hook that returns the theme and setTheme function.
- * Avoids hydration mismatch errors by returning "system" during SSR
+ * Avoids hydration mismatch errors by returning "dark" during SSR
  * and initializing to the persisted state only after the component mounts on the client.
  */
 export function useTheme() {
@@ -36,7 +36,7 @@ export function useTheme() {
 	}, []);
 
 	return {
-		theme: mounted ? store.theme : "system",
+		theme: mounted ? store.theme : "dark",
 		setTheme: store.setTheme,
 		mounted,
 	};

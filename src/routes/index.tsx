@@ -1,10 +1,10 @@
 import {
-	Book01Icon,
-	Book02Icon,
-	BookSearchIcon,
+	BookOpen01Icon,
 	Database01Icon,
 	Folder01Icon,
+	HighlighterIcon,
 	PaintBrush01Icon,
+	Search01Icon,
 	Share01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -190,61 +190,54 @@ function RouteComponent() {
 					<h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground ml-1">
 						{howItWorksTitle}
 					</h2>
-					<div className="space-y-8 border-l border-border pl-4 ml-1">
-						<div className="space-y-2 relative">
-							<span className="absolute -left-5.25 top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Book01Icon}
-									className="text-muted-foreground size-5 shrink-0"
-								/>
-								<span>{step1Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step1Desc}
-							</p>
-						</div>
+					<div className="relative pl-1">
+						{/* Polished continuous timeline connector */}
+						<div className="absolute left-4.25 top-4 bottom-6 w-px bg-linear-to-b from-border via-border/60 to-transparent" />
 
-						<div className="space-y-2 relative">
-							<span className="absolute -left-5.25 top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Book02Icon}
-									className="text-muted-foreground size-5 shrink-0"
-								/>
-								<span>{step2Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step2Desc}
-							</p>
-						</div>
+						<div className="space-y-6">
+							{[
+								{
+									title: step1Title,
+									desc: step1Desc,
+									icon: BookOpen01Icon,
+								},
+								{
+									title: step2Title,
+									desc: step2Desc,
+									icon: HighlighterIcon,
+								},
+								{
+									title: step3Title,
+									desc: step3Desc,
+									icon: Search01Icon,
+								},
+								{
+									title: step4Title,
+									desc: step4Desc,
+									icon: Share01Icon,
+								},
+							].map((step, idx) => (
+								<div key={idx} className="flex items-start gap-4 group relative">
+									{/* Modern Node Badge */}
+									<div className="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-xl border border-border/80 bg-background text-foreground shadow-xs group-hover:border-foreground/40 group-hover:bg-muted/30 transition-all duration-200">
+										<HugeiconsIcon
+											icon={step.icon}
+											size={18}
+											className="text-foreground/80 group-hover:text-foreground transition-colors"
+										/>
+									</div>
 
-						<div className="space-y-2 relative">
-							<span className="absolute -left-5.25 top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={BookSearchIcon}
-									className="text-muted-foreground size-5 shrink-0"
-								/>
-								<span>{step3Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step3Desc}
-							</p>
-						</div>
-
-						<div className="space-y-2 relative">
-							<span className="absolute -left-5.25 top-1.5 flex h-2 w-2 rounded-full bg-foreground" />
-							<h3 className="text-base font-medium text-foreground flex items-center gap-2">
-								<HugeiconsIcon
-									icon={Share01Icon}
-									className="text-muted-foreground size-5 shrink-0"
-								/>
-								<span>{step4Title}</span>
-							</h3>
-							<p className="text-sm text-muted-foreground leading-relaxed">
-								{step4Desc}
-							</p>
+									{/* Step Content */}
+									<div className="space-y-1 pt-1 flex-1">
+										<h3 className="text-sm font-medium text-foreground tracking-tight">
+											{step.title}
+										</h3>
+										<p className="text-sm text-muted-foreground leading-relaxed">
+											{step.desc}
+										</p>
+									</div>
+								</div>
+							))}
 						</div>
 					</div>
 				</motion.section>

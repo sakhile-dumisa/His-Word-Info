@@ -41,8 +41,8 @@ export const Route = createRootRoute({
 					try {
 						const themeStoreStr = localStorage.getItem("theme-store");
 						const theme = themeStoreStr 
-							? JSON.parse(themeStoreStr).state.theme 
-							: "system";
+							? JSON.parse(themeStoreStr).state?.theme 
+							: "dark";
 						if (theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
 							document.documentElement.classList.add("dark");
 						} else {
@@ -80,7 +80,7 @@ function RootLayout() {
 
 function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
+		<html lang="en" className="dark">
 			<head>
 				<HeadContent />
 			</head>

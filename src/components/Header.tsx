@@ -1,8 +1,6 @@
 import {
 	Cancel01Icon,
 	Comment01Icon,
-	ComputerIcon,
-	Globe02Icon,
 	Moon01Icon,
 	Store01Icon,
 	Sun01Icon,
@@ -11,30 +9,18 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { Link as RouterLink } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useIntlayer, useLocale } from "react-intlayer";
-import { type Theme, useTheme } from "#/lib/theme-store";
+import { useTheme } from "#/lib/theme-store";
 import { Button } from "@/components/ui/button";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuRadioGroup,
-	DropdownMenuRadioItem,
-	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
 	const { theme, setTheme } = useTheme();
 	const { locale, setLocale } = useLocale();
 	const {
-		englishOption,
-		zuluOption,
 		bannerPrompt,
 		bannerLinkText,
 		appGalleryBannerPrompt,
 		appGalleryBannerLinkText,
 		themeToggle,
-		lightTheme,
-		darkTheme,
-		systemTheme,
 	} = useIntlayer("header");
 
 	const [showAppGalleryBanner, setShowAppGalleryBanner] = useState(false);
@@ -53,21 +39,24 @@ export default function Header() {
 		setShowAppGalleryBanner(false);
 	};
 
-	const currentIcon = () => {
-		switch (theme) {
-			case "light":
-				return Sun01Icon;
-			case "dark":
-				return Moon01Icon;
-			default:
-				return ComputerIcon;
-		}
+	const isDark =
+		theme === "dark" ||
+		(theme === "system" &&
+			typeof window !== "undefined" &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+	const toggleTheme = () => {
+		setTheme(isDark ? "light" : "dark");
+	};
+
+	const toggleLocale = () => {
+		setLocale(locale === "zu" ? "en" : "zu");
 	};
 
 	return (
 		<div className="w-full">
 			{showAppGalleryBanner ? (
-				<div className="w-full bg-red-500/5 hover:bg-red-500/10 border-b border-red-500/10 py-2.5 px-4 text-xs text-center flex items-center justify-center gap-1.5 transition-all duration-300 relative">
+				<div className="hidden md:flex w-full bg-red-500/5 hover:bg-red-500/10 border-b border-red-500/10 py-2.5 px-4 text-xs text-center items-center justify-center gap-1.5 transition-all duration-300 relative">
 					<div className="flex flex-wrap items-center justify-center gap-1.5 pr-6">
 						<span className="inline-flex items-center justify-center bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[8px] tracking-wider uppercase mr-1 shrink-0 animate-pulse">
 							New Launch
@@ -128,74 +117,28 @@ export default function Header() {
 					</RouterLink>
 				</div>
 
-				<div className="flex items-center gap-4">
-					{/* Language Selection Dropdown */}
-					<DropdownMenu>
-						<DropdownMenuTrigger>
-							<Button
-								variant="ghost"
-								size="icon"
-								aria-label="Language selection"
-								className="rounded-full text-muted-foreground hover:text-primary"
-							>
-								<HugeiconsIcon icon={Globe02Icon} size={20} />
-							</Button>
-						</DropdownMenuTrigger>
-						<DropdownMenuContent align="end">
-							<DropdownMenuRadioGroup
-								value={locale}
-								onValueChange={(val) =>
-									setLocale(val as Parameters<typeof setLocale>[0])
-								}
-							>
-								<DropdownMenuRadioItem value="en">
-									<span>{englishOption}</span>
-								</DropdownMenuRadioItem>
-								<DropdownMenuRadioItem value="zu">
-									<span>{zuluOption}</span>
-								</DropdownMenuRadioItem>
-							</DropdownMenuRadioGroup>
-						</DropdownMenuContent>
-					</DropdownMenu>
+				<div className="flex items-center gap-2">
+					{/* Language Toggle Button */}
+					<Button
+						variant="ghost"
+						size="sm"
+						onClick={toggleLocale}
+						aria-label="Toggle language"
+						className="rounded-full text-muted-foreground hover:text-foreground font-semibold px-3 h-9 text-xs"
+					>
+						{locale === "zu" ? "Zu" : "En"}
+					</Button>
 
-					{/* Theme Selector Dropdown */}
-					<DropdownMenu>
-						<DropdownMenuTrigger>
-							<Button
-								variant="ghost"
-								size="icon"
-								aria-label={themeToggle}
-								className="rounded-full text-muted-foreground hover:text-primary"
-							>
-								<HugeiconsIcon icon={currentIcon()} size={20} />
-							</Button>
-						</DropdownMenuTrigger>
-						<DropdownMenuContent align="end">
-							<DropdownMenuRadioGroup
-								value={theme}
-								onValueChange={(val) => setTheme(val as Theme)}
-							>
-								<DropdownMenuRadioItem value="light">
-									<div className="flex items-center gap-2">
-										<HugeiconsIcon icon={Sun01Icon} size={18} />
-										<span>{lightTheme}</span>
-									</div>
-								</DropdownMenuRadioItem>
-								<DropdownMenuRadioItem value="dark">
-									<div className="flex items-center gap-2">
-										<HugeiconsIcon icon={Moon01Icon} size={18} />
-										<span>{darkTheme}</span>
-									</div>
-								</DropdownMenuRadioItem>
-								<DropdownMenuRadioItem value="system">
-									<div className="flex items-center gap-2">
-										<HugeiconsIcon icon={ComputerIcon} size={18} />
-										<span>{systemTheme}</span>
-									</div>
-								</DropdownMenuRadioItem>
-							</DropdownMenuRadioGroup>
-						</DropdownMenuContent>
-					</DropdownMenu>
+					{/* Theme Toggle Button */}
+					<Button
+						variant="ghost"
+						size="icon"
+						onClick={toggleTheme}
+						aria-label={themeToggle}
+						className="rounded-full text-muted-foreground hover:text-foreground h-9 w-9"
+					>
+						<HugeiconsIcon icon={isDark ? Sun01Icon : Moon01Icon} size={20} />
+					</Button>
 				</div>
 			</header>
 		</div>
