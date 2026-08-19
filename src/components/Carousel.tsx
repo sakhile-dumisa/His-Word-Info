@@ -18,7 +18,6 @@ const SCREENS = [
 	"/appShots/Frame 3.png",
 	"/appShots/Frame 4.png",
 	"/appShots/Frame 5.png",
-	"/appShots/Frame 6.png",
 ];
 
 const COLLAGE_IMAGE = "/appShots/thumbnail.png";
@@ -38,7 +37,7 @@ export default function Carousel({ hideHeader = false }: CarouselProps) {
 	} = useIntlayer("carousel");
 
 	const [activeTab, setActiveTab] = useState<"slider" | "collage">("slider");
-	const [currentIndex, setCurrentIndex] = useState(0);
+	const [currentIndex, setCurrentIndex] = useState(3);
 	const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
 	const handleNext = () => {
@@ -190,7 +189,7 @@ export default function Carousel({ hideHeader = false }: CarouselProps) {
 													className={cn(
 														"relative w-65 h-115 rounded-2xl overflow-hidden border transition-all duration-300 select-none block p-0 bg-transparent text-left cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary/50",
 														isActive
-															? "border-primary/50 shadow-lg shadow-primary/5"
+															? "border-transparent shadow-lg shadow-primary/5"
 															: "border-border/40 opacity-40 scale-90 shadow-sm",
 													)}
 													animate={{

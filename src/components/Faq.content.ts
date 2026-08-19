@@ -9,15 +9,15 @@ const faqContent = {
 		}),
 		sectionSubtitle: t({
 			en: "Everything you need to know about the His Word application features, performance, and data policies.",
-			zu: "Konke odinga ukukwazi mayelana nezici ze-His Word, ukusebenza, nezinqubomgomo zemininingwane.",
+			zu: "Konke odinga ukukwazi mayelana nezici ze-His Word, ukusebenza kwayo, kanye nenqubomgomo yobumfihlo.",
 		}),
 		catAppTitle: t({
 			en: "App & Features",
-			zu: "I-App nezici",
+			zu: "Uhlelo Lokusebenza & Nezici Zalo",
 		}),
 		catAppDesc: t({
 			en: "General questions about features, translations, and reading tools.",
-			zu: "Imibuzo ejwayelekile mayelana nezici, ukuhunyushwa, namathuluzi okufunda.",
+			zu: "Imibuzo ejwayelekile mayelana nezici, izinguqulo, namathuluzi okufunda.",
 		}),
 		q1Title: t({
 			en: "What translations are supported in His Word?",
@@ -25,71 +25,71 @@ const faqContent = {
 		}),
 		q1Content: t({
 			en: "His Word includes the American Standard Version (ASV) and the World English Bible (WEB). Both translations are stored fully offline on your device, allowing you to switch between them instantly with zero network delay.",
-			zu: "I-His Word ihlanganisa i-American Standard Version (ASV) ne-World English Bible (WEB). Zombili lezi zinguqulo zigcinwa ngokungaxhunyiwe ku-inthanethi ngokuphelele kudivayisi yakho, okukuvumela ukuthi ushintshe phakathi kwazo ngaphandle kokulibaziseka kwenethiwekhi.",
+			zu: "I-His Word ihlanganisa i-American Standard Version (ASV) ne-World English Bible (WEB). Zombili lezi zinguqulo zigcinwa ngokuphelele kudivayisi yakho ngaphandle kwe-inthanethi, okukuvumela ukuthi ushintshe phakathi kwazo ngokushesha.",
 		}),
 		q2Title: t({
 			en: "Is His Word free to use, and are there ads?",
-			zu: "Ingabe i-His Word imahhala ukuyisebenzisa, futhi kukhona izikhangiso?",
+			zu: "Ingabe i-His Word imahhala ukuyisebenzisa, futhi ingabe kukhona izikhangiso?",
 		}),
 		q2Content: t({
 			en: "Yes, His Word is 100% free, open-source, and does not contain any advertisements, subscription models, or hidden in-app purchases.",
-			zu: "Yebo, i-His Word imahhala ngo-100%, ivulekile (open-source), futhi ayinazo izikhangiso, izindlela zokubhalisa, noma ukuthenga okufihliwe ngaphakathi kwe-app.",
+			zu: "Yebo, i-His Word imahhala ngo-100%, ivulekile (open-source), futhi ayinazo nhlobo izikhangiso, izindlela zokubhalisa, noma ukukhokha okufihliwe ngaphakathi kohlelo.",
 		}),
 		q3Title: t({
 			en: "How do the daily devotionals and notifications work?",
 			zu: "Isebenza kanjani imikhuleko yansuku zonke nezaziso?",
 		}),
 		q3Content: t({
-			en: "The app features a custom notification queue that schedules devotionals locally on your device. It includes holiday-specific reminders (such as Christmas, Easter, and Good Friday) and automatically refreshes its internal queue to make sure you never miss a Verse of the Day.",
-			zu: "I-app inohlu lwezaziso ezenziwe ngokwezifiso ezihlela imikhuleko yansuku zonke kudivayisi yakho. Kuhlanganisa nezikhumbuzi ezithile zamaholide (njengoKhisimusi, Iphasika, noLwesihlanu Olungcwele) futhi ivuselela ngokuzenzakalelayo uhlu lwayo lwangaphakathi ukuqinisekisa ukuthi awulahlekelwa yiVesi Losuku.",
+			en: "The app features a custom notification queue that schedules devotionals locally on your device. It includes holiday-specific scripture selections (such as Christmas, Easter, and Good Friday) and automatically manages its local queue so you never miss a Verse of the Day.",
+			zu: "Uhlelo lusebenzisa uhlu lwezaziso oluhlela amavesi osuku endaweni kudivayisi yakho. Kuhlanganisa nemibhalo ekhethekile yezinsuku zamaholide (njengoKhisimusi, Iphasika, noLwesihlanu Olungcwele) futhi luphatha uhlu lwalo ukuqinisekisa ukuthi awuphuthelwa yiVesi Losuku.",
 		}),
 		q4Title: t({
 			en: "Does the app track what I read?",
-			zu: "Ingabe i-app ilandelela lokho engikufundayo?",
+			zu: "Ingabe uhlelo luyakulandelela lokho engikufundayo?",
 		}),
 		q4Content: t({
-			en: "No. His Word features a local Reading History tracker that logs your last 10 reading sessions with deduplication and relative timestamps, but this log remains strictly on your device and is not shared with any analytics services.",
-			zu: "Cha. I-His Word inesilandi somlando wokufunda sasendaweni esigcina izikhathi zakho zokugcina eziyishumi zokufunda, kodwa lo mlando uhlala kudivayisi yakho kuphela futhi awabelwa izinsiza ze-analytics.",
+			en: "No. His Word features a local Reading History tracker that logs your last 10 reading sessions with deduplication and relative timestamps. This record remains strictly on your device and is never transmitted to any analytics or tracking services.",
+			zu: "Cha. I-His Word inesilandeleli somlando wokufunda sasendaweni esigcina izikhathi zakho zokugcina eziyishumi zokufunda. Lolu hlu luhlala kuphela kudivayisi yakho futhi alwabelwa muntu noma izinsiza ze-analytics.",
 		}),
 		q5Title: t({
 			en: "Can I filter scriptures by testament or category?",
 			zu: "Ngingakwazi ukuhlunga imibhalo ngeTestamente noma ngesigaba?",
 		}),
 		q5Content: t({
-			en: "Yes. The search and navigation views include dynamic category tags (such as Law, History, Poetry, Gospels, or Epistles), allowing you to quickly filter search results and navigate to specific genres of biblical literature.",
-			zu: "Yebo. Imibono yokusesha neyokuzulazula ihlanganisa amathegi ezigaba (njengoMthetho, Umlando, Izinkondlo, amaVangeli, noma iziBhalo), okukuvumela ukuthi uhlunge ngokushesha imiphumela yosesho.",
+			en: "Yes. The search and navigation views include dynamic category tags (such as Law, History, Poetry, Gospels, and Epistles), allowing you to quickly filter search results and navigate to specific genres of biblical literature.",
+			zu: "Yebo. Imibono yokusesha neyokuzulazula ihlanganisa amathegi ezigaba (njengoMthetho, Umlando, Izinkondlo, amaVangeli, nezincwadi zabaPhostoli), okukuvumela ukuthi uhlunge ngokushesha imiphumela yosesho.",
 		}),
 		catPrivacyTitle: t({
 			en: "Privacy & Offline Access",
-			zu: "Ubumfihlo Nokungaxhunyiwe ku-inthanethi",
+			zu: "Ubumfihlo Nokusebenza Ngaphandle Kwe-inthanethi",
 		}),
 		catPrivacyDesc: t({
 			en: "How your data and connection status are managed.",
-			zu: "Ukuthi idatha yakho nesimo sokuxhumana kulawulwa kanjani.",
+			zu: "Ukuthi idatha yakho nobumfihlo kulawulwa kanjani.",
 		}),
 		q6Title: t({
 			en: "Where is my journaling and reading data stored?",
-			zu: "Iphi idatha yami yokubhala nedatha yokufunda igcinwe khona?",
+			zu: "Igciniwe kuphi idatha yami yokubhala namanothi okufunda?",
 		}),
 		q6Content: t({
-			en: "All data—including your reflections, book bookmarks, reading logs, and color-coded verse highlights—is stored locally on your device using AsyncStorage. None of your data is ever uploaded to external databases or cloud servers.",
-			zu: "Yonke idatha—kuhlanganise nokubhalile, amabhukumaka ebhuku, izingodo zokufunda, nokugqanyiswa kwamavesi ngemibala—igcinwa kudivayisi yakho isebenzisa i-AsyncStorage. Ayikho idatha yakho eyake yalayishwa kuma-database angaphandle noma amaseva wamafu.",
+			en: "All data—including your reflection notes, bookmarks, reading logs, and color-coded verse highlights—is stored locally on your device using AsyncStorage. None of your data is ever uploaded to external databases or cloud servers.",
+			zu: "Yonke idatha—kuhlanganise namanothi akho okuzindla, amabhukumaka, amarekhodi wokufunda, nokugqamisa amavesi ngemibala—igcinwa kudivayisi yakho kuphela kusetshenziswa i-AsyncStorage. Ayikho idatha yakho eyake yalayishwa kumaseva angaphandle noma efwini.",
 		}),
 		q7Title: t({
 			en: "Do I need an active internet connection to read?",
 			zu: "Ingabe ngidinga uxhumano lwe-inthanethi olusebenzayo ukuze ngifunde?",
 		}),
 		q7Content: t({
-			en: "No. His Word is designed as an offline-first application. Once installed, all Bible scriptures, search tools, and devotionals are accessible without internet, cellular data, or server connectivity.",
-			zu: "Cha. I-His Word yakhelwe njenge-app esebenza ngaphandle kwe-inthanethi kuqala. Uma isifakiwe, yonke imibhalo yeBhayibheli, amathuluzi okusesha, nemikhuleko ifinyeleleka ngaphandle kwe-inthanethi.",
+			en: "No. His Word is designed as a true offline-first application. Once installed, all scriptures, Text-to-Speech audio reading, search tools, and devotionals are fully accessible without Wi-Fi or cellular data.",
+			zu: "Cha. I-His Word yakhelwe njengohlelo olusebenza ngokuphelele ngaphandle kwe-inthanethi. Uma selufakiwe, yonke imibhalo, umsindo wokufundelwa, amathuluzi okusesha, nemikhuleko kutholakala ngaphandle kwe-Wi-Fi noma idatha yeselula.",
 		}),
 		q8Title: t({
 			en: "What personal details are required to use the app?",
-			zu: "Imiphi imininingwane yomuntu siqu edingekayo ukuze usebenzise i-app?",
+			zu: "Imiphi imininingwane yomuntu siqu edingekayo ukuze usebenzise uhlelo?",
 		}),
 		q8Content: t({
-			en: "None. There are no sign-up forms, email verifications, profile creations, or social sign-ins. Your identity remains completely anonymous.",
-			zu: "Ayikho. Azikho amafomu okubhalisa, ukuqinisekiswa kwe-imeyili, ukudalwa kwephrofayela, noma ukungena ngemithombo yezokuxhumana. Ubuwena buhlala buyimfihlo ngokuphelele.",
+			en: "None. There are no sign-up forms, email verifications, user accounts, or social logins. Your identity remains 100% anonymous.",
+			zu: "Ayikho nhlobo. Awukho amafomu okubhalisa, ukuqinisekiswa kwe-imeyili, ama-akhawunti abasebenzisi, noma ukungena ngemithombo yezokuxhumana. Ubuwena buhlala buyimfihlo ngokuphelele.",
 		}),
 		catPerfTitle: t({
 			en: "Performance & Hardware Sensors",
@@ -97,47 +97,47 @@ const faqContent = {
 		}),
 		catPerfDesc: t({
 			en: "Details on advanced mobile capabilities, caching, and background threads.",
-			zu: "Imininingwane emayelana namakhono eselula athuthukile, ukugcina okwesikhashana, nemicu yangemuva.",
+			zu: "Imininingwane emayelana namakhono eselula athuthukile, ukugcina kwesikhashana, nokusebenza kwangemuva.",
 		}),
 		q9Title: t({
 			en: "How does the 'Shake-to-Capture' sharing feature work?",
 			zu: "Isebenza kanjani isici sokwabelana se-'Shake-to-Capture'?",
 		}),
 		q9Content: t({
-			en: "When you shake your device, the app's accelerometer triggers a screenshot capture of your current reader layout. It uses native haptics to give you tactile feedback, then opens your system's share sheet to let you send or save the image.",
-			zu: "Uma unyakazisa idivayisi yakho, inzwa yeselula iqalisa ukuthwebula isikrini sendlela ofunda ngayo njengamanje. Isebenzisa i-haptic yomdabu ukuze ikunikeze impendulo yokuthinta, bese ivula ishidi lokwabelana lesistimu yakho ukuze ikuvumele uthumele noma ugcine isithombe.",
+			en: "When you shake your phone while reading, the device's accelerometer detects the motion and triggers our on-device canvas renderer. It provides tactile haptic feedback, dynamically composes a high-resolution scripture card with your active theme, and opens the native OS share sheet.",
+			zu: "Uma unyakazisa ifoni yakho ngenkathi ufunda, inzwa yokunyakaza (accelerometer) ithola ukunyakaza bese iqala injini yokwenza amakhadi. Ikunikeza ukuthinta okudlidlizayo (haptic), yakhe ikhadi le-vesi elihle kakhulu elinetimu yakho, bese ivula iwindi lokwabelana ledivayisi.",
 		}),
 		q10Title: t({
 			en: "Why does the app request notification and sensor access?",
-			zu: "Kungani i-app icela ukufinyelela kwesaziso nenzwa?",
+			zu: "Kungani uhlelo lucela ukufinyelela kwesaziso nenzwa?",
 		}),
 		q10Content: t({
-			en: "Notifications are requested to deliver your scheduled daily devotionals. Sensor (accelerometer) permissions are requested solely to detect the shake gesture for screen capturing. None of this data is collected or transmitted off your device.",
-			zu: "Izaziso zicelwa ukuthi zilethe imikhuleko yakho yansuku zonke ehleliwe. Izimvume zenzwa zicelwa kuphela ukuthola ukunyakaza kokuthwebula isikrini. Ayikho kule datha eqoqwayo noma edluliselwa ngaphandle kwedivayisi yakho.",
+			en: "Notifications are requested solely to deliver your opt-in daily devotionals. Sensor (accelerometer) access is requested strictly to detect the shake gesture for sharing cards while reading. None of this sensor or notification data ever leaves your device.",
+			zu: "Izaziso zicelwa kuphela ukuletha amavesi osuku owakhethile. Izimvume zenzwa zicelwa kuphela ukuthola ukunyakaza kokudala amakhadi okwabelana ngenkathi ufunda. Ayikho kule datha eqoqwayo noma edluliselwa ngaphandle kwedivayisi yakho.",
 		}),
 		q11Title: t({
 			en: "What is the LRU Bible module cache?",
 			zu: "Yini inqolobane yemojula yeBhayibheli ye-LRU?",
 		}),
 		q11Content: t({
-			en: "To keep the memory footprint minimal on older devices, the app utilizes a custom Least Recently Used (LRU) cache. It dynamically loads book translations when needed and limits active Bible files in memory to a maximum of 5, preventing memory bloat and app crashes.",
-			zu: "Ukuze ugcine imemori incane kumadivayisi amadala, i-app isebenzisa inqolobane ye-Least Recently Used (LRU). Ilayisha izinguqulo zezincwadi uma kunesidingo futhi ikhawulela amafayela eBhayibheli asebenzayo ememorini afinyelele ku-5 ukuvikela ukuphahlazeka kwe-app.",
+			en: "To keep the memory footprint minimal on older devices, the app utilizes a custom Least Recently Used (LRU) cache. It dynamically loads book translations when needed and caches active chapters in memory, preventing memory bloat and app crashes.",
+			zu: "Ukuze kugcinwe ukusetshenziswa kwememori kuncane kumadivayisi amadala, uhlelo lusebenzisa inqolobane ye-Least Recently Used (LRU). Ilayisha izinguqulo zezincwadi lapho zidingeka futhi igcine izahluko ezisebenzayo ememorini ukuvimbela ukuphahlazeka kohlelo.",
 		}),
 		q12Title: t({
 			en: "How does the non-blocking search work?",
-			zu: "Isebenza kanjani isesha engavimbeli?",
+			zu: "Isebenza kanjani injini yokusesha engaphazamisi ukusebenza kwe-UI?",
 		}),
 		q12Content: t({
-			en: "Searching a massive text database on mobile can cause lag. His Word splits search queries into asynchronous batches (using timer chunk macros) to run on separate execution cycles. This allows the search bar to stay 100% responsive and lag-free while parsing the entire scripture.",
-			zu: "Ukusesha i-database yombhalo omkhulu kuselula kungadala ukulibala. I-His Word ihlukanisa imibuzo yosesho ibe yamaqoqo asynchronous ukugwema ukulibazisa i-UI. Lokhu kuvumela ibha yosesho ukuthi ihlale isabela ngo-100% ngaphandle kokulibaziseka.",
+			en: "Searching a massive text database on mobile can cause stutter. His Word pairs a 200ms debounce with asynchronous timer micro-task chunking to run queries on separate execution cycles, ensuring the search bar remains silky smooth while querying all 66 books.",
+			zu: "Ukusesha umbhalo omkhulu wesizindalwazi kuselula kungadala ukunensa. I-His Word ihlanganisa ukubambezela (debounce) nemisebenzi emincane ye-asynchronous ukuhlunga imibhalo ngokwezigaba, ukuqinisekisa ukuthi ibha yosesho ihlala ishesha futhi ibushelelezi ngenkathi ihlola zonke izincwadi ezingama-66.",
 		}),
 		q13Title: t({
 			en: "How does the high-fidelity image exporter work?",
-			zu: "Isebenza kanjani isithekelisi sezithombe eziphezulu?",
+			zu: "Isebenza kanjani injini yokukhiqiza amakhadi ezithombe ezisezingeni eliphezulu?",
 		}),
 		q13Content: t({
-			en: "When you click share, the app uses a hidden WebView to render the scripture, your highlight colors, or reflection text onto a virtual HTML5 Canvas using premium typography. The canvas compiles this into a high-resolution PNG locally for sharing.",
-			zu: "Uma uchofoza okwabelana, i-app isebenzisa i-WebView efihliwe ukukhombisa umbhalo, imibala yakho egqamile, noma umbhalo wokubhala ku-Virtual HTML5 Canvas isebenzisa i-typography ye-premium. Le canvas ihlanganisa lokhu kube yi-resolution ephezulu ye-PNG yasendaweni ukuze yabelane.",
+			en: "When you trigger a share, the app uses a hidden WebView to render the scripture, highlight colors, and reflection text onto a virtual HTML5 Canvas using premium typography. The canvas outputs a high-resolution PNG locally for sharing.",
+			zu: "Uma uqala ukwabelana, uhlelo lusebenzisa i-WebView efihliwe ukubhala umbhalo, imibala egqanyisiwe, namanothi akho ku-HTML5 Canvas kusetshenziswa ubuciko bokubhala obusezingeni eliphezulu. Le canvas ibe isikhiqiza isithombe se-PNG esiphezulu endaweni ukuze wabelane ngaso.",
 		}),
 		q14Title: t({
 			en: "How can I submit bugs, request features, or contact the developer?",
@@ -145,15 +145,15 @@ const faqContent = {
 		}),
 		q14Content: t({
 			en: "For support, bug submissions, or feature requests, you can email the developer directly at ",
-			zu: "Ukuze uthole ukwesekwa, ukuthunyelwa kweziphazamisi, noma izicelo zezici, ungathumela i-imeyili kunjiniyela ngqo ku- ",
+			zu: "Ukuze uthole ukwesekwa, ukuthumela iziphazamisi, noma ukucela izici ezintsha, ungathumela i-imeyili kunjiniyela ngqo ku- ",
 		}),
 		q14LinkText: t({
 			en: " Alternatively, if you want to engage directly and publicly with the developer, you can leave a comment on this ",
-			zu: " Kungenjalo, uma ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni, ungashiya umbono wakho kule ",
+			zu: " Kungenjalo, uma ufuna ukuxhumana ngqo nonjiniyela esidlangalaleni, ungashiya umbono wakho kuleli ",
 		}),
 		q14BlogText: t({
 			en: "blog post",
-			zu: "bhulogi post",
+			zu: "bhalo lebhulogi",
 		}),
 	},
 } satisfies Dictionary;

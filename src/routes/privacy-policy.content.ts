@@ -9,7 +9,7 @@ const privacyPolicyContent = {
 		}),
 		pageSubtitle: t({
 			en: "Learn how we protect and respect your data inside the His Word mobile application and website.",
-			zu: "Funda ukuthi sizivikela kanjani futhi sizihlonipha kanjani izinhlelo zakho zemininingwane ngaphakathi kwe-His Word.",
+			zu: "Funda kabanzi ngendlela esivikela nesihlonipha ngayo ubumfihlo nedatha yakho ngaphakathi kohlelo lwe-His Word kanye nakuwebhusayithi.",
 		}),
 		backLink: t({
 			en: "Back to Home",
@@ -17,11 +17,11 @@ const privacyPolicyContent = {
 		}),
 		item1Title: t({
 			en: "1. Offline-First & Local Storage",
-			zu: "1. Isitore Somdabu Esingaxhunyiwe ku-inthanethi",
+			zu: "1. Isitore Sasendaweni Nesingaxhunyiwe ku-Inthanethi",
 		}),
 		item1Content: t({
 			en: "His Word is designed to be fully functional offline. All user-generated data—including your reflections/journal entries, reading history, verse highlights, custom book bookmarks, and theme configurations—is stored locally on your device via AsyncStorage. This data is never sent to, stored on, or processed by remote servers. The application may periodically connect to our update servers (Expo) to automatically check for and download critical software updates. This process accesses basic system parameters (like app version and OS type) and does not transmit or store any personal data or reading activity.",
-			zu: "I-His Word idizayinelwe ukuthi isebenze ngokugcwele ungaxhunyiwe ku-inthanethi. Yonke idatha eyenziwe ngumsebenzisi—kuhlanganise nokubhalile, umlando wokufunda, ukugqanyiswa kwamavesi, amabhukumaka ezincwadi, nokucushwa kwetimu—igcinwa kudivayisi yakho isebenzisa i-AsyncStorage. Le datha ayithunyelwa, ayigcinwa, noma ayicutshungulwa amaseva akude. I-app ingase ixhumane ngezikhathi ezithile namaseva ethu wezibuyekezo (Expo) ukuze ihlole futhi ilande izibuyekezo zesofthiwe ezibalulekile ngokuzenzakalelayo. Le nqubo ifinyelela amapharamitha ayisisekelo wesistimu (njengenguqulo ye-app nohlobo lwe-OS) futhi ayithumeli noma igcine noma iyiphi idatha yomuntu siqu noma umsebenzi wokufunda.",
+			zu: "I-His Word yakhelwe ukuthi isebenze ngokugcwele ungaxhunyiwe ku-inthanethi. Yonke idatha eyenziwe ngumsebenzisi—kuhlanganise namanothi okuzindla, umlando wokufunda, ukugqanyiswa kwamavesi, amabhukumaka ezincwadi, nokucushwa kwetimu—igcinwa kudivayisi yakho kusetshenziswa i-AsyncStorage. Le datha ayithunyelwa, ayigcinwa, futhi ayicutshungulwa kumaseva akude. Uhlelo lungase luxhumane ngezikhathi ezithile namaseva ethu ezibuyekezo (Expo) ukuze luhlole futhi lilande izibuyekezo ezibalulekile ngokuzenzakalelayo. Le nqubo ifinyelela amapharamitha ayisisekelo wesistimu (njengenguqulo yohlelo nohlobo lwe-OS) futhi ayithumeli noma igcine noma iyiphi idatha yomuntu siqu noma umsebenzi wokufunda.",
 		}),
 		item2Title: t({
 			en: "2. Device Permissions",
@@ -29,39 +29,39 @@ const privacyPolicyContent = {
 		}),
 		item2Content: t({
 			en: "The mobile application requires specific system permissions to function: Accelerometer (solely to register the shake gesture for capturing/sharing scripture cards) and Notifications (solely to deliver daily scheduled devotionals). We do not collect, monitor, or leverage these permissions for tracking purposes.",
-			zu: "I-app idinga izimvume ezithile zesistimu ukuze isebenze: Inzwa yeselula (kuphela ukuthola ukunyakazisa idivayisi kwesici sokwabelana) nezaziso (kuphela ukuletha imikhuleko yansuku zonke ehleliwe). Asiqoqi, asigadi, noma asisebenzisi lezi zimvume ngezinhloso zokulandelela.",
+			zu: "Uhlelo lweselula ludinga izimvume ezithile zesistimu ukuze lusebenze: Inzwa yokunyakaza (Accelerometer) (kuphela ukuthola ukunyakazisa ifoni kwesici sokwenza amakhadi okwabelana) kanye nezaziso (kuphela ukuletha amavesi osuku ahleliwe). Asiqoqi, asigadi, futhi asisebenzisi lezi zimvume ngezinhloso zokulandelela.",
 		}),
 		item3Title: t({
 			en: "3. Sharing and Exporter Canvas",
-			zu: "3. Ukwabelana ne-Canvas Yesithekelisi",
+			zu: "3. Ukwabelana Nenjini ye-Canvas",
 		}),
 		item3Content: t({
 			en: "When exporting highlights or reflections, the application compiles images locally using HTML5 Canvas on a hidden WebView context. All rendering, text composition, and canvas encoding happen entirely on-device, and the resulting image is passed directly to the OS share sheet without ever contacting external media servers.",
-			zu: "Lapho uthumela amavesi noma okubhalile, i-app ihlanganisa izithombe endaweni isebenzisa i-HTML5 Canvas ku-WebView efihliwe. Ukunikezwa kwezithombe, ukubhala, nemibala kwenzeka kudivayisi yakho kuphela, futhi isithombe esiphumelayo sithunyelwa ngqo ekwabelaneni kwesistimu ngaphandle kokuxhumana namaseva wemidiya angaphandle.",
+			zu: "Lapho uthumela amavesi agqanyisiwe noma amanothi, uhlelo luhlanganisa izithombe endaweni kusetshenziswa i-HTML5 Canvas ku-WebView efihliwe. Ukwakhiwa kwezithombe, ukubhala, kanye nemibala kwenzeka kudivayisi yakho kuphela, futhi isithombe esiphumelayo sidluliselwa ngqo ewindini lokwabelana lesistimu ngaphandle kokuxhumana namaseva emidiya angaphandle.",
 		}),
 		item4Title: t({
 			en: "4. Children's Privacy",
-			zu: "4. Ubumfihlo Bongane",
+			zu: "4. Ubumfihlo Bezingane",
 		}),
 		item4Content: t({
 			en: "Our services are designed to be safe for all readers, including children. Since we collect absolutely no personally identifiable information (PII), telemetry data, or location logs, we comply naturally with COPPA and global youth privacy frameworks.",
-			zu: "Izinsizakalo zethu zakhelwe ukuthi ziphephe kubo bonke abafundi, kuhlanganise nezingane. Njengoba singaqoqi nhlobo imininingwane ekhomba umuntu siqu (PII), idatha ye-telemetry, noma izingodo zendawo, sithobela ngokwemvelo i-COPPA nezinhlaka zomhlaba jikelele zobumfihlo bentsha.",
+			zu: "Izinsizakalo zethu zakhelwe ukuthi ziphephe kubo bonke abafundi, kuhlanganise nezingane. Njengoba singaqoqi nhlobo imininingwane ekhomba umuntu siqu (PII), idatha ye-telemetry, noma amarekhodi endawo, sithobela ngokwemvelo i-COPPA nezinhlaka zomhlaba jikelele zobumfihlo bezingane.",
 		}),
 		item5Title: t({
 			en: "5. Web Companion Metrics",
-			zu: "5. Amamethrikhi we-Web Companion",
+			zu: "5. Amamethrikhi Ewebhusayithi",
 		}),
 		item5Content: t({
 			en: "If you browse this informational website, basic anonymous metrics (such as page views, browser types, and referral paths) may be collected through Vercel or Google Analytics to help us monitor performance. This is separate from the mobile app, which remains entirely offline and telemetry-free.",
-			zu: "Uma upheqa le webhusayithi, amamethrikhi ayisisekelo angaziwa (njengokubukwa kwamakhasi, izinhlobo zeziphequluli, nezindlela zokudlulisela) angaqoqwa nge-Vercel noma i-Google Analytics ukuze asisize sigade ukusebenza kwewebhusayithi. Lokhu kuhlukile ku-app yeselula, ehlala ingaxhunyiwe ku-inthanethi ngokuphelele futhi ingenayo i-telemetry.",
+			zu: "Uma upheqa le webhusayithi, amamethrikhi ayisisekelo angaziwa (njengokubukwa kwamakhasi, izinhlobo zeziphequluli, nezindlela zokudlulisela) angaqoqwa nge-Vercel noma i-Google Analytics ukuze asisize sigade ukusebenza kwayo. Lokhu kuhlukile kohlelweni lweselula, oluhlala lungaxhunyiwe ku-inthanethi ngokuphelele futhi lungenayo i-telemetry.",
 		}),
 		item6Title: t({
 			en: "6. Data Control & Deletion",
-			zu: "6. Ukulawulwa Kwemininingwane Nokususwa",
+			zu: "6. Ukulawulwa Nokususwa Kwedatha",
 		}),
 		item6Content: t({
 			en: "Since all mobile application data resides on your physical device, you maintain absolute control over it. You can modify or delete your journaling entries and highlights at any time directly in the app. Uninstalling the application will permanently erase all locally stored data from your device.",
-			zu: "Njengoba yonke idatha ye-app yeselula ihlala kudivayisi yakho, ugcina ukulawula okuphelele phezu kwayo. Ungalungisa noma ususe okubhalile nokugqanyisiwe nganoma yisiphi isikhathi ngqo ku-app. Ukukhipha i-app kuzosusa unomphela yonke idatha egcinwe endaweni kudivayisi yakho.",
+			zu: "Njengoba yonke idatha yohlelo lweselula ihlala kudivayisi yakho, ugcina ukulawula okuphelele phezu kwayo. Ungashintsha noma ususe amanothi akho namavesi agqanyisiwe nganoma yisiphi isikhathi ngqo ohlelweni. Ukukhipha uhlelo (uninstall) kuzosusa unomphela yonke idatha egcinwe endaweni kudivayisi yakho.",
 		}),
 		item7Title: t({
 			en: "7. Changes to this Policy",
@@ -69,7 +69,7 @@ const privacyPolicyContent = {
 		}),
 		item7Content: t({
 			en: "We may update this privacy standard from time to time to align with new features or underlying OS changes. Continued use of the mobile application or website following updates constitutes your acknowledgement of the revised privacy practices.",
-			zu: "Singase sibuyekeze le nqubomgomo yobumfihlo ngezikhathi ezithile ukuze ihambisane nezici ezintsha noma izinguquko zesistimu yokusebenza (OS). Ukusebenzisa kwakho okuqhubekayo kwe-app yeselula noma iwebhusayithi kulandela izibuyekezo kukhombisa ukwamukela kwakho inqubomgomo yobumfihlo ebuyekeziwe.",
+			zu: "Singase sibuyekeze le nqubomgomo yobumfihlo ngezikhathi ezithile ukuze ihambisane nezici ezintsha noma izinguquko zesistimu yokusebenza (OS). Ukusebenzisa kwakho okuqhubekayo kohlelo lweselula noma iwebhusayithi kulandela izibuyekezo kukhombisa ukwamukela kwakho inqubomgomo ebuyekeziwe.",
 		}),
 		item8Title: t({
 			en: "8. Developer & Contact Info",
@@ -81,7 +81,7 @@ const privacyPolicyContent = {
 		}),
 		item8Content2: t({
 			en: ". If you have any inquiries, feedback, or concerns regarding your privacy or the application's functionality, please reach out via email at ",
-			zu: ". Uma unemibuzo, impendulo, noma ukukhathazeka mayelana nobumfihlo bakho noma ukusebenza kwe-app, sicela usithinte nge-imeyili ku-",
+			zu: ". Uma unemibuzo, impendulo, noma ukukhathazeka mayelana nobumfihlo bakho noma ukusebenza kohlelo, sicela usithinte nge-imeyili ku-",
 		}),
 		relatedTermsTitle: t({
 			en: "9. Related Terms",
@@ -89,7 +89,7 @@ const privacyPolicyContent = {
 		}),
 		relatedTermsText: t({
 			en: "Please also review our ",
-			zu: "Sicela uphinde ubuyekeze yethu ",
+			zu: "Sicela uphinde ubuyekeze ",
 		}),
 		relatedTermsLink: t({
 			en: "Terms of Use",

@@ -56,7 +56,7 @@ export default function Header() {
 	return (
 		<div className="w-full">
 			{showAppGalleryBanner ? (
-				<div className="hidden md:flex w-full bg-red-500/5 hover:bg-red-500/10 border-b border-red-500/10 py-2.5 px-4 text-xs text-center items-center justify-center gap-1.5 transition-all duration-300 relative">
+				<div className="hidden md:flex w-full bg-red-500/5 hover:bg-red-500/10 py-2.5 px-4 text-xs text-center items-center justify-center gap-1.5 transition-all duration-300 relative">
 					<div className="flex flex-wrap items-center justify-center gap-1.5 pr-6">
 						<span className="inline-flex items-center justify-center bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[8px] tracking-wider uppercase mr-1 shrink-0 animate-pulse">
 							New Launch
@@ -88,7 +88,7 @@ export default function Header() {
 					</button>
 				</div>
 			) : (
-				<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 border-b border-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
+				<div className="hidden md:flex w-full bg-primary/5 hover:bg-primary/10 py-2.5 px-4 text-xs text-center flex-wrap items-center justify-center gap-1.5 transition-all duration-300">
 					<HugeiconsIcon
 						icon={Comment01Icon}
 						size={14}

@@ -9,7 +9,7 @@ const indexContent = {
 		}),
 		heroDescription: t({
 			en: "A beautifully fast, offline-first Bible companion built for distraction-free reading, deep study, and absolute privacy.",
-			zu: "Umngane weBhayibheli osheshayo ngendlela enhle, ongaxhunyiwe ku-inthanethi owakhelwe ukufunda okungenaphazamiso, ukutadisha okujulile, kanye nobumfihlo obuphelele.",
+			zu: "Umngane weBhayibheli osheshayo, osebenza ngaphandle kwe-inthanethi owakhelwe ukufunda okungenaphazamiso, ukutadisha okujulile, kanye nobumfihlo obuphelele.",
 		}),
 		verseText: t({
 			en: '"In the beginning was the Word, and the Word was with God, and the Word was God." — John 1:1',
@@ -17,79 +17,79 @@ const indexContent = {
 		}),
 		aboutText: t({
 			en: 'Inspired by this prologue, His Word is built to celebrate scripture as the living Word of God. The app\'s original concept was titled Izwi Lakhe (isiZulu for "His Word"), but due to copyright restrictions regarding Zulu Bible translations, the companion is currently available in English only.',
-			zu: "Uphefumulelwe yilesi singeniso, i-His Word yakhelwe ukubungaza umbhalo ongcwele njengezwi eliphilayo likaNkulunkulu. Umqondo wokuqala walolu hlelo lokusebenza wawunesihloko esithi Izwi Lakhe, kodwa ngenxa yemikhawulo ye-copyright mayelana nokuhunyushwa kweBhayibheli lesiZulu, umngane okwamanje itholakala ngesiNgisi kuphela.",
+			zu: 'I-His Word iphefumulelwe yilesi singeniso, yakhelwe ukubungaza umbhalo ongcwele njengezwi eliphilayo likaNkulunkulu. Umqondo wokuqala walolu hlelo lokusebenza wawunesihloko esithi Izwi Lakhe, kodwa ngenxa yemikhawulo ye-copyright mayelana nokuhunyushwa kweBhayibheli lesiZulu, lolu hlelo okwamanje lutholakala ngesiNgisi kuphela.',
 		}),
 		howItWorksTitle: t({
 			en: "How It Works",
 			zu: "Ukusebenza Kwayo",
 		}),
 		step1Title: t({
-			en: "1. Fast, Offline Reading",
-			zu: "1. Ukufunda Okusheshayo Ngaphandle kwe-Inthanethi",
+			en: "1. Fast, Offline Reading & Audio",
+			zu: "1. Ukufunda Okusheshayo & Nomsindo Ongaxhunyiwe ku-Inthanethi",
 		}),
 		step1Desc: t({
-			en: "His Word stores Bible translations (ASV and WEB) locally on your device. Toggle between translations instantly, check your reading history, and resume exactly where you left off with spring-animated controls.",
-			zu: "I-His Word igcina izinguqulo zeBhayibheli (ASV ne-WEB) endaweni kudivayisi yakho. Shintsha phakathi kwezinguqulo ngokushesha, hlola umlando wakho wokufunda, futhi uqhubeke lapho ugcine khona ngezilawuli ezinezithombe.",
+			en: "His Word stores complete Bible translations (ASV and WEB) locally on your device. Switch translations instantly, listen to hands-free Text-to-Speech audio narration, and resume right where you left off with smooth spring animations.",
+			zu: "I-His Word igcina izinguqulo eziphelele zeBhayibheli (ASV ne-WEB) ngqo kudivayisi yakho. Shintsha phakathi kwezinguqulo ngokushesha, lalela umsindo wokufundelwa (Text-to-Speech), futhi uqhubeke lapho ugcine khona ngezilawuli ezibushelelezi.",
 		}),
 		step2Title: t({
 			en: "2. Study, Highlight & Journal",
-			zu: "2. Funda, Gqamisa & Bhala phansi",
+			zu: "2. Tadisha, Gqamisa & Bhala Amanothi",
 		}),
 		step2Desc: t({
-			en: "Long-press verses to highlight using custom theme-adaptive palettes. Author rich-text reflection entries directly inside the chapter reader to record your study notes.",
-			zu: "Cindezela isikhathi eside amavesi ukuze uwagqamise usebenzisa amaphalethi ahambisana netimu. Bhala okufundile ngqo ngaphakathi komfundi wesahluko ukuze ugcine amanothi akho okutadisha.",
+			en: "Highlight verses using curated theme-adaptive palettes and browse through a snap-to-page journal deck. Author rich-text reflection notes directly inside the chapter reader with privacy locks.",
+			zu: "Gqamisa amavesi usebenzisa amaphalethi emibala ahambisana netimu yakho bese upheqa amakhadi amanothi. Bhala ukuzindla kwakho ngqo ngaphakathi komfundi wesahluko unelungelo lokukhiya amanothi ayimfihlo.",
 		}),
 		step3Title: t({
-			en: "3. Asynchronous Deep Search",
-			zu: "3. Ukusesha Okujulile Okujwayelekile",
+			en: "3. Non-Blocking Deep Search",
+			zu: "3. Ukusesha Okujulile Okungenakubambezeleka",
 		}),
 		step3Desc: t({
-			en: "Search across all 66 books instantly. The search engine uses smart micro-task chunking to parse keywords over thousands of verses without blocking the UI thread, highlighting search keywords dynamically.",
-			zu: "Sesha kuzo zonke izincwadi ezingama-66 ngokushesha. Injini yosesho isebenzisa ukwahlukanisa ukuhlunga amagama angukhiye emavesini ayizinkulungwane ngaphandle kokuvimba i-UI.",
+			en: "Search across all 66 books instantly. The search engine leverages debounced asynchronous micro-tasks to parse thousands of verses without stuttering the UI, dynamically highlighting matching keywords.",
+			zu: "Sesha kuzo zonke izincwadi ezingama-66 ngokushesha. Injini yosesho isebenzisa ukuhlukanisa imisebenzi emincane ukuze ihlole izinkulungwane zamavesi ngaphandle kokubambezela isikrini, igqamise amagama owaseshile.",
 		}),
 		step4Title: t({
 			en: "4. Tactile Shake & Share",
 			zu: "4. Nyakazisa & Wabelane",
 		}),
 		step4Desc: t({
-			en: "Export your journal entries or highlighted scriptures as beautiful high-res cards rendered on-device using a local canvas. Simply shake your device to capture and share content with haptic vibration confirmation.",
-			zu: "Thumela okubhalile noma amavesi agqanyisiwe njengamakhadi amahle e-high-res akhiqizwa kudivayisi isebenzisa i-canvas yasendaweni. Nyakazisa idivayisi yakho ukuze uthwebule futhi wabelane ngokuqukethwe ngesikhumbuzi sokudlidliza.",
+			en: "Export your favorite scriptures and reflection notes as beautifully typeset, high-resolution cards. Simply shake your device while reading to capture and share content with gentle haptic confirmation.",
+			zu: "Khipha amavesi owathandayo namanothi akho njengamakhadi amahle ekhwalithi ephezulu kakhulu. Nyakazisa idivayisi yakho ngenkathi ufunda ukuze uthwebule futhi wabelane ngamakhadi ngokuthinta okudlidlizayo.",
 		}),
 		underTheHoodTitle: t({
 			en: "Under the Hood",
-			zu: "Ngaphansi Kwendwangu",
+			zu: "Ubuchwepheshe Ngaphakathi",
 		}),
 		hoodCard1Title: t({
-			en: "LRU Database Cache",
-			zu: "I-LRU Database Cache",
+			en: "LRU Bible Cache & Instant Load",
+			zu: "I-LRU Cache Yokulayisha Ngokushesha",
 		}),
 		hoodCard1Desc: t({
-			en: "Custom Least Recently Used cache system that keeps memory footprint minimal by loading book modules dynamically and caching only active books.",
-			zu: "Isistimu yenqolobane ye-Least Recently Used (LRU) egcina inkumbulo incane ngokulayisha amamojula ezincwadi ngendlela eguquguqukayo nangokugcina izincwadi ezisebenzayo kuphela.",
+			en: "Custom Least Recently Used cache system that keeps memory footprint minimal by loading book modules dynamically and caching active chapters for instant navigation.",
+			zu: "Isistimu yenqolobane ye-Least Recently Used (LRU) egcina ukusetshenziswa kwenkumbulo kuncane ngokulayisha amamojula ezincwadi ngokushesha nokugcina izahluko ezisebenzayo.",
 		}),
 		hoodCard2Title: t({
-			en: "Multi-Theme Engine",
-			zu: "Injini Yezinhlobonhlobo Zezihloko",
+			en: "Uniwind Multi-Theme Engine",
+			zu: "Injini Yezitayela ye-Uniwind",
 		}),
 		hoodCard2Desc: t({
-			en: "Built using Uniwind and custom Metro configurations. Instantly switches system accent variables across 4 premium color palettes (Green, Pink, Blue, Charcoal).",
-			zu: "Yakhiwe isebenzisa i-Uniwind nokucushwa kwe-Metro. Ishintsha ngokushesha okuguquguqukayo kwesistimu phakathi kwamaphalethi emibala we-premium ama-4 (Eliluhlaza, Eliphinki, Eliluhlaza okwesibhakabhaka, Namalahle).",
+			en: "Built with Uniwind (Tailwind CSS) and HeroUI Native. Instantly switches system accents across 4 curated themes (Default Green, Feminine Rose, Masculine Blue, Neutral Charcoal) in both light and dark modes.",
+			zu: "Yakhiwe nge-Uniwind (Tailwind CSS) kanye ne-HeroUI Native. Ishintsha izitayela ngokushesha phakathi kwezindikimba ezi-4 (Okuluhlaza, Okubomvana, Okwesibhakabhaka, Namalahle) kokubili kwimodi ekhanyayo nemnyama.",
 		}),
 		hoodCard3Title: t({
-			en: "Local JSON / Storage",
-			zu: "I-Local JSON / Isitore",
+			en: "100% Local Storage & Zero Telemetry",
+			zu: "Isitore Sasendaweni Nozero Wokulandelela",
 		}),
 		hoodCard3Desc: t({
-			en: "All metrics, reflections, historical reading records, bookmarks, and preferences are saved locally on-device. Zero cloud database latency or tracking.",
-			zu: "Yonke imikhombandlela, okubhalile, amarekhodi wokufunda omlando, amabhukumaka, nezintandokazi kulondolozwa endaweni kudivayisi. Ukubambezeleka kwedatha yefu enguziro noma ukulandelela.",
+			en: "All highlights, reflections, reading logs, and preferences are stored exclusively on your device using local storage. No user accounts, analytics, cloud tracking, or latency.",
+			zu: "Yonke imibhalo egqanyisiwe, amanothi, umlando wokufunda, nezintandokazi kulondolozwa endaweni kudivayisi yakho kuphela. Akukho ma-akhawunti, ukulandelela kwedatha, noma ukubambezeleka kwefu.",
 		}),
 		hoodCard4Title: t({
-			en: "Canvas Share Engine",
-			zu: "Injini Yokwabelana ye-Canvas",
+			en: "High-Res Canvas Share Engine",
+			zu: "Injini Yokwenza Amakhadi e-Canvas",
 		}),
 		hoodCard4Desc: t({
-			en: "Uses a localized off-screen WebView to dynamically compose and render typography into a high-res PNG image, which feeds directly into native sharing hooks.",
-			zu: "Isebenzisa i-WebView yasendaweni engaphandle kwesikrini ukuze ibhale ngokuguquguqukayo futhi inikeze i-typography esithombeni se-PNG esiphezulu, esondla ngqo kumahuku okwabelana omndabu.",
+			en: "Uses a localized off-screen canvas engine to dynamically compose custom typography and themes into crisp PNG cards, feeding directly into native OS share sheets.",
+			zu: "Isebenzisa injini ye-canvas yasendaweni engaphandle kwesikrini ukuhlanganisa ubuciko bokubhala netimu ibe yisithombe se-PNG esisezingeni eliphezulu, esidluliselwa ngqo ewindini lokwabelana ledivayisi.",
 		}),
 	},
 } satisfies Dictionary;
