@@ -2,13 +2,11 @@
 
 The official web presence and companion platform for **His Word**, an offline-first mobile Bible study application built for focus, high-performance scripture study, and complete user privacy.
 
-Live site: [word.sakhiledumisa.com](https://word.sakhiledumisa.com) • Story: [Quietly: Building a Bible App for My Grandmother](https://www.sakhiledumisa.com/blog/his-word-quietly)
+Live site: [word.sakhiledumisa.com](https://word.sakhiledumisa.com) • Story: [His Word, Quietly](https://www.sakhiledumisa.com/blog/his-word-quietly)
 
 <p align="center">
   <img src="./public/appShots/thumbnail.png" alt="His Word App Mockup" width="100%" />
 </p>
-
----
 
 ## 🕊️ The Name & Origin
 
@@ -32,8 +30,6 @@ That app is good at what it does. It just wasn't built for her. It wasn't built 
 
 So I built one that is.
 
----
-
 ## 👥 Two Kinds of Bible Apps
 
 There is nothing wrong with feature-rich Bible apps. They serve millions of people who want social accountability, video devotionals, and progress tracking.
@@ -50,8 +46,6 @@ But there is another kind of user:
 
 These users don’t need streaks. They don’t need a social feed. They don't want to sign in.  
 They just need the scriptures. **Clear. Fast. Beautiful.**
-
----
 
 ## 📱 What Is His Word?
 
@@ -76,8 +70,6 @@ They just need the scriptures. **Clear. Fast. Beautiful.**
 * **Multi-Language Support (Intlayer):** Content localized in English and isiZulu.
 * **Back to Top & Sticky Navigation:** Floating quick-navigation actions with smooth scrolling.
 * **Comprehensive Legal & Privacy Documentation:** Clear, plain-language privacy policies and terms of service.
-
----
 
 ## ⚖️ Design Choices: Compared
 
@@ -113,8 +105,6 @@ Here is how **His Word** compares to typical, feature-heavy Bible apps — not a
 | Basic screenshot or cluttered text sharing | **Shake-to-capture high-resolution**, beautifully formatted scripture cards |
 | Pushy engagement notifications to "keep your streak" | **Silent by default;** 100% opt-in local daily devotional reminders |
 
----
-
 ## 🛡️ What His Word Will Never Have
 
 I wanted this app to feel respectful. To do that, I committed:
@@ -125,8 +115,6 @@ I wanted this app to feel respectful. To do that, I committed:
 4. **No emails** – I don't want your address, and I will never send you marketing emails.
 5. **No engagement spam** – The app will never beg for your attention with artificial streak notifications.
 6. **No forced plans** – Read at your own pace. No guilt.
-
----
 
 ## 🛠️ Web Tech Stack
 
@@ -141,8 +129,6 @@ This companion website is built using modern web tooling:
 * **State Management:** [Zustand](https://github.com/pmndrs/zustand)
 * **Animations:** [Motion (Framer Motion)](https://motion.dev/)
 * **Linting & Formatting:** [Biome](https://biomejs.dev/)
-
----
 
 ## 🚀 Getting Started
 
@@ -172,8 +158,6 @@ pnpm build
 
 This compiles both the client-side code and the Nitro server bundle into the `.output/` and `.tanstack/` folders.
 
----
-
 ## 🌐 Routing & SEO
 
 * `/` — `src/routes/index.tsx` (Homepage, Showcase & FAQ)
@@ -185,12 +169,10 @@ This compiles both the client-side code and the Nitro server bundle into the `.o
 * **Robots.txt:** [public/robots.txt](public/robots.txt)
 * **SEO Metadata:** Canonical URLs, OpenGraph, Twitter Cards, and structured JSON-LD schemas.
 
----
-
 ## 📝 Learn More & Story
 
 Read the complete design philosophy and personal back-story:
-* 📖 Blog Post: [Quietly: Building a Bible App for My Grandmother](https://www.sakhiledumisa.com/blog/his-word-quietly)
+* 📖 Blog Post: [His Word, Quietly](https://www.sakhiledumisa.com/blog/his-word-quietly)
 * 🌐 Live Site: [word.sakhiledumisa.com](https://word.sakhiledumisa.com)
 
 Developed with focus by [Sakhile Dumisa](https://www.github.com/sakhile-dumisa).
