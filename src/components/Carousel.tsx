@@ -290,7 +290,7 @@ export default function Carousel({ hideHeader = false }: CarouselProps) {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						onClick={closeLightbox}
-						className="fixed inset-0 z-100 flex items-center justify-center bg-background/90 backdrop-blur-md p-4 md:p-8 cursor-zoom-out"
+						className="fixed inset-0 z-100 flex items-center justify-center bg-background/90 backdrop-blur-md p-4 md:p-8 cursor-zoom-out!"
 					>
 						<motion.div
 							initial={{ scale: 0.95, opacity: 0 }}
@@ -305,17 +305,17 @@ export default function Carousel({ hideHeader = false }: CarouselProps) {
 								type="button"
 								onClick={closeLightbox}
 								aria-label="Close zoomed view"
-								className="absolute top-4 right-4 z-50 p-2 rounded-full bg-background/80 backdrop-blur-xs border border-border text-foreground hover:text-primary transition-all hover:scale-105 active:scale-95 shadow-sm"
+								className="absolute top-4 right-4 z-50 p-2 rounded-full bg-background/80 backdrop-blur-xs border border-border text-foreground hover:text-primary transition-all hover:scale-105 active:scale-95 shadow-sm cursor-pointer!"
 							>
 								<HugeiconsIcon icon={Cancel01Icon} size={16} />
 							</button>
 
 							{/* Lightbox Image */}
-							<div className="flex items-center justify-center p-2 bg-muted/5 max-h-[85vh]">
+							<div className="flex items-center justify-center p-2 bg-muted/5 max-h-[85vh] cursor-pointer!">
 								<img
 									src={lightboxSrc}
 									alt="Zoomed App Screenshot"
-									className="max-h-[80vh] w-auto object-contain rounded-xl select-none"
+									className="max-h-[80vh] w-auto object-contain rounded-xl select-none cursor-default!"
 								/>
 							</div>
 						</motion.div>

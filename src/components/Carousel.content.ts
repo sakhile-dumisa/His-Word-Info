@@ -17,7 +17,7 @@ const carouselContent = {
 		}),
 		tabCollage: t({
 			en: "All-in-One Collage",
-			zu: "I-Collage Yonke-Ku-One",
+			zu: "Zonke Kwi-collage",
 		}),
 		clickToExpand: t({
 			en: "Click to Expand",
