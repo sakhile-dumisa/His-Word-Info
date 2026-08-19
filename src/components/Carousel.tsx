@@ -258,12 +258,12 @@ export default function Carousel({ hideHeader = false }: CarouselProps) {
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -15 }}
 							transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-							className="flex justify-center"
+							className="flex justify-center w-full"
 						>
 							<button
 								type="button"
 								onClick={() => openLightbox(COLLAGE_IMAGE)}
-								className="group relative block cursor-zoom-in overflow-hidden rounded-2xl border border-border/40 bg-muted/10 p-2 max-w-full md:max-w-2xl shadow-xl transition-all duration-300 hover:shadow-primary/5 hover:border-primary/20 text-left outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+								className="group relative block w-full cursor-zoom-in overflow-hidden rounded-2xl border border-border/40 bg-muted/10 p-2 max-w-full md:max-w-2xl shadow-xl transition-all duration-300 hover:shadow-primary/5 hover:border-primary/20 text-left outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
 							>
 								<img
 									src={COLLAGE_IMAGE}
