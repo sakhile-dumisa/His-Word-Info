@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 		const title = "His Word — Offline-First Bible Companion";
 		const description =
 			"A premium, offline-first Bible app built with Expo and HeroUI. Features dual translations, rich reflections, lag-free search, and shake-to-capture sharing.";
-		const socialImage = `${SITE_URL}/images/main.png`;
+		const socialImage = `/appShots/thumbnail.png`;
 		const url = SITE_URL;
 
 		return {

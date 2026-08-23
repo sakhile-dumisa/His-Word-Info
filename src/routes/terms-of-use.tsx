@@ -38,11 +38,11 @@ export const Route = createFileRoute("/terms-of-use")({
 				{ property: "og:title", content: title },
 				{ property: "og:description", content: description },
 				{ property: "og:url", content: url },
-				{ property: "og:image", content: `${SITE_URL}/images/terms.png` },
+				{ property: "og:image", content: `/appShots/thumbnail.png` },
 				{ property: "og:image:width", content: "1200" },
 				{ property: "og:image:height", content: "630" },
 				{ name: "twitter:card", content: "summary_large_image" },
-				{ name: "twitter:image", content: `${SITE_URL}/images/terms.png` },
+				{ name: "twitter:image", content: `/appShots/thumbnail.png` },
 			],
 		};
 	},
