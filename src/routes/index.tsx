@@ -14,7 +14,7 @@ import { useIntlayer } from "react-intlayer";
 import Carousel from "../components/Carousel";
 import FAQ from "../components/Faq";
 // Import site constants
-import { SITE_URL, X_URL } from "../lib/site";
+import { OG_IMAGE, SITE_URL, X_URL } from "../lib/site";
 
 export const Route = createFileRoute("/")({
 	loader: async () => {
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 		const title = "His Word — Offline-First Bible Companion";
 		const description =
 			"A premium, offline-first Bible app built with Expo and HeroUI. Features dual translations, rich reflections, lag-free search, and shake-to-capture sharing.";
-		const socialImage = `/appShots/thumbnail.png`;
+		const socialImage = OG_IMAGE;
 		const url = SITE_URL;
 
 		return {

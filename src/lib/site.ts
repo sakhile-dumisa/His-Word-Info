@@ -2,6 +2,7 @@ export const SITE_TITLE = "His Word";
 export const SITE_DESCRIPTION =
 	"A premium, offline-first Bible app built with Expo and HeroUI. Features dual translations, rich reflections, lag-free search, and shake-to-capture sharing.";
 export const SITE_URL = "https://word.sakhiledumisa.com";
+export const OG_IMAGE = `${SITE_URL}/appShots/thumbnail.png`;
 export const LINKEDIN_URL = "https://www.linkedin.com/in/sakhile-dumisa";
 export const X_URL = "https://x.com/sakhiledumisa0";
 export const EMAIL = "word@sakhiledumisa.com";
