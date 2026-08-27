@@ -35,12 +35,12 @@ export const SOCIAL_LINKS: SocialLinkItem[] = [
 	{ key: "github", href: "https://github.com/sakhile-dumisa", label: "GitHub" },
 	{
 		key: "instagram",
-		href: "https://www.instagram.com/dumisasakhile",
+		href: "https://www.instagram.com/sakhiledumisa_x",
 		label: "Instagram",
 	},
 	{
 		key: "threads",
-		href: "https://www.threads.com/@dumisasakhile",
+		href: "https://www.threads.com/@sakhiledumisa_x",
 		label: "Threads",
 	},
 	{ key: "website", href: SITE_URL, label: "Website" },
