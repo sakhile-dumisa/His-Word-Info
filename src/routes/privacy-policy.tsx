@@ -21,7 +21,7 @@ export const Route = createFileRoute("/privacy-policy")({
 		const title = `Privacy Policy | ${SITE_TITLE}`;
 		const description =
 			"Privacy policy for His Word, detailing our offline-first local storage, device permissions, and image sharing systems.";
-		const url = `${SITE_URL}/privacy`;
+		const url = `${SITE_URL}/privacy-policy`;
 
 		return {
 			links: [

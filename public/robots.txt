@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://his-word.sakhiledumisa.com/sitemap.xml
+Sitemap: https://word.sakhiledumisa.com/sitemap.xml
