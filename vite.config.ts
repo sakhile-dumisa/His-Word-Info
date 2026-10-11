@@ -8,10 +8,28 @@ import { intlayer } from "vite-intlayer";
 
 const config = defineConfig({
 	resolve: { tsconfigPaths: true },
+	define: {
+		__dirname: '""',
+	},
 	plugins: [
 		intlayer(),
 		devtools(),
-		nitro({ rollupConfig: { external: [/^@sentry\//] } }),
+		nitro({
+			preset: process.env.NITRO_PRESET || "cloudflare-module",
+			rollupConfig: { external: [/^@sentry\//, /^cloudflare:/] },
+			hooks: {
+				"build:before": (nitro) => {
+					for (const h of [
+						...(nitro.options.handlers || []),
+						...(nitro.scannedHandlers || []),
+					]) {
+						if (typeof h.handler === "string") {
+							h.handler = h.handler.replace(/\\/g, "/");
+						}
+					}
+				},
+			},
+		}),
 		tailwindcss(),
 		tanstackStart(),
 		viteReact(),
