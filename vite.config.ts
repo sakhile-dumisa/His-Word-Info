@@ -17,18 +17,20 @@ const config = defineConfig({
 		nitro({
 			preset: process.env.NITRO_PRESET || "cloudflare-module",
 			rollupConfig: { external: [/^@sentry\//, /^cloudflare:/] },
-			hooks: {
-				"build:before": (nitro) => {
-					for (const h of [
-						...(nitro.options.handlers || []),
-						...(nitro.scannedHandlers || []),
-					]) {
-						if (typeof h.handler === "string") {
-							h.handler = h.handler.replace(/\\/g, "/");
+			modules: [
+				(nitro) => {
+					nitro.hooks.hook("build:before", (nitro) => {
+						for (const h of [
+							...(nitro.options.handlers || []),
+							...(nitro.scannedHandlers || []),
+						]) {
+							if (typeof h.handler === "string") {
+								h.handler = h.handler.replace(/\\/g, "/");
+							}
 						}
-					}
+					});
 				},
-			},
+			],
 		}),
 		tailwindcss(),
 		tanstackStart(),
