@@ -34,7 +34,6 @@
     "clsx": "^2.1.1",
     "intlayer": "^9.7.0",
     "motion": "^14.8.0",
-    "nitro": "npm:nitro-nightly@3.0.1-20261029-234751-02295c5e",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-intlayer": "^9.7.0",
@@ -46,6 +45,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.4",
+    "@cloudflare/vite-plugin": "^1.66.0",
     "@tailwindcss/typography": "^0.5.20",
     "@tanstack/devtools-vite": "latest",
     "@tanstack/router-cli": "^1.167.46",
