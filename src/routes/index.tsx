@@ -122,6 +122,22 @@ const itemVariants = {
 	},
 };
 
+const stepItemVariants = {
+	hidden: { 
+		opacity: 0, 
+		y: 10,
+	},
+	visible: (i: number) => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			duration: 0.4,
+			delay: i * 0.1,
+			ease: [0.16, 1, 0.3, 1] as const,
+		},
+	}),
+};
+
 function RouteComponent() {
 	const {
 		heroTitle,
@@ -196,8 +212,8 @@ function RouteComponent() {
 						{howItWorksTitle}
 					</h2>
 					<div className="relative pl-1">
-						{/* Polished continuous timeline connector */}
-						<div className="absolute left-4.25 top-4 bottom-6 w-px bg-linear-to-b from-border via-border/60 to-transparent" />
+						{/* Subtle timeline connector */}
+						<div className="absolute left-[18px] top-4 bottom-4 w-px bg-gradient-to-b from-border via-border/40 to-transparent" />
 
 						<div className="space-y-6">
 							{[
@@ -222,13 +238,21 @@ function RouteComponent() {
 									icon: Share01Icon,
 								},
 							].map((step, idx) => (
-								<div key={idx} className="flex items-start gap-4 group relative">
-									{/* Modern Node Badge */}
-									<div className="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-xl border border-border/80 bg-background text-foreground shadow-xs group-hover:border-foreground/40 group-hover:bg-muted/30 transition-all duration-200">
+								<motion.div 
+									key={idx}
+									custom={idx}
+									variants={stepItemVariants}
+									initial="hidden"
+									whileInView="visible"
+									viewport={{ once: true, margin: "-50px" }}
+									className="flex items-start gap-4 group relative"
+								>
+									{/* Clean icon badge */}
+									<div className="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-xl border border-border/60 bg-background text-foreground shadow-sm group-hover:border-border group-hover:shadow transition-all duration-300">
 										<HugeiconsIcon
 											icon={step.icon}
 											size={18}
-											className="text-foreground/80 group-hover:text-foreground transition-colors"
+											className="text-muted-foreground group-hover:text-foreground transition-colors duration-300"
 										/>
 									</div>
 
@@ -241,7 +265,7 @@ function RouteComponent() {
 											{step.desc}
 										</p>
 									</div>
-								</div>
+								</motion.div>
 							))}
 						</div>
 					</div>
